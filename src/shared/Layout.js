@@ -1,13 +1,7 @@
 import styled from "styled-components";
+import Header from "./Header";
 
 // TODO: 컴포넌트 빼서 if문으로 로그인/글작성/마이페이지 보이게
-const Header = () => {
-  return (
-    <Head>
-      <h1>보람삼조 XX토론</h1>
-    </Head>
-  );
-};
 
 const Footer = () => {
   return (
@@ -31,15 +25,6 @@ const Layout = ({ children }) => {
 export default Layout;
 
 // styled-components
-const Head = styled.div`
-  max-width: 1200px;
-  min-width: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 20px 40px;
-`;
 
 const Foot = styled.div`
   max-width: 1200px;
