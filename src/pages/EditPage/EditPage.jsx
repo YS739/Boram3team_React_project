@@ -1,7 +1,7 @@
 import React from "react";
 
-function EditPage() {
+const EditPage = () => {
   return <div>EditPage</div>;
-}
+};
 
 export default EditPage;
