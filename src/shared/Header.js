@@ -5,6 +5,8 @@ const Header = () => {
   return (
     <Head>
       <h1>보람삼조 XX토론</h1>
+
+      <Btn>로그인</Btn>
     </Head>
   );
 };
@@ -19,4 +21,10 @@ const Head = styled.div`
   align-items: center;
 
   margin: 20px 40px;
+`;
+
+const Btn = styled.button`
+  display: flex;
+  justify-content: right;
+  align-items: right;
 `;
