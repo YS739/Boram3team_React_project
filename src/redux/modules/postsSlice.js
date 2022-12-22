@@ -1,7 +1,15 @@
-import React from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-function postsSlice() {
-  return <div></div>;
-}
+const initialState = {
+  todo: [],
+  isLoading: false,
+  error: null,
+};
+
+const postsSlice = createSlice({
+  name: "postsSlice",
+  initialState,
+  reducers: {},
+});
 
 export default postsSlice;

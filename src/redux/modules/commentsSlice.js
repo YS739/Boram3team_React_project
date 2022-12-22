@@ -1,7 +1,15 @@
-import React from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-function commentsSlice() {
-  return <div></div>;
-}
+const initialState = {
+  todo: [],
+  isLoading: false,
+  error: null,
+};
+
+const commentsSlice = createSlice({
+  name: "commentsSlice",
+  initialState,
+  reducers: {},
+});
 
 export default commentsSlice;

@@ -1,7 +1,15 @@
-import React from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-function usersSlice() {
-  return <div></div>;
-}
+const initialState = {
+  todo: [],
+  isLoading: false,
+  error: null,
+};
+
+const usersSlice = createSlice({
+  name: "usersSlice",
+  initialState,
+  reducers: {},
+});
 
 export default usersSlice;
