@@ -1,7 +1,7 @@
 import React from "react";
 
-function UploadPage() {
-  return <div>글작성</div>;
-}
+const UploadPage = () => {
+  return <div>UploadPage</div>;
+};
 
 export default UploadPage;
