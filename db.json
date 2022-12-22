@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "뭐라고할까요",
+      "category": "value",
+      "like": 0
+    }
+  ]
+}
