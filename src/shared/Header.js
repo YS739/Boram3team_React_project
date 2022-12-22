@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Head>
       <h1>보람삼조 XX토론</h1>
-
-      <Btn>로그인</Btn>
+      <Btn onClick={() => navigate("/login")}>로그인</Btn>
     </Head>
   );
 };
