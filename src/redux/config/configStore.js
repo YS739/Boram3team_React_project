@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     commentsSlice: commentsSlice,
     postsSlice: postsSlice,
-    users: users,
+    users,
   },
 });
 

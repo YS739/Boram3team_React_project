@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "ID": "ee",
-      "PW": "e",
-      "user": true,
-      "id": 1
+      "id": "a0850a40-d1e3-4959-b8fd-496e6cbcf75f",
+      "userId": "e",
+      "userPw": "e",
+      "loggedIn": true
     }
   ]
 }

@@ -9,6 +9,18 @@ const initialState = {
 };
 
 // Thunk 함수
+export const __getUsers = createAsyncThunk(
+  "users/getUsers",
+  async (payload, thunkAPI) => {
+    try { 
+      const data = await axios.get("http://localhost:3001/users");
+      return thunkAPI.fulfillWithValue(data.data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const __signUp = createAsyncThunk(
   // 첫 번째 인자: action value
   "users/signUp",
@@ -29,6 +41,18 @@ const usersSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
+    [__getUsers.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__getUsers]: (state, action) => {
+      state.isLoading = false;
+      state.users = action.payload;
+    },
+    [__getUsers]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+
     [__signUp.pending]: (state) => {
       state.isLoading = true;
       console.log("pengding")
