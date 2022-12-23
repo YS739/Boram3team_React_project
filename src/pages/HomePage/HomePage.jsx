@@ -12,7 +12,6 @@ const HomePage = () => {
 
   return (
     <div>
-      HomePage
       <PostList></PostList>
     </div>
   );
