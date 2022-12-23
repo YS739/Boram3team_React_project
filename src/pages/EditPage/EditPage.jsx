@@ -1,14 +1,22 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { v4 as uuidv4 } from "uuid";
+import { __editPost } from "../../redux/modules/postsSlice";
 
 const EditPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  // TODO: 새로고침 오류 방지 - useEffect, __getPost 쓰기
+  // useEffect(()=>{
+  //   dispatch()
+  // })
+
   // TODO: useInput custom hook 쓰기
   const [title, setTitle] = useState();
   const [aContents, setAContents] = useState();
   const [bContents, setBContents] = useState();
-
-  const navigate = useNavigate();
 
   const editPostHandler = (e) => {
     e.preventDefault();
@@ -16,14 +24,13 @@ const EditPage = () => {
     if (title && aContents && bContents) {
       if (window.confirm("수정하시겠습니까?") === true) {
         navigate("/upload");
-
-        // TODO: dispatch에 넣기(import 하기)
         const editPost = {
           id: uuidv4(), //TODO: comment.id 등으로 바꾸기
           title,
           aContents,
           bContents,
         };
+        dispatch(__editPost(editPost));
       }
     }
 
