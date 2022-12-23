@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CommentBody } from "./style";
+import { CommentBody, CommentUser } from "./style";
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -17,10 +17,12 @@ const Comments = () => {
       {globalComment?.map((co) => {
         return (
           <>
-            <div>카테고리 내용</div>
             <CommentBody>
-              <span key={co.id}>{co.comment}</span>
-              <span>작성자</span>
+              <div>카테고리 내용</div>
+              <CommentUser>
+                <span key={co.id}>{co.comment}</span>
+                <span>작성자</span>
+              </CommentUser>
             </CommentBody>
           </>
         );

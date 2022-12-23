@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
+import { CommentForm, CategoryBox, CommentInputBox } from "./style";
 
 const CommentUpload = () => {
   // TODO: useInput custom hook 쓰기
@@ -45,25 +46,37 @@ const CommentUpload = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmitCommentHandler}>
-        {/* A,B 선택하기 */}
-        <input type="radio" name="category" id="A" value="true" />
-        <label for="A">A: 부먹</label>
-        {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
-        {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
-        <input type="radio" name="category" id="B" value="false" />
-        <label for="B">B: 찍먹</label>
-        <br />
-        <input
-          id="comment"
-          value={comment}
-          placeholder="댓글을 입력해주세요."
-          onChange={onChangeCommentHandler}
-        ></input>
-        <button>댓글 등록</button>
-      </form>
-    </div>
+    <>
+      <CommentForm>
+        <form onSubmit={onSubmitCommentHandler}>
+          {/* A,B 선택하기 */}
+          <CategoryBox>
+            <span>
+              <input type="radio" name="category" id="A" value="true" />
+              <label for="A">A: 부먹</label>
+            </span>
+            <span>
+              <input type="radio" name="category" id="B" value="false" />
+              <label for="B">B: 찍먹</label>
+            </span>
+            {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
+            {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
+          </CategoryBox>
+
+          {/* 댓글 입력 */}
+          <br />
+          <CommentInputBox>
+            <input
+              id="comment"
+              value={comment}
+              placeholder="댓글을 입력해주세요."
+              onChange={onChangeCommentHandler}
+            ></input>
+            <button>댓글 등록</button>
+          </CommentInputBox>
+        </form>
+      </CommentForm>
+    </>
   );
 };
 
