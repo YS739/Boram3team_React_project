@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  todo: [],
-  isLoading: false,
-  error: null,
-};
+const initialState = {};
 
 const commentsSlice = createSlice({
   name: "commentsSlice",
