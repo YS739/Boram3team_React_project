@@ -3,6 +3,7 @@ import axios from "axios";
 
 const initialState = {};
 
+// 댓글 불러오기
 export const __getComment = createAsyncThunk(
   "comments/getComment",
   async (payload, thunkAPI) => {
@@ -15,6 +16,7 @@ export const __getComment = createAsyncThunk(
   }
 );
 
+// 댓글 등록하기
 export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {

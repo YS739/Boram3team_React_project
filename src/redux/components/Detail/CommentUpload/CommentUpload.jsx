@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 
 const CommentUpload = () => {
+  // TODO: useInput custom hook 쓰기
   const [comment, setComment] = useState();
   const dispatch = useDispatch();
 
@@ -19,6 +20,7 @@ const CommentUpload = () => {
         comment,
       };
       dispatch(__postComment(newComment));
+
       // input 초기화
       setComment("");
     }

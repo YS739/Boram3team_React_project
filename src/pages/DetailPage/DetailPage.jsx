@@ -11,6 +11,7 @@ const DetailPage = () => {
   useEffect(() => {
     dispatch(__getComment());
   }, [dispatch]);
+
   return (
     <div>
       <Post />
