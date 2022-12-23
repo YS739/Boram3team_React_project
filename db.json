@@ -1,0 +1,10 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "aContent": "json-server를 배워봅시다.",
+      "bContent": "json-server를 배워봅시다."
+    }
+  ]
+}
