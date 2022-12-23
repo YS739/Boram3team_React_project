@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
   const globalComment = useSelector((state) => state.comments.comment);
+  // TODO: initialState 이용해서 state.comments로 바꾸기
 
   if (error) {
     // 데이터를 불러오다가 오류가 나면 화면에 오류 메시지 표시

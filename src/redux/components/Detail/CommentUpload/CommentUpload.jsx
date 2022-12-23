@@ -18,6 +18,7 @@ const CommentUpload = () => {
       const newComment = {
         id: uuidv4(),
         comment,
+        // TODO: 본문 아이디, category 추가하기
       };
       dispatch(__postComment(newComment));
 
@@ -38,8 +39,6 @@ const CommentUpload = () => {
         <input
           id="comment"
           value={comment}
-          // TODO: 글자수 상의해서 정하기 - alert 추가
-          maxLength="30"
           placeholder="댓글을 입력해주세요."
           onChange={onChangeCommentHandler}
         ></input>

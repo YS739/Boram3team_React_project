@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {};
+const initialState = {
+  // TODO: 추가하기
+};
 
 // 댓글 불러오기
 export const __getComment = createAsyncThunk(
@@ -21,7 +23,8 @@ export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.post("http://localhost:3001/comments", payload);
+      await axios.post("http://localhost:3001/comments", payload);
+      const data = await axios.get("http://localhost:3001/comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -50,7 +53,7 @@ const commentsSlice = createSlice({
     },
     [__postComment.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.comment = [...state.comment, action.payload];
+      state.comment = action.payload;
     },
     [__postComment.rejected]: (state, action) => {
       state.isLoading = false;
