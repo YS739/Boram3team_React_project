@@ -12,7 +12,7 @@ const Comments = () => {
 
   return (
     <div>
-      {globalComment.map((co) => {
+      {globalComment?.map((co) => {
         return <div key={co.id}>{co.comment}</div>;
       })}
     </div>
