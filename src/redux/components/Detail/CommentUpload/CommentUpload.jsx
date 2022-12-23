@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
-import { __postComment } from "../../../modules/commentsSlice";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { __postComment } from '../../../modules/commentsSlice';
 
 const CommentUpload = () => {
   // TODO: useInput custom hook 쓰기
@@ -22,13 +22,13 @@ const CommentUpload = () => {
       dispatch(__postComment(newComment));
 
       // input 초기화
-      setComment("");
+      setComment('');
     }
     // 댓글을 작성하지 않았을 때 alert
     else if (!comment) {
       e.preventDefault();
-      document.getElementById("comment").focus();
-      alert("댓글을 입력해주세요.");
+      document.getElementById('comment').focus();
+      alert('댓글을 입력해주세요.');
     }
   };
 
@@ -36,10 +36,10 @@ const CommentUpload = () => {
     <div>
       <form onSubmit={onSubmitCommentHandler}>
         <input
-          id="comment"
+          id='comment'
           value={comment}
-          maxLength="30"
-          placeholder="댓글을 입력해주세요."
+          maxLength='30'
+          placeholder='댓글을 입력해주세요.'
           onChange={onChangeCommentHandler}
         ></input>
         <button>댓글 등록</button>

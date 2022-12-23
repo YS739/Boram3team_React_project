@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import Comments from "../../redux/components/Detail/Comments";
-import CommentUpload from "../../redux/components/Detail/CommentUpload";
-import Post from "../../redux/components/Detail/Post";
-import { __getComment } from "../../redux/modules/commentsSlice";
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Comments from '../../redux/components/Detail/Comments';
+import CommentUpload from '../../redux/components/Detail/CommentUpload';
+import Post from '../../redux/components/Detail/Post';
+import { __getComment } from '../../redux/modules/commentsSlice';
 
 const DetailPage = () => {
   const dispatch = useDispatch();
