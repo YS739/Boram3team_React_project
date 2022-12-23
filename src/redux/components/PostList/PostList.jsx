@@ -1,13 +1,23 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { __getComments } from "../../modules/commentsSlice";
 import { __getPosts } from "../../modules/postsSlice";
-import { Article, H1, PostBox, PostLike, Section } from "./style";
+import {
+  Article,
+  H1,
+  PostBox,
+  PostLike,
+  Section,
+  PostContainer,
+  GageBar,
+  BarA,
+} from "./style";
 
 const PostList = () => {
-  const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
+  const { comments } = useSelector((state) => state.comments);
   const navigate = useNavigate();
-
   if (error) {
     return <div>{error.message}</div>;
   }
@@ -17,6 +27,26 @@ const PostList = () => {
       <H1>토론주제</H1>
 
       {posts.map((post) => {
+        let countA = 0;
+        let countB = 0;
+
+        comments.map((comment) => {
+          if (comment.isA === true && comment.postId === post.id) {
+            countA = countA + 1;
+          }
+          if (comment.isA === false && comment.postId === post.id) {
+            countB = countB + 1;
+          }
+        });
+        let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
+        let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+        if (countA === 0) {
+          ratioA = 50;
+        }
+        if (countB === 0) {
+          ratioB = 50;
+        }
+
         return (
           <Article
             key={post.id}
@@ -24,16 +54,26 @@ const PostList = () => {
               navigate(`/${post.id}`);
             }}
           >
-            <PostBox>
-              <div>논제: {post.title}</div>
-              <div>
+            <PostContainer>
+              <PostBox>
+                <div>논제: {post.title}</div>
                 <div>
-                  A: {post.categoryA} vs B: {post.categoryB}
+                  <div>
+                    A: {post.categoryA} vs B: {post.categoryB}
+                  </div>
+                  <div></div>
                 </div>
-                <div></div>
-              </div>
-            </PostBox>
-            <PostLike>👍: {post.like}</PostLike>
+              </PostBox>
+              <PostLike>👍: {post.like}</PostLike>
+            </PostContainer>
+            <GageBar>
+              <BarA bg={ratioA} color={"coral"}>
+                {ratioA}%
+              </BarA>
+              <BarA bg={ratioB} color={"skyblue"}>
+                {ratioB}%
+              </BarA>
+            </GageBar>
           </Article>
         );
       })}

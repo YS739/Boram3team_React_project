@@ -28,5 +28,49 @@
       "categoryB": "내가 준 선물 당근마켓에 파는 남친",
       "like": 0
     }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 1,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
+    },
+    {
+      "id": 2,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 3,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 4,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
+    },
+    {
+      "id": 5,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 6,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
+    }
   ]
 }
