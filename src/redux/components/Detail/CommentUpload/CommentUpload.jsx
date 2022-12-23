@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
+import { __postComment } from "../../../modules/commentsSlice";
 
 const CommentUpload = () => {
   const [comment, setComment] = useState();
-  //  TODO: dispatch import 추가
+  const dispatch = useDispatch();
 
   const onChangeCommentHandler = (e) => {
     setComment(e.target.value);
@@ -16,8 +18,12 @@ const CommentUpload = () => {
         id: uuidv4(),
         comment,
       };
-      // TODO: dispatch, input 초기화 추가
-    } else if (!comment) {
+      dispatch(__postComment(newComment));
+      // input 초기화
+      setComment("");
+    }
+    // 댓글을 작성하지 않았을 때 alert
+    else if (!comment) {
       e.preventDefault();
       document.getElementById("comment").focus();
       alert("댓글을 입력해주세요.");
