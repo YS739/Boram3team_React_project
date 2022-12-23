@@ -4,7 +4,7 @@ import DetailPage from "../pages/DetailPage";
 import EditPage from "../pages/EditPage";
 import UploadPage from "../pages/UploadPage";
 import SignUpPage from "../pages/SignUpPage";
-import LoginPage from "../pages/LoginPage/LoginPage";
+import LoginPage from "../pages/LoginPage";
 import MyPage from "../pages/MyPage";
 import Layout from "./Layout";
 

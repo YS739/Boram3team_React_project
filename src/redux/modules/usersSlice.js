@@ -9,6 +9,7 @@ const initialState = {
 };
 
 // Thunk 함수
+// DB의 users 정보를 불러옴.
 export const __getUsers = createAsyncThunk(
   "users/getUsers",
   async (payload, thunkAPI) => {
@@ -21,6 +22,7 @@ export const __getUsers = createAsyncThunk(
   }
 );
 
+// 회원가입할 때 새로운 user 정보를 users DB에 저장함.
 export const __signUp = createAsyncThunk(
   // 첫 번째 인자: action value
   "users/signUp",
@@ -28,6 +30,20 @@ export const __signUp = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post("http://localhost:3001/users", payload);
+      const data = await axios.get("http://localhost:3001/users");
+      return thunkAPI.fulfillWithValue(data.data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+// 로그인했을 때 loggedIn을 true로 변경함
+export const __switchLoggedIn = createAsyncThunk(
+  "users/switchLoggedIn",
+  async (payload, thunkAPI) => {
+    try {
+      await axios.patch(`http://localhost:3001/users/${payload.id}`, payload)
       const data = await axios.get("http://localhost:3001/users");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -44,11 +60,11 @@ const usersSlice = createSlice({
     [__getUsers.pending]: (state) => {
       state.isLoading = true;
     },
-    [__getUsers]: (state, action) => {
+    [__getUsers.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.users = action.payload;
     },
-    [__getUsers]: (state, action) => {
+    [__getUsers.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     },
@@ -64,6 +80,18 @@ const usersSlice = createSlice({
       console.log("state.users:", state.users)
     },
     [__signUp.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+
+    [__switchLoggedIn.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__switchLoggedIn.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.users = action.payload;
+    },
+    [__switchLoggedIn.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     }
