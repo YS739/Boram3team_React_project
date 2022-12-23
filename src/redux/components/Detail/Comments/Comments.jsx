@@ -2,6 +2,7 @@ import React, { createElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { __deleteComment } from '../../../modules/commentsSlice';
 import { __changeComment } from '../../../modules/commentsSlice';
+import { CommentBody, CommentUser } from './style';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -34,18 +35,31 @@ const Comments = () => {
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {globalComment?.map((co) => {
         return (
-          <div key={co.id}>
-            {co.comment}
-            <span>
-              <button type='button' onClick={() => changeButtonHandler(co.id)}>
-                수정
-              </button>
-              <button type='button' onClick={() => deleteButtonHandler(co.id)}>
-                삭제
-              </button>
-            </span>
-          </div>
+          <>
+            <CommentBody>
+              <div>카테고리 내용</div>
+              <CommentUser>
+                <span key={co.id}>{co.comment}</span>
+                <span>작성자</span>
+              </CommentUser>
+              <span>
+                <button
+                  type='button'
+                  onClick={() => changeButtonHandler(co.id)}
+                >
+                  수정
+                </button>
+                <button
+                  type='button'
+                  onClick={() => deleteButtonHandler(co.id)}
+                >
+                  삭제
+                </button>
+              </span>
+            </CommentBody>
+          </>
         );
+        // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
     </div>
   );

@@ -1,7 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const initialState = {};
+const initialState = {
+  comments: [],
+  isLoading: false,
+  error: null,
+};
 
 // 댓글 불러오기
 export const __getComment = createAsyncThunk(
@@ -80,7 +84,7 @@ const commentsSlice = createSlice({
     },
     [__postComment.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.comment = [...state.comment, action.payload];
+      state.comment = action.payload;
     },
     [__postComment.rejected]: (state, action) => {
       state.isLoading = false;
