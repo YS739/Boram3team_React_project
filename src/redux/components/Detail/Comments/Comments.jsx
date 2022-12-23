@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { CommentBody } from "./style";
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -14,7 +15,16 @@ const Comments = () => {
     <div>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {globalComment?.map((co) => {
-        return <div key={co.id}>{co.comment}</div>;
+        return (
+          <>
+            <div>카테고리 내용</div>
+            <CommentBody>
+              <span key={co.id}>{co.comment}</span>
+              <span>작성자</span>
+            </CommentBody>
+          </>
+        );
+        // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
     </div>
   );
