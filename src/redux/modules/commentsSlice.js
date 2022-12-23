@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  posts: [],
+  comments: [],
   isLoading: false,
   error: null,
 };
@@ -12,13 +12,7 @@ export const __getComment = createAsyncThunk(
   "comments/getComment",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/posts");
-      // const allData = data.data;
-      // const commentData = allData.map((comment) => comment.comments);
-      // console.log(commentData);
-      // const getComment = commentData.map((comment) => comment);
-      // console.log(getComment);
-      console.log(data.data);
+      const data = await axios.get("http://localhost:3001/comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -31,10 +25,9 @@ export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {
     try {
-      // TODO: 댓글이 posts 안의 comments로 들어가야 함
-      await axios.post("http://localhost:3001/posts", payload);
+      await axios.post("http://localhost:3001/comments", payload);
       // 최신 데이터를 불러오기 위해 get 추가
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get("http://localhost:3001/comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -43,8 +36,7 @@ export const __postComment = createAsyncThunk(
 );
 
 const commentsSlice = createSlice({
-  name: "posts",
-  // FIXME: postSlice랑 겹쳐서 수정해야 함 - configStore도
+  name: "comments",
   initialState,
   reducers: {},
   extraReducers: {
@@ -53,7 +45,7 @@ const commentsSlice = createSlice({
     },
     [__getComment.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.posts = action.payload;
+      state.comment = action.payload;
     },
     [__getComment.rejected]: (state, action) => {
       state.isLoading = false;
@@ -64,7 +56,7 @@ const commentsSlice = createSlice({
     },
     [__postComment.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.posts = action.payload;
+      state.comment = action.payload;
     },
     [__postComment.rejected]: (state, action) => {
       state.isLoading = false;

@@ -52,11 +52,11 @@ const CommentUpload = () => {
           <div>
             <span>
               <input type="radio" name="category" id="A" value="true" />
-              <label for="A">A: 부먹</label>
+              <label htmlFor="A">A: 부먹</label>
             </span>
             <span>
               <input type="radio" name="category" id="B" value="false" />
-              <label for="B">B: 찍먹</label>
+              <label htmlFor="B">B: 찍먹</label>
             </span>
             {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
             {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
