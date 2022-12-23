@@ -1,33 +1,9 @@
 {
-  "posts": [
+  "comments": [
     {
-      "id": 0,
-      "title": "탕수육",
-      "categoryA": "부먹",
-      "categoryB": "찍먹",
-      "like": 0,
-      "comments": [
-        {
-          "id": "346dad80-b2e2-49d0-b1da-3180f4986abc",
-          "comment": "ㅇ",
-          "isA": "false"
-        },
-        {
-          "id": "83dcab80-98d4-4aa0-b8a7-b44ca67c7683",
-          "comment": "ㄹㄹ3ㄹㅇㅇㄹ",
-          "isA": "false"
-        },
-        {
-          "id": "bef48a55-e954-47a2-a886-b350189af9c6",
-          "comment": " ㅇ",
-          "isA": "false"
-        },
-        {
-          "id": "2ce01eb6-50a9-4813-a180-9c937b67cb71",
-          "comment": "dfd",
-          "isA": "false"
-        }
-      ]
+      "id": "346dad80-b2e2-49d0-b1da-3180f4986abc",
+      "comment": "dfdfafdf",
+      "isA": "false"
     }
   ]
 }
