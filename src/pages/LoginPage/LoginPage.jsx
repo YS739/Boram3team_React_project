@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { __getUsers, __switchLoggedIn } from "../../redux/modules/usersSlice";
+import { __getUsers, __switchIsLogin } from "../../redux/modules/usersSlice";
 import useInput from "../../hooks/useInput";
 
 const LoginPage = () => {
@@ -34,11 +34,11 @@ const LoginPage = () => {
                 id: user.id,
                 userId: user.userId,
                 userPw: user.userPw,
-                loggedIn: true,
+                isLogin: true,
             }
 
-            // 로그인 성공하면 loggedIn을 true로 변경함
-            dispatch(__switchLoggedIn(switchUser))
+            // 로그인 성공하면 isLogin을 true로 변경함
+            dispatch(__switchIsLogin(switchUser))
         }
 
         setUserId('');

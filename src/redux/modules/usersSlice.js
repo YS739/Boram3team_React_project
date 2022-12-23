@@ -39,7 +39,7 @@ export const __signUp = createAsyncThunk(
 );
 
 // 로그인했을 때 loggedIn을 true로 변경함
-export const __switchLoggedIn = createAsyncThunk(
+export const __switchIsLogin = createAsyncThunk(
   "users/switchLoggedIn",
   async (payload, thunkAPI) => {
     try {
@@ -84,14 +84,14 @@ const usersSlice = createSlice({
       state.error = action.payload;
     },
 
-    [__switchLoggedIn.pending]: (state) => {
+    [__switchIsLogin.pending]: (state) => {
       state.isLoading = true;
     },
-    [__switchLoggedIn.fulfilled]: (state, action) => {
+    [__switchIsLogin.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.users = action.payload;
     },
-    [__switchLoggedIn.rejected]: (state, action) => {
+    [__switchIsLogin.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     }
