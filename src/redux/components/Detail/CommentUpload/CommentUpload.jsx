@@ -17,6 +17,7 @@ const CommentUpload = () => {
     const categories = document.getElementsByName("category");
     const selected = Array.from(categories).find((choice) => choice.checked);
 
+    // 댓글 입력하고 카테고리 선택했을 때
     if (comment && selected) {
       e.preventDefault();
       const newComment = {
