@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { __postComment } from '../../../modules/commentsSlice';
-import { CommentForm, CategoryBox, CommentInputBox } from './style';
 
 const CommentUpload = () => {
   // TODO: useInput custom hook 쓰기
@@ -47,10 +46,10 @@ const CommentUpload = () => {
 
   return (
     <>
-      <CommentForm>
+      <div>
         <form onSubmit={onSubmitCommentHandler}>
           {/* A,B 선택하기 */}
-          <CategoryBox>
+          <div>
             <span>
               <input type='radio' name='category' id='A' value='true' />
               <label for='A'>A: 부먹</label>
@@ -61,11 +60,11 @@ const CommentUpload = () => {
             </span>
             {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
             {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
-          </CategoryBox>
+          </div>
 
           {/* 댓글 입력 */}
           <br />
-          <CommentInputBox>
+          <div>
             <input
               id='comment'
               value={comment}
@@ -73,9 +72,9 @@ const CommentUpload = () => {
               onChange={onChangeCommentHandler}
             ></input>
             <button>댓글 등록</button>
-          </CommentInputBox>
+          </div>
         </form>
-      </CommentForm>
+      </div>
     </>
   );
 };

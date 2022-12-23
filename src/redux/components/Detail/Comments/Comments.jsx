@@ -1,13 +1,9 @@
-import React, { createElement } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { __deleteComment } from '../../../modules/commentsSlice';
-import { __changeComment } from '../../../modules/commentsSlice';
-import { CommentBody, CommentUser } from './style';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
-  const globalComment = useSelector((state) => state.comments.comment);
-  const dispatch = useDispatch();
+  const { comment } = useSelector((state) => state.comments);
 
   if (error) {
     // 데이터를 불러오다가 오류가 나면 화면에 오류 메시지 표시
@@ -33,31 +29,15 @@ const Comments = () => {
   return (
     <div>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
-      {globalComment?.map((co) => {
+      {comment?.map((co) => {
         return (
-          <>
-            <CommentBody>
-              <div>카테고리 내용</div>
-              <CommentUser>
-                <span key={co.id}>{co.comment}</span>
-                <span>작성자</span>
-              </CommentUser>
-              <span>
-                <button
-                  type='button'
-                  onClick={() => changeButtonHandler(co.id)}
-                >
-                  수정
-                </button>
-                <button
-                  type='button'
-                  onClick={() => deleteButtonHandler(co.id)}
-                >
-                  삭제
-                </button>
-              </span>
-            </CommentBody>
-          </>
+          <div key={co.id}>
+            <div>카테고리 내용</div>
+            <div>
+              <span>{co.comment}</span>
+              <span>작성자</span>
+            </div>
+          </div>
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
