@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { __deleteComment } from '../../../modules/commentsSlice';
 import { __changeComment } from '../../../modules/commentsSlice';
@@ -28,30 +28,39 @@ const Comments = () => {
 
   const changeButtonHandler = (id) => {
     let input = prompt();
-
-    // const changeId = id;
-    // console.log(changeId);
-
-    const changeComment = {
-      id,
-      comment: input,
-    };
-
-    dispatch(__changeComment(changeComment));
+    console.log(input);
+    if (input !== null) {
+      const changeComment = {
+        id,
+        comment: input,
+      };
+      dispatch(__changeComment(changeComment));
+    } else if (input === null) {
+      return;
+    }
   };
 
   return (
     <div>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {comment?.map((co) => {
+        // const input
+
         return (
           <div key={co.id}>
             <div>카테고리 내용</div>
             <div>
               <span>{co.comment}</span>
               <span>작성자</span>
-              <span>
-                <button onClick={() => changeButtonHandler(co.id)}>수정</button>
+              <span id='comment'>
+                {/* {document.querySelector('#change') ? <input /> : null} */}
+                <button
+                  id='changein'
+                  type='button'
+                  onClick={() => changeButtonHandler(co.id)}
+                >
+                  수정
+                </button>
                 <button onClick={() => deleteButtonHandler(co.id)}>삭제</button>
               </span>
             </div>
