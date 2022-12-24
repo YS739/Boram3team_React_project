@@ -11,7 +11,9 @@ export const __getComments = createAsyncThunk(
   "comments/getComments",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "http://localhost:3001/comments?_sort=createdAt&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -24,9 +26,14 @@ export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/comments", payload);
+      await axios.post(
+        "http://localhost:3001/comments?_sort=createdAt&_order=DESC",
+        payload
+      );
       // 최신 데이터를 불러오기 위해 get 추가
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "http://localhost:3001/comments?_sort=createdAt&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

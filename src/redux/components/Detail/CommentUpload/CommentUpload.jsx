@@ -42,6 +42,7 @@ const CommentUpload = () => {
         postId: theId,
         comment,
         isA: selected.value,
+        createdAt: Date.now(),
       };
       dispatch(__postComment(newComment));
 
