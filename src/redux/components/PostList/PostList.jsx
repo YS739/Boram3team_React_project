@@ -1,10 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { __getPosts } from "../../modules/postsSlice";
 import { Article, H1, PostBox, PostLike, Section } from "./style";
 
 const PostList = () => {
-  const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const navigate = useNavigate();
 
