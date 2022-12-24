@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { __getUsers, __switchIsLogin } from "../../redux/modules/usersSlice";
+import { __getUsers } from "../../redux/modules/usersSlice";
 import useInput from "../../hooks/useInput";
 
 const LoginPage = () => {
@@ -16,6 +16,10 @@ const LoginPage = () => {
     const [userId, setUserId, onChangeUserIdHandler] = useInput();
     const [userPw, setUserPw, onChangeUserPwHandler] = useInput();
 
+    // 어느 페이지든 현재 로그인한 유저의 id를 가져오고 싶을 때
+    // let logeedInUseId = localStorage.getItem("id");
+    // console.log(logeedInUseId)
+
     const logInHandler = (e) => {
         e.preventDefault();
 
@@ -30,19 +34,22 @@ const LoginPage = () => {
         } else {
             alert("로그인 성공")
 
-            const switchUser = {
-                id: user.id,
-                userId: user.userId,
-                userPw: user.userPw,
-                isLogin: true,
-            }
+            // 로그인한 특정 유저의 id를 localStorage에 저장함
+            // 저장하는 이유는 어느 페이지에 가든 현재 로그인한 유저의 id를 불러오기 위해서
+            localStorage.clear();
+            localStorage.setItem("id", user.id)
+            
+            // 로그인 성공하면 input 창 비우기
+            setUserId('');
+            setUserPw('');
+        };
+    };
 
-            // 로그인 성공하면 isLogin을 true로 변경함
-            dispatch(__switchIsLogin(switchUser))
-        }
+    const logoutHandler = (e) => {
+        e.preventDefault();
+        alert("로그아웃 완료")
+        localStorage.clear();
 
-        setUserId('');
-        setUserPw('');
     };
 
     if (error) {
@@ -57,9 +64,10 @@ const LoginPage = () => {
                 <input type="text" id="userId" name="userId" method="post"
                 value={userId} onChange={onChangeUserIdHandler}/>
                 <span>비밀번호</span>
-                <input type="text" id="userPw" name="userPw" method="post"
+                <input type="password" id="userPw" name="userPw" method="post"
                 value={userPw} onChange={onChangeUserPwHandler}/>
                 <button onClick={logInHandler}>로그인하기</button>
+                <button onClick={logoutHandler}>로그아웃</button>
             </form>
         </div>
     )
