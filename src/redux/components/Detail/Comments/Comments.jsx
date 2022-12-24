@@ -44,8 +44,6 @@ const Comments = () => {
     <div>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {comment?.map((co) => {
-        // const input
-
         return (
           <div key={co.id}>
             <div>카테고리 내용</div>
