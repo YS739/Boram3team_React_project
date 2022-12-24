@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../shared/components/Header";
+import Header from "./Header";
 // TODO: 컴포넌트 빼서 if문으로 로그인/글작성/마이페이지 보이게
 
 const Footer = () => {
