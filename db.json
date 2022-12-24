@@ -9,19 +9,22 @@
   ],
   "comments": [
     {
-      "id": "346dad80-b2e2-49d0-b1da-3180f4986abc",
-      "comment": "ㅇ",
+      "id": "95c0ac6b-58b8-4700-a8ff-d99c04fd16b8",
+      "postId": 1,
+      "comment": "난 찍ㄴ먹",
       "isA": "false"
     },
     {
-      "id": "420b64e7-ddf6-4ea5-b5eb-14dd65d8cb76",
-      "comment": "부먹",
+      "id": "86307678-5c68-493c-8a8e-0003d1f70765",
+      "postId": 1,
+      "comment": "ㅇㄻㄹㄴㅇ",
       "isA": "true"
     },
     {
-      "id": "1d661ba0-de37-4402-899a-28e62eb822bd",
-      "comment": "부먹 최고",
-      "isA": "true"
+      "id": "971897b6-a332-432e-9126-e0839dccdb94",
+      "postId": 1,
+      "comment": "ㅁㄹㅇㄴㄹㅇㄹ",
+      "isA": "false"
     }
   ]
 }

@@ -5,6 +5,12 @@ const Comments = () => {
   const { error } = useSelector((state) => state.comments);
   const { comment } = useSelector((state) => state.comments);
 
+  // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
+  const { posts } = useSelector((state) => state.posts);
+  const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+  const theA = thePost?.categoryA;
+  const theB = thePost?.categoryB;
+
   if (error) {
     return <div>{error.message}</div>;
   }
@@ -16,7 +22,7 @@ const Comments = () => {
         return (
           <div key={co.id}>
             <br />
-            <div>{co.isA === "true" ? "부먹" : "찍먹"}</div>
+            <div>{co.isA === "true" ? theA : theB}</div>
             <div>
               <span>{co.comment}</span>
               <span>작성자ID</span>
