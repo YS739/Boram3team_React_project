@@ -7,8 +7,8 @@ const initialState = {
   error: null,
 };
 
-export const __getPost = createAsyncThunk(
-  "posts/getPost",
+export const __getPosts = createAsyncThunk(
+  "posts/getPosts",
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get("http://localhost:3001/posts");
@@ -37,15 +37,15 @@ const postsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [__getPost.pending]: (state) => {
+    [__getPosts.pending]: (state) => {
       state.isLoading = true;
     },
-    [__getPost.fulfilled]: (state, action) => {
+    [__getPosts.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.posts = action.payload;
     },
   },
-  [__getPost.rejected]: (state, action) => {
+  [__getPosts.rejected]: (state, action) => {
     state.isLoading = false;
     state.posts = action.payload;
   },

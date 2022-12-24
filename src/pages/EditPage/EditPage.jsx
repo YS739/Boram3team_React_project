@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
-import { __editPost, __getPost } from "../../redux/modules/postsSlice";
+import { __editPost, __getPosts } from "../../redux/modules/postsSlice";
 
 const EditPage = () => {
   const dispatch = useDispatch();
 
   // 새로고침 오류 방지
   useEffect(() => {
-    dispatch(__getPost());
+    dispatch(__getPosts());
   }, [dispatch]);
 
   const { posts } = useSelector((state) => state.posts);
