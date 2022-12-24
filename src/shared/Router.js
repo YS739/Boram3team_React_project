@@ -4,6 +4,7 @@ import DetailPage from "../pages/DetailPage";
 import EditPage from "../pages/EditPage";
 import UploadPage from "../pages/UploadPage";
 import SignUpPage from "../pages/SignUpPage";
+import LoginPage from "../pages/LoginPage";
 import MyPage from "../pages/MyPage";
 import Layout from "./Layout";
 
@@ -16,7 +17,8 @@ const Router = () => {
           <Route path="/:id" element={<DetailPage />} />
           <Route path="/edit/:id" element={<EditPage />} />
           <Route path="/upload" element={<UploadPage />} />
-          <Route path="/login" element={<SignUpPage />} />
+          <Route path="/signUp" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/my" element={<MyPage />} />
         </Routes>
       </Layout>
