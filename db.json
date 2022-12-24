@@ -1,9 +1,16 @@
 {
-  "post": [
+  "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "content": "json-server를 배워봅시다."
+      "title": "jsoaffd",
+      "aContents": "addfd",
+      "bContents": "afsdfd"
+    },
+    {
+      "id": 2,
+      "title": "탕수육을 맛있게 먹는 방법은?",
+      "aContents": "찍먹",
+      "bContents": "부먹"
     },
     {
       "id": "0b652fca-3540-4f7c-a5b6-e8cf5f4e0628",
@@ -46,6 +53,18 @@
       "title": "d",
       "aContents": "d",
       "bContents": "d"
+    },
+    {
+      "id": "cc3b1dda-ba83-4881-915c-6607698f55d6",
+      "title": "d",
+      "aContents": "f",
+      "bContents": "d"
+    },
+    {
+      "id": "b3147ab7-f9a9-482d-8ed5-4e072934cbfe",
+      "title": " fgffgd",
+      "aContents": "dfgfdg",
+      "bContents": "fgdfg"
     }
   ]
 }

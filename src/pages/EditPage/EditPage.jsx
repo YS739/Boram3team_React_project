@@ -1,56 +1,80 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
-import { v4 as uuidv4 } from "uuid";
-import { __editPost } from "../../redux/modules/postsSlice";
+import { __editPost, __getPost } from "../../redux/modules/postsSlice";
 
 const EditPage = () => {
   const dispatch = useDispatch();
 
-  // TODO: 새로고침 오류 방지 - useEffect, __getPost 쓰기
-  // useEffect(()=>{
-  //   dispatch(__getPost())
-  // },[dispatch]);
+  // 새로고침 오류 방지
+  useEffect(() => {
+    dispatch(__getPost());
+  }, [dispatch]);
 
-  // FIXME: 본문 등록 페이지가 reducer 등등으로 연결이 안 되어 있어서 state가 빈 배열이 나옴
-  // __getPost함수를 만들어 useEffect를 써야함
-  // const globalPost = useSelector((state) => state.posts);
-  // console.log(globalPost);
-
+  const { posts } = useSelector((state) => state.posts);
+  // TODO: 본문 클릭과 연결 되면 주석 해제
   // const param = useParams();
-  // const { error } = useSelector((state) => state.posts);
+  const { error } = useSelector((state) => state.posts);
 
-  // const thePost = globalPost.find((post) => post.id === param.id);
-  // const navigate = useNavigate(`/${thePost.id}`);
+  // TODO: 본문 등록 페이지 구현 완료 되면 2를 param.id로수정하기
+  const thePost = posts?.find((post) => post.id === 2);
+  const navigate = useNavigate();
 
   // TODO: useInput custom hook 쓰기
-  const [title, setTitle] = useState();
-  const [aContents, setAContents] = useState();
-  const [bContents, setBContents] = useState();
+  const [title, setTitle] = useState(thePost?.title); // thePost?.title
+  const [aContents, setAContents] = useState(thePost?.aContents); // thePost.aContents
+  const [bContents, setBContents] = useState(thePost?.bContents); // thePost.bContents
 
-  // if (error) {
-  //   return <div>{error.massage}</div>;
-  // }
+  useEffect(() => {
+    if (posts.length < 1) return;
 
+    // TODO: 본문 등록 페이지 구현 완료 되면 param.id 등 수정하기
+    const thePost = posts?.find((post) => post.id === 2);
+    // 새로고침 후 데이터가 들어왔을 때
+    // input에 가져온 posts 데이터를 넣음
+    setTitle(thePost?.title);
+    setAContents(thePost?.aContents);
+    setBContents(thePost?.bContents);
+  }, [posts]);
+
+  if (error) {
+    return <div>{error.massage}</div>;
+  }
+
+  // input창에 새로운 값 입력할 때
+  const titleChangeHandler = (e) => {
+    e.preventDefault();
+    setTitle(e.target.value);
+  };
+
+  const aContentsChangeHandler = (e) => {
+    e.preventDefault();
+    setAContents(e.target.value);
+  };
+
+  const bContentsChangeHandler = (e) => {
+    e.preventDefault();
+    setBContents(e.target.value);
+  };
+
+  // 수정 완료 버튼 눌렀을 때
   const editPostHandler = (e) => {
     e.preventDefault();
     if (title && aContents && bContents) {
-      e.preventDefault();
-
-      if (window.confirm("수정하시겠습니까?") === true) {
-        // navigate();
+      if (window.confirm("수정하시겠습니까?")) {
+        navigate(`/${thePost?.id}`);
         const editPost = {
-          id: uuidv4(), // thePost.id,
+          id: thePost?.id,
           title,
           aContents,
           bContents,
         };
         dispatch(__editPost(editPost));
+        // input 초기화
+        setTitle("");
+        setAContents("");
+        setBContents("");
       }
-      // input 초기화
-      setTitle("");
-      setAContents("");
-      setBContents("");
     }
 
     if (!title) {
@@ -74,25 +98,18 @@ const EditPage = () => {
     }
   };
 
-  const titleChangeHandler = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const aContentsChangeHandler = (e) => {
-    setAContents(e.target.value);
-  };
-
-  const bContentsChangeHandler = (e) => {
-    setBContents(e.target.value);
-  };
-
   return (
     <div>
       <div>
         <form onSubmit={editPostHandler}>
           <section>
             <h1>토론주제</h1>
-            <input id="title" value={title} onChange={titleChangeHandler} />
+            <input
+              id="title"
+              value={title}
+              onChange={titleChangeHandler}
+              autoFocus
+            />
             <br></br>
             <h2>선택분류</h2>
             <p>A</p> :
