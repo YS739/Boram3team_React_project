@@ -17,4 +17,10 @@ const CategoryStyle = styled.span`
   padding: 2px 10px;
 `;
 
-export { Wrap, CategoryStyle };
+const UserComment = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+`;
+
+export { Wrap, CategoryStyle, UserComment };

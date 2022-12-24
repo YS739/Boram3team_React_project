@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Wrap, CategoryStyle } from "./style";
+import { Wrap, CategoryStyle, UserComment } from "./style";
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -33,11 +33,11 @@ const Comments = () => {
             <CategoryStyle color={color}>
               {co.isA === "true" ? theA : theB}
             </CategoryStyle>
-            <div>
+            <UserComment>
               <span>{co.comment}</span>
               <span>작성자ID</span>
               {/* TODO: 작성자에는 로그인한 사람의 id 넣기 */}
-            </div>
+            </UserComment>
           </div>
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
