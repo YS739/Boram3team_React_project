@@ -36,7 +36,11 @@ const Comments = () => {
             </CategoryStyle>
             <UserComment>
               <span>{co.comment}</span>
-              <span>작성자ID</span>
+              <div>
+                <span>{co.date.slice(0, 10)}</span>
+                <br />
+                <span>작성자ID</span>
+              </div>
               {/* TODO: 작성자에는 로그인한 사람의 id 넣기 */}
             </UserComment>
           </div>

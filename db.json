@@ -9,109 +9,25 @@
   ],
   "comments": [
     {
-      "id": "b12777f1-960c-4581-a8c3-cc182c94b9a7",
+      "id": "68c40af7-8fd7-481e-9ddd-c0bb076883c9",
       "postId": 1,
-      "comment": "ㅇㄹㅇㄹ",
+      "comment": "1번",
       "isA": "true",
-      "createdAt": 1671884738140
+      "date": "2022-12-24T13:17:26.068Z"
     },
     {
-      "id": "b6eec5fb-4962-40ee-8874-57809bedd413",
+      "id": "9fa4de90-893b-4f9c-b993-f1fc80670ce7",
       "postId": 1,
       "comment": "2번",
-      "isA": "false",
-      "createdAt": 1671884771217
+      "isA": "true",
+      "date": "2022-12-24T13:17:27.782Z"
     },
     {
-      "id": "6e72514c-72df-473c-9aae-4df824c31662",
+      "id": "25ac6e36-15f8-422e-9247-b147560e6233",
       "postId": 1,
       "comment": "3번",
-      "isA": "true",
-      "createdAt": 1671884775545
-    },
-    {
-      "id": "f100133a-64ea-49d6-96db-290bdd3bf28e",
-      "postId": 1,
-      "comment": "4번",
       "isA": "false",
-      "createdAt": 1671884778929
-    },
-    {
-      "id": "98b7f3d6-2a00-4855-9209-c009139032eb",
-      "postId": 1,
-      "comment": "5번",
-      "isA": "true",
-      "createdAt": 1671884791946
-    },
-    {
-      "id": "c57aa4a0-3c2f-45cb-88c5-ad54f74ab0cf",
-      "postId": 1,
-      "comment": "ㅇㄹㅇㄹ",
-      "isA": "true",
-      "createdAt": 1671885117655
-    },
-    {
-      "id": "5c38fdbe-06ec-4e17-878c-3d2e034380df",
-      "postId": 1,
-      "comment": "6번",
-      "isA": "true",
-      "createdAt": 1671885122838
-    },
-    {
-      "id": "08f44e5f-fb5c-453c-b9fb-5955dcea74d8",
-      "postId": 1,
-      "comment": "ㅇㄹㅇ",
-      "isA": "false",
-      "createdAt": 1671885882538
-    },
-    {
-      "id": "af7e2552-eedc-4f59-b6a6-ccd21cddd70f",
-      "postId": 1,
-      "comment": "ㅇㄻㄴㅇㄹ",
-      "isA": "true",
-      "createdAt": 1671886616582
-    },
-    {
-      "id": "87615fc2-4f43-4841-9fef-ad4437f5ecb4",
-      "postId": 1,
-      "comment": "새로",
-      "isA": "true",
-      "createdAt": 1671886619093
-    },
-    {
-      "id": "3d7637d6-8fe6-4ed8-a5da-7946c30ab956",
-      "postId": 1,
-      "comment": "새로",
-      "isA": "true",
-      "createdAt": 1671886625217
-    },
-    {
-      "id": "052aa133-03b2-48c2-ab28-a6c3aa0c35de",
-      "postId": 1,
-      "comment": "t새로 댓글 단 것",
-      "isA": "true",
-      "createdAt": 1671886651882
-    },
-    {
-      "id": "7ce88bc6-746f-4316-969c-6a73e2e9f2f3",
-      "postId": 1,
-      "comment": "새로새로",
-      "isA": "false",
-      "createdAt": 1671886686892
-    },
-    {
-      "id": "a43bdc9a-0435-4020-a017-8fb441da9bfe",
-      "postId": 1,
-      "comment": "안녕",
-      "isA": "true",
-      "createdAt": 1671886722764
-    },
-    {
-      "id": "d95746c5-a635-47e9-a67b-a4ead59ae8c4",
-      "postId": 1,
-      "comment": "부먹부먹",
-      "isA": "true",
-      "createdAt": 1671886843696
+      "date": "2022-12-24T13:17:31.931Z"
     }
   ]
 }
