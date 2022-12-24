@@ -19,6 +19,7 @@ const Comments = () => {
   return (
     <Wrap>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
+
       {comment?.map((co) => {
         let color = "";
         if (co.isA === "true") {
