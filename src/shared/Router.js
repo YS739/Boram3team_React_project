@@ -6,7 +6,7 @@ import UploadPage from "../pages/UploadPage";
 import SignUpPage from "../pages/SignUpPage";
 import LoginPage from "../pages/LoginPage";
 import MyPage from "../pages/MyPage";
-import Layout from "./Layout";
+import Layout from "./Layout/Layout";
 
 const Router = () => {
   return (
