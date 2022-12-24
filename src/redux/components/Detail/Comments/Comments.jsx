@@ -1,9 +1,15 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { __deleteComment } from '../../../modules/commentsSlice';
+import { __changeComment } from '../../../modules/commentsSlice';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
   const { comment } = useSelector((state) => state.comments);
+
+  // console.log(comment);
+
+  const dispatch = useDispatch();
 
   if (error) {
     // 데이터를 불러오다가 오류가 나면 화면에 오류 메시지 표시
@@ -21,9 +27,17 @@ const Comments = () => {
   };
 
   const changeButtonHandler = (id) => {
-    dispatch(__changeComment(id));
-    console.log(typeof id);
-    console.log(dispatch);
+    let input = prompt();
+
+    // const changeId = id;
+    // console.log(changeId);
+
+    const changeComment = {
+      id,
+      comment: input,
+    };
+
+    dispatch(__changeComment(changeComment));
   };
 
   return (
@@ -36,6 +50,10 @@ const Comments = () => {
             <div>
               <span>{co.comment}</span>
               <span>작성자</span>
+              <span>
+                <button onClick={() => changeButtonHandler(co.id)}>수정</button>
+                <button onClick={() => deleteButtonHandler(co.id)}>삭제</button>
+              </span>
             </div>
           </div>
         );
@@ -44,5 +62,19 @@ const Comments = () => {
     </div>
   );
 };
+
+function ChangeInput({ changeComment, dispatch }) {
+  // const changeComment = {
+  //   id,
+  //   comment: input,
+  // };
+
+  // dispatch(__changeComment(changeComment));
+  return (
+    <>
+      <input />
+    </>
+  );
+}
 
 export default Comments;
