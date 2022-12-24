@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+// import { useParams } from "react-router-dom";
+// TODO: Param 쓸 때 주석해제
 import { v4 as uuidv4 } from 'uuid';
 import { __postComment } from '../../../modules/commentsSlice';
+import {
+  CommentContainer,
+  CommentForm,
+  CategoryBox,
+  CategoryA,
+  CategoryB,
+  InputBox,
+} from './style';
 
 const CommentUpload = () => {
+  // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
+  const { posts } = useSelector((state) => state.posts);
+  const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+  const theA = thePost?.categoryA;
+  const theB = thePost?.categoryB;
+  const theId = thePost?.id;
+
   // TODO: useInput custom hook 쓰기
   const [comment, setComment] = useState();
   const dispatch = useDispatch();
@@ -22,7 +39,7 @@ const CommentUpload = () => {
       e.preventDefault();
       const newComment = {
         id: uuidv4(),
-        // postId: TODO: 상현님 본문 등록 구현 - 성환님 pull(main get) - 해당 post.id 가져오기
+        postId: theId,
         comment,
         isA: selected.value,
       };
@@ -45,37 +62,35 @@ const CommentUpload = () => {
   };
 
   return (
-    <>
-      <div>
-        <form onSubmit={onSubmitCommentHandler}>
-          {/* A,B 선택하기 */}
-          <div>
-            <span>
-              <input type='radio' name='category' id='A' value='true' />
-              <label for='A'>A: 부먹</label>
-            </span>
-            <span>
-              <input type='radio' name='category' id='B' value='false' />
-              <label for='B'>B: 찍먹</label>
-            </span>
-            {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
-            {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
-          </div>
+    <CommentContainer>
+      <CommentForm onSubmit={onSubmitCommentHandler}>
+        {/* A,B 선택하기 */}
+        <CategoryBox>
+          <CategoryA>
+            <input type='radio' name='category' id='A' value='true' />
+            <label htmlFor='A'>A: {theA}</label>
+          </CategoryA>
+          <CategoryB>
+            <input type='radio' name='category' id='B' value='false' />
+            <label htmlFor='B'>B: {theB}</label>
+          </CategoryB>
+          {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
+          {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
+        </CategoryBox>
 
-          {/* 댓글 입력 */}
-          <br />
-          <div>
-            <input
-              id='comment'
-              value={comment}
-              placeholder='댓글을 입력해주세요.'
-              onChange={onChangeCommentHandler}
-            ></input>
-            <button>댓글 등록</button>
-          </div>
-        </form>
-      </div>
-    </>
+        {/* 댓글 입력 */}
+        <br />
+        <InputBox>
+          <input
+            id='comment'
+            value={comment}
+            placeholder='댓글을 입력해주세요.'
+            onChange={onChangeCommentHandler}
+          ></input>
+          <button>댓글 등록</button>
+        </InputBox>
+      </CommentForm>
+    </CommentContainer>
   );
 };
 

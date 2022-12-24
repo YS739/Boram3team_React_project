@@ -1,38 +1,59 @@
 {
+  "posts": [
+    {
+      "id": 1,
+      "title": "탕수육을 제일 맛있게 먹는 방법은?",
+      "categoryA": "부먹",
+      "categoryB": "찍먹"
+    }
+  ],
   "comments": [
     {
-      "id": "82544d04-0d60-4515-867f-61e4b02f07b9",
-      "comment": "afqwe1",
+      "id": "86307678-5c68-493c-8a8e-0003d1f70765",
+      "postId": 1,
+      "comment": "ㅇㄻㄹㄴㅇ",
       "isA": "true"
     },
     {
-      "id": "6aa2b147-4341-4397-849b-ddf2c03f0891",
-      "comment": "qwe12e",
+      "id": "971897b6-a332-432e-9126-e0839dccdb94",
+      "postId": 1,
+      "comment": "ㅁㄹㅇㄴㄹㅇㄹ",
       "isA": "false"
     },
     {
-      "id": "844dbedd-3f8a-4a06-a2a6-4e194ce42756",
-      "comment": "qwr21e",
+      "id": "c40e64f8-0d50-48a5-93e6-a53b62113ab7",
+      "postId": 1,
+      "comment": "ㅀㄴㄹㅇㅎ",
       "isA": "false"
     },
     {
-      "id": "09d1660a-14e8-49d3-8dde-5e9ad37c4fd5",
-      "comment": "ㅁㄴㅇㅂㅈ",
+      "id": "3cd7b81e-9c5b-44e5-bf81-769b7e467f2e",
+      "postId": 1,
+      "comment": "ㅇㄹㅇㄹ",
       "isA": "false"
     },
     {
-      "id": "af6a52b8-5624-4fac-b5e0-b9b766bd7e69",
-      "comment": "ㄴㅇㄼㅈㄷ",
-      "isA": "false"
-    },
-    {
-      "id": "1cf90b3e-b214-457c-a934-fc034f1dc64e",
-      "comment": "ㅁㄴㅊ",
+      "id": "44fd9482-896a-4324-908d-6679d85923a5",
+      "postId": 1,
+      "comment": "ㅁㄹㄴㅇㄹㅇ",
       "isA": "true"
     },
     {
-      "id": "4b306822-0fdd-4dcd-a390-d3830736b951",
-      "comment": "ㅋㅌㅊ",
+      "id": "15613fca-dfd2-48e2-9ae2-068d336c7580",
+      "postId": 1,
+      "comment": "ㅇ",
+      "isA": "true"
+    },
+    {
+      "id": "2bfac664-2339-4a53-881f-c1f143c77edb",
+      "postId": 1,
+      "comment": " dfdfdsf",
+      "isA": "true"
+    },
+    {
+      "id": "5422f915-8a18-416c-b78a-eb7be606a97a",
+      "postId": 1,
+      "comment": "qweqwe1",
       "isA": "false"
     }
   ]

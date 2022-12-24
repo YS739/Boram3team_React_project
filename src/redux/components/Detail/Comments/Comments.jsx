@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { __deleteComment } from '../../../modules/commentsSlice';
 import { __changeComment } from '../../../modules/commentsSlice';
+import { Wrap, CategoryStyle } from './style';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -10,9 +11,13 @@ const Comments = () => {
   // console.log(comment);
 
   const dispatch = useDispatch();
+  // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
+  const { posts } = useSelector((state) => state.posts);
+  const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+  const theA = thePost?.categoryA;
+  const theB = thePost?.categoryB;
 
   if (error) {
-    // 데이터를 불러오다가 오류가 나면 화면에 오류 메시지 표시
     return <div>{error.message}</div>;
   }
 
@@ -41,15 +46,25 @@ const Comments = () => {
   };
 
   return (
-    <div>
+    <Wrap>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {comment?.map((co) => {
+        let color = '';
+        if (co.isA === 'true') {
+          color = '#fa7d43';
+        }
+        if (co.isA === 'false') {
+          color = '#179bbf';
+        }
         return (
           <div key={co.id}>
-            <div>카테고리 내용</div>
+            <br />
+            <CategoryStyle color={color}>
+              {co.isA === 'true' ? theA : theB}
+            </CategoryStyle>
             <div>
               <span>{co.comment}</span>
-              <span>작성자</span>
+              <span>작성자 ID</span>
               <span id='comment'>
                 {/* {document.querySelector('#change') ? <input /> : null} */}
                 <button
@@ -66,7 +81,7 @@ const Comments = () => {
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
-    </div>
+    </Wrap>
   );
 };
 

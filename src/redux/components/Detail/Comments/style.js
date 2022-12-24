@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
-const CommentBody = styled.div`
+const Wrap = styled.div`
   width: 600px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
   margin: 0 auto;
 `;
 
-const CommentUser = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+const CategoryStyle = styled.span`
+  background-color: ${(props) => props.color};
+  color: white;
+
+  border-radius: 6px;
+  padding: 2px 10px;
 `;
 
-export { CommentBody, CommentUser };
+export { Wrap, CategoryStyle };
