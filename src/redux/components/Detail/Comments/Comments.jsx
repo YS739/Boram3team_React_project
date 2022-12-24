@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Children } from "react";
 import { useSelector } from "react-redux";
+import { Wrap, CategoryStyle } from "./style";
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -16,13 +17,22 @@ const Comments = () => {
   }
 
   return (
-    <div>
+    <Wrap>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {comment?.map((co) => {
+        let color = "";
+        if (co.isA === "true") {
+          color = "red";
+        }
+        if (co.isA === "false") {
+          color = "blue";
+        }
         return (
           <div key={co.id}>
             <br />
-            <div>{co.isA === "true" ? theA : theB}</div>
+            <CategoryStyle color={color}>
+              {co.isA === "true" ? theA : theB}
+            </CategoryStyle>
             <div>
               <span>{co.comment}</span>
               <span>작성자ID</span>
@@ -32,7 +42,7 @@ const Comments = () => {
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
-    </div>
+    </Wrap>
   );
 };
 

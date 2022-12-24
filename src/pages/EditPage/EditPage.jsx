@@ -17,7 +17,7 @@ const EditPage = () => {
   const { error } = useSelector((state) => state.posts);
 
   // TODO: 본문 등록 페이지 구현 완료 되면 2를 param.id로수정하기
-  const thePost = posts?.find((post) => post.id === 2);
+  const thePost = posts?.find((post) => post.id === 1);
   const navigate = useNavigate();
 
   // TODO: useInput custom hook 쓰기

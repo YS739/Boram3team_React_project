@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 // TODO: Param 쓸 때 주석해제
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
+import { CommentForm, CategoryA, CategoryB } from "./style";
 
 const CommentUpload = () => {
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
@@ -54,37 +55,35 @@ const CommentUpload = () => {
   };
 
   return (
-    <>
-      <div>
-        <form onSubmit={onSubmitCommentHandler}>
-          {/* A,B 선택하기 */}
-          <div>
-            <span>
-              <input type="radio" name="category" id="A" value="true" />
-              <label htmlFor="A">A: {theA}</label>
-            </span>
-            <span>
-              <input type="radio" name="category" id="B" value="false" />
-              <label htmlFor="B">B: {theB}</label>
-            </span>
-            {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
-            {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
-          </div>
+    <div>
+      <CommentForm onSubmit={onSubmitCommentHandler}>
+        {/* A,B 선택하기 */}
+        <div>
+          <CategoryA>
+            <input type="radio" name="category" id="A" value="true" />
+            <label htmlFor="A">A: {theA}</label>
+          </CategoryA>
+          <CategoryB>
+            <input type="radio" name="category" id="B" value="false" />
+            <label htmlFor="B">B: {theB}</label>
+          </CategoryB>
+          {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
+          {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
+        </div>
 
-          {/* 댓글 입력 */}
-          <br />
-          <div>
-            <input
-              id="comment"
-              value={comment}
-              placeholder="댓글을 입력해주세요."
-              onChange={onChangeCommentHandler}
-            ></input>
-            <button>댓글 등록</button>
-          </div>
-        </form>
-      </div>
-    </>
+        {/* 댓글 입력 */}
+        <br />
+        <div>
+          <input
+            id="comment"
+            value={comment}
+            placeholder="댓글을 입력해주세요."
+            onChange={onChangeCommentHandler}
+          ></input>
+          <button>댓글 등록</button>
+        </div>
+      </CommentForm>
+    </div>
   );
 };
 
