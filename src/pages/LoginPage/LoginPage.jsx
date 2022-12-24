@@ -17,8 +17,8 @@ const LoginPage = () => {
     const [userPw, setUserPw, onChangeUserPwHandler] = useInput();
 
     // 어느 페이지든 현재 로그인한 유저의 id를 가져오고 싶을 때
-    // let logeedInUseId = localStorage.getItem("id");
-    // console.log(logeedInUseId)
+    // let currentUserId = localStorage.getItem("id");
+    // console.log(currentUserId)
 
     const logInHandler = (e) => {
         e.preventDefault();
