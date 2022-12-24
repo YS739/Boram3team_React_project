@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Wrap, CategoryStyle } from "./style";
 
@@ -22,10 +22,10 @@ const Comments = () => {
       {comment?.map((co) => {
         let color = "";
         if (co.isA === "true") {
-          color = "red";
+          color = "#fa7d43";
         }
         if (co.isA === "false") {
-          color = "blue";
+          color = "#179bbf";
         }
         return (
           <div key={co.id}>

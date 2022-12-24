@@ -6,11 +6,15 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  margin: 0 auto;
 `;
 
 const CategoryStyle = styled.span`
   background-color: ${(props) => props.color};
   color: white;
+
+  border-radius: 6px;
+  padding: 2px 10px;
 `;
 
 export { Wrap, CategoryStyle };
