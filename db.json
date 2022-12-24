@@ -25,6 +25,24 @@
       "postId": 1,
       "comment": "ㅁㄹㅇㄴㄹㅇㄹ",
       "isA": "false"
+    },
+    {
+      "id": "c40e64f8-0d50-48a5-93e6-a53b62113ab7",
+      "postId": 1,
+      "comment": "ㅀㄴㄹㅇㅎ",
+      "isA": "false"
+    },
+    {
+      "id": "3cd7b81e-9c5b-44e5-bf81-769b7e467f2e",
+      "postId": 1,
+      "comment": "ㅇㄹㅇㄹ",
+      "isA": "false"
+    },
+    {
+      "id": "44fd9482-896a-4324-908d-6679d85923a5",
+      "postId": 1,
+      "comment": "ㅁㄹㄴㅇㄹㅇ",
+      "isA": "true"
     }
   ]
 }

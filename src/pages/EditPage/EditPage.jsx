@@ -22,19 +22,19 @@ const EditPage = () => {
 
   // TODO: useInput custom hook 쓰기
   const [title, setTitle] = useState(thePost?.title); // thePost?.title
-  const [aContents, setAContents] = useState(thePost?.aContents); // thePost.aContents
-  const [bContents, setBContents] = useState(thePost?.bContents); // thePost.bContents
+  const [categoryA, setCategoryA] = useState(thePost?.categoryA); // thePost.categoryA
+  const [categoryB, setCategoryB] = useState(thePost?.categoryB); // thePost.categoryB
 
   useEffect(() => {
     if (posts.length < 1) return;
 
     // TODO: 본문 등록 페이지 구현 완료 되면 param.id 등 수정하기
-    const thePost = posts?.find((post) => post.id === 2);
+    const thePost = posts?.find((post) => post.id === 1);
     // 새로고침 후 데이터가 들어왔을 때
     // input에 가져온 posts 데이터를 넣음
     setTitle(thePost?.title);
-    setAContents(thePost?.aContents);
-    setBContents(thePost?.bContents);
+    setCategoryA(thePost?.categoryA);
+    setCategoryB(thePost?.categoryB);
   }, [posts]);
 
   if (error) {
@@ -47,52 +47,48 @@ const EditPage = () => {
     setTitle(e.target.value);
   };
 
-  const aContentsChangeHandler = (e) => {
+  const categoryAChangeHandler = (e) => {
     e.preventDefault();
-    setAContents(e.target.value);
+    setCategoryA(e.target.value);
   };
 
-  const bContentsChangeHandler = (e) => {
+  const categoryBChangeHandler = (e) => {
     e.preventDefault();
-    setBContents(e.target.value);
+    setCategoryB(e.target.value);
   };
 
   // 수정 완료 버튼 눌렀을 때
   const editPostHandler = (e) => {
     e.preventDefault();
-    if (title && aContents && bContents) {
+    if (title && categoryA && categoryB) {
       if (window.confirm("수정하시겠습니까?")) {
         navigate(`/${thePost?.id}`);
         const editPost = {
           id: thePost?.id,
           title,
-          aContents,
-          bContents,
+          categoryA,
+          categoryB,
         };
         dispatch(__editPost(editPost));
         // input 초기화
         setTitle("");
-        setAContents("");
-        setBContents("");
+        setCategoryA("");
+        setCategoryB("");
       }
     }
 
     if (!title) {
-      // e.preventDefault();
       document.getElementById("title").focus();
       alert("주제를 입력해주세요");
       return;
     }
-    if (!aContents) {
-      // e.preventDefault();
-      document.getElementById("aContents").focus();
+    if (!categoryA) {
+      document.getElementById("categoryA").focus();
       alert("A의 내용을 입력해 주세요");
       return;
     }
-    if (!bContents) {
-      // e.preventDefault();
-
-      document.getElementById("bContents").focus();
+    if (!categoryB) {
+      document.getElementById("categoryB").focus();
       alert("B의 내용을 입력해 주세요");
       return;
     }
@@ -114,15 +110,15 @@ const EditPage = () => {
             <h2>선택분류</h2>
             <p>A</p> :
             <input
-              id="aContents"
-              value={aContents}
-              onChange={aContentsChangeHandler}
+              id="categoryA"
+              value={categoryA}
+              onChange={categoryAChangeHandler}
             />
             <p>B</p> :
             <input
-              id="bContents"
-              value={bContents}
-              onChange={bContentsChangeHandler}
+              id="categoryB"
+              value={categoryB}
+              onChange={categoryBChangeHandler}
             />
             <button>수정 완료</button>
           </section>
