@@ -9,7 +9,7 @@
     },
     {
       "id": 1,
-      "title": "고기 먹고 후식으로",
+      "title": "고기 먹고 후식으로 뭐 먹을래?",
       "categoryA": "냉면",
       "categoryB": "된장찌개",
       "like": 0
@@ -29,7 +29,6 @@
       "like": 0
     }
   ],
-
   "comments": [
     {
       "id": "95c0ac6b-58b8-4700-a8ff-d99c04fd16b8",
@@ -78,9 +77,20 @@
       "postId": 1,
       "comment": " dfdfdsf",
       "isA": "true"
+    },
+    {
+      "id": "d75e56cb-edcd-4621-ae12-4499001e85dd",
+      "postId": 1,
+      "comment": "ㄹㅇㄹㅇㄹ",
+      "isA": "true"
+    },
+    {
+      "id": "c911e1ce-82fd-4b36-86ed-a0c56ce1e621",
+      "postId": 1,
+      "comment": "ㄻㅇㄹㅇ",
+      "isA": "false"
     }
   ],
-
   "users": [
     {
       "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",

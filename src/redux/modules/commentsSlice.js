@@ -7,9 +7,8 @@ const initialState = {
   error: null,
 };
 
-// 댓글 불러오기
-export const __getComment = createAsyncThunk(
-  "comments/getComment",
+export const __getComments = createAsyncThunk(
+  "comments/getComments",
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get("http://localhost:3001/comments");
@@ -40,14 +39,14 @@ const commentsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [__getComment.pending]: (state) => {
+    [__getComments.pending]: (state) => {
       state.isLoading = true;
     },
-    [__getComment.fulfilled]: (state, action) => {
+    [__getComments.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.comment = action.payload;
     },
-    [__getComment.rejected]: (state, action) => {
+    [__getComments.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     },
