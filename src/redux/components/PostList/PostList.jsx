@@ -29,17 +29,21 @@ const PostList = () => {
       {posts.map((post) => {
         let countA = 0;
         let countB = 0;
-
+        let barA = "lightgray";
+        let barB = "gray";
         comments.map((comment) => {
           if (comment.isA === true && comment.postId === post.id) {
             countA = countA + 1;
+            barA = "coral";
           }
           if (comment.isA === false && comment.postId === post.id) {
             countB = countB + 1;
+            barB = "skyblue";
           }
         });
         let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
         let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+
         if (countA === 0) {
           ratioA = 50;
         }
@@ -67,10 +71,10 @@ const PostList = () => {
               <PostLike>👍: {post.like}</PostLike>
             </PostContainer>
             <GageBar>
-              <BarA bg={ratioA} color={"coral"}>
+              <BarA bg={ratioA} color={barA}>
                 {ratioA}%
               </BarA>
-              <BarA bg={ratioB} color={"skyblue"}>
+              <BarA bg={ratioB} color={barB}>
                 {ratioB}%
               </BarA>
             </GageBar>
