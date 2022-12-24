@@ -6,7 +6,6 @@ const Comments = () => {
   const { comment } = useSelector((state) => state.comments);
 
   if (error) {
-    // 데이터를 불러오다가 오류가 나면 화면에 오류 메시지 표시
     return <div>{error.message}</div>;
   }
 
@@ -16,10 +15,12 @@ const Comments = () => {
       {comment?.map((co) => {
         return (
           <div key={co.id}>
-            <div>카테고리 내용</div>
+            <br />
+            <div>{co.isA === "true" ? "부먹" : "찍먹"}</div>
             <div>
               <span>{co.comment}</span>
-              <span>작성자</span>
+              <span>작성자ID</span>
+              {/* TODO: 작성자에는 로그인한 사람의 id 넣기 */}
             </div>
           </div>
         );

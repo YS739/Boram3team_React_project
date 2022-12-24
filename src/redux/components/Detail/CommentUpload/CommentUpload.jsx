@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 
 const CommentUpload = () => {
+  // TODO: posts의 데이터 불러오기 - 데이터를 가지고 A,B 내용 보여주기
+
   // TODO: useInput custom hook 쓰기
   const [comment, setComment] = useState();
   const dispatch = useDispatch();
