@@ -12,6 +12,7 @@ import {
   CategoryB,
   InputBox,
 } from "./style";
+import CustomButtons from "../../CustomButtons";
 
 const CommentUpload = () => {
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
@@ -92,7 +93,7 @@ const CommentUpload = () => {
             placeholder="댓글을 입력해주세요."
             onChange={onChangeCommentHandler}
           ></input>
-          <button>댓글 등록</button>
+          <CustomButtons color="pink">댓글 등록</CustomButtons>
         </InputBox>
       </CommentForm>
     </CommentContainer>

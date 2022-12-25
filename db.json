@@ -155,6 +155,20 @@
       "comment": "ㅁㄹㅇ",
       "isA": "false",
       "date": "2022-12-25T06:50:07.890Z"
+    },
+    {
+      "id": "937fd67d-1edb-480c-bfba-39658ae257c8",
+      "postId": 1,
+      "comment": "ㅍㅇ",
+      "isA": "false",
+      "date": "2022-12-25T07:45:54.005Z"
+    },
+    {
+      "id": "94e1e185-edb7-4bfd-90d0-4673ad1a0f2a",
+      "postId": 1,
+      "comment": "ㅇㅇ",
+      "isA": "true",
+      "date": "2022-12-25T07:45:56.443Z"
     }
   ],
   "posts": [
