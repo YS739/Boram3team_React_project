@@ -17,7 +17,9 @@ import CustomButtons from "../../CustomButtons";
 const CommentUpload = () => {
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
   const { posts } = useSelector((state) => state.posts);
-  const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+  const thePost = posts.find(
+    (post) => post.id === "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8"
+  ); // TODO: param.id로 바꾸기
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
   const theId = thePost?.id;

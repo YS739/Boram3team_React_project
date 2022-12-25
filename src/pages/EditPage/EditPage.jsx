@@ -16,7 +16,9 @@ const EditPage = () => {
   // const param = useParams();
 
   // TODO: 본문 등록 페이지 구현 완료 되면 2를 param.id로수정하기
-  const thePost = posts?.find((post) => post.id === 1);
+  const thePost = posts?.find(
+    (post) => post.id === "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8"
+  );
   const navigate = useNavigate();
 
   // TODO: useInput custom hook 쓰기
@@ -29,7 +31,9 @@ const EditPage = () => {
     if (posts.length < 1) return;
 
     // TODO: 본문 등록 페이지 구현 완료 되면 param.id 등 수정하기
-    const thePost = posts?.find((post) => post.id === 1);
+    const thePost = posts?.find(
+      (post) => post.id === "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8"
+    );
     setTitle(thePost?.title);
     setCategoryA(thePost?.categoryA);
     setCategoryB(thePost?.categoryB);
