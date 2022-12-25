@@ -48,6 +48,7 @@ const CommentUpload = () => {
 
       // input 초기화
       setComment("");
+      // TODO: 카테고리 선택부분 초기화
     }
     // 댓글을 작성하지 않았을 때 alert
     else if (!comment) {
