@@ -1,10 +1,19 @@
 {
+  "posts": [
+    {
+      "id": 1,
+      "title": "탕수육",
+      "categoryA": "찍먹",
+      "categoryB": "부먹",
+      "like": 1
+    }
+  ],
   "users": [],
   "comments": [
     {
       "id": "dcbe162f-de01-47fb-9fd1-cdb764ddc59f",
       "postId": 1,
-      "comment": "확인용",
+      "comment": "잘됬으면 좋겠다.",
       "isA": "true"
     },
     {
@@ -15,19 +24,19 @@
     },
     {
       "id": "909d357f-2dac-4582-a71c-d37153c19421",
-      "postId": 1,
+      "postId": 2,
       "comment": "다시화면으로",
       "isA": "true"
     },
     {
       "id": "721c97c6-8f74-4292-b0a5-08f73caf5458",
-      "postId": 1,
+      "postId": 2,
       "comment": "수정을누르고새로고침",
       "isA": "false"
     },
     {
       "id": "b355744c-4150-47a8-b982-985b5b1c9f0d",
-      "postId": 1,
+      "postId": 2,
       "comment": "인풋창 ->태그",
       "isA": "false"
     }

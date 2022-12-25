@@ -1,14 +1,13 @@
-import { useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { __changeComment } from '../../../modules/commentsSlice';
-import { useDispatch } from 'react-redux';
+import { useRef, useState } from "react";
+import { __changeComment } from "../../../modules/commentsSlice";
+import { useDispatch } from "react-redux";
+import { Btn } from "./style";
 
-const UpdateComment = ({ comment, changeCommentHandler }) => {
+const UpdateComment = ({ comment }) => {
   const dispatch = useDispatch();
   const [commentChange, setCommentChange] = useState(comment.comment);
-
-  // const { comments } = useSelector((state) => state.comments);
-  // console.log(comments);
+  const [completeDisplay, setCompleteDisplay] = useState("none");
+  const [editDisplay, setEditDisplay] = useState("block");
 
   const changeInput = useRef();
   const userComment = useRef();
@@ -17,51 +16,45 @@ const UpdateComment = ({ comment, changeCommentHandler }) => {
     setCommentChange(e.target.value);
   };
 
-  const changeButtonHandler = (id) => {
-    changeInput.current.style = 'display:block';
-    userComment.current.style = 'display:none';
+  const editButtonHandler = () => {
+    changeInput.current.style = "display:block";
+    userComment.current.style = "display:none";
     changeInput.current.focus();
+    setCompleteDisplay("block");
+    setEditDisplay("none");
+  };
 
-    // console.log(comment.comment);
+  const changeButtonHandler = (id) => {
+    changeInput.current.style = "display:none";
+    userComment.current.style = "display:block";
+    setCompleteDisplay("none");
+    setEditDisplay("block");
 
     if (commentChange) {
-      const changeComment = {
-        id: comment.id,
-        postId: comment.postId,
-        comment: commentChange,
-        isA: comment.isA,
-      };
-
       dispatch(__changeComment(id));
-
-      // setCommentChange[...comment, ]
-      // changeInput.current.style = 'display:none';
-      // userComment.current.style = 'display:block';
-    }
-
-    if (!commentChange) {
-      alert('댓글을 입력해주세요');
+    } else {
+      alert("댓글을 입력해주세요");
     }
   };
 
   return (
     <div>
       <br />
-      {/* <CategoryStyle color={color}>
-        {co.isA === 'true' ? theA : theB}
-      </CategoryStyle> */}
       <div>
         <span ref={userComment}>{comment.comment}</span>
         <input
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
           ref={changeInput}
           value={commentChange}
           onChange={changeShow}
         />
         <span>작성자 ID</span>
-        <span id='comment'>
-          <button
-            type='button'
+        <span id="comment">
+          <Btn dp={editDisplay} type="button" onClick={editButtonHandler}>
+            수정
+          </Btn>
+          <Btn
+            dp={completeDisplay}
             onClick={() =>
               changeButtonHandler({
                 id: comment.id,
@@ -71,8 +64,8 @@ const UpdateComment = ({ comment, changeCommentHandler }) => {
               })
             }
           >
-            수정
-          </button>
+            완료
+          </Btn>
         </span>
       </div>
     </div>

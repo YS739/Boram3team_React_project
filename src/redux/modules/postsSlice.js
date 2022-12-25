@@ -14,9 +14,9 @@ export const __uploadPost = createAsyncThunk(
   "post/uploadPost",
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/post", payload);
+      await axios.post("http://localhost:3001/posts", payload);
       // 최신 데이터를 불러오기 위해 get 추가
-      const data = await axios.get("http://localhost:3001/post");
+      const data = await axios.get("http://localhost:3001/posts");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
