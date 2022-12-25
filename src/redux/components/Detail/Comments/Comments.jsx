@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { __deleteComment } from '../../../modules/commentsSlice';
 import { __changeComment } from '../../../modules/commentsSlice';
 import { Wrap, CategoryStyle, ChangeInput } from './style';
+import UpdateComment from '../UpdateComment/UpdateComment';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
@@ -15,13 +16,9 @@ const Comments = () => {
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
 
-  const inputRef = React.useRef();
-
   if (error) {
     return <div>{error.message}</div>;
   }
-
-  // 수정 Input창
 
   // 삭제버튼
 
@@ -34,22 +31,26 @@ const Comments = () => {
   };
 
   // 수정 버튼
-  let numb = 0;
-  const changeButtonHandler = (id) => {
-    numb = 1;
 
-    // prompt로 댓글수정
-    // let input = prompt('댓글을 수정하시겠습니까??', '');
-    // if (input !== null) {
-    //   const changeComment = {
-    //     id,
-    //     comment: input,
-    //   };
-    //   dispatch(__changeComment(changeComment));
-    // } else if (input === null) {
-    //   return;
-    // }
-  };
+  // const changeCommentHandler = (id) => {
+  //   const changeComment = {
+  //     id,
+  //     comment: input,
+  //   };
+  //   dispatch(__changeComment(changeComment));
+
+  //   // prompt로 댓글수정
+  //   // let input = prompt('댓글을 수정하시겠습니까??', '');
+  //   // if (input !== null) {
+  // const changeComment = {
+  //   id,
+  //   comment: input,
+  // };
+  // dispatch(__changeComment(changeComment));
+  //   // } else if (input === null) {
+  //   //   return;
+  //   // }
+  // };
 
   return (
     <Wrap>
@@ -70,17 +71,17 @@ const Comments = () => {
               {co.isA === 'true' ? theA : theB}
             </CategoryStyle>
             <div>
-              <span>{co.comment}</span>
-              <span>작성자 ID</span>
+              {/* <span>{co.comment}</span> */}
+              {/* <span>작성자 ID</span> */}
               <span id='comment'>
-                <ChangeInput ref={inputRef} />
-                <Modal numb={numb} changeButtonHandler={changeButtonHandler} />
-                <button
+                {/* <ChangeInput ref={inputRef} /> */}
+                <UpdateComment key={co.id} comment={co} />
+                {/* <button
                   type='button'
                   onClick={() => changeButtonHandler(co.id)}
                 >
                   수정
-                </button>
+                </button> */}
                 <button onClick={() => deleteButtonHandler(co.id)}>삭제</button>
               </span>
             </div>
@@ -89,18 +90,6 @@ const Comments = () => {
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
     </Wrap>
-  );
-};
-
-const Modal = (props) => {
-  let numb = props.numb;
-  console.log(numb);
-
-  return (
-    <div>
-      {numb === 1 ? <input /> : null}
-      {/* <input /> */}
-    </div>
   );
 };
 

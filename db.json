@@ -9,39 +9,33 @@
   ],
   "comments": [
     {
-      "id": "ccff95b7-1b4d-4bd4-8f05-82908797a1f4",
-      "postId": 1,
-      "comment": "qwdqwd",
-      "isA": "false"
-    },
-    {
       "id": "dcbe162f-de01-47fb-9fd1-cdb764ddc59f",
       "postId": 1,
-      "comment": "wefwef",
+      "comment": "확인용",
       "isA": "true"
     },
     {
       "id": "8b287218-477b-49b2-b40a-3d01c96306ae",
       "postId": 1,
-      "comment": "qwe12",
+      "comment": "ㅇㅅㅅㅇㅈㄷ",
       "isA": "false"
     },
     {
       "id": "909d357f-2dac-4582-a71c-d37153c19421",
       "postId": 1,
-      "comment": "qwe12",
+      "comment": "다시화면으로",
       "isA": "true"
     },
     {
       "id": "721c97c6-8f74-4292-b0a5-08f73caf5458",
       "postId": 1,
-      "comment": "qwe12e12e",
+      "comment": "수정을누르고새로고침",
       "isA": "false"
     },
     {
       "id": "b355744c-4150-47a8-b982-985b5b1c9f0d",
       "postId": 1,
-      "comment": "sdfqwe",
+      "comment": "인풋창 ->태그",
       "isA": "false"
     }
   ]

@@ -53,13 +53,11 @@ export const __deleteComment = createAsyncThunk(
 export const __changeComment = createAsyncThunk(
   'comments/changeComment',
   async (payload, thunkAPI) => {
-    // console.log(payload);
     try {
       await axios.patch(
         `http://localhost:3001/comments/${payload.id}`,
         payload
       );
-      // console.log('data', data);
       const data = await axios.get('http://localhost:3001/comments');
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
