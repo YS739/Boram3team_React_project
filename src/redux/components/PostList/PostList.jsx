@@ -7,6 +7,7 @@ import {
   __signUp,
   __getUsers,
   __switchIsLogin,
+  __userLikes,
 } from "../../modules/usersSlice";
 import {
   Article,
@@ -20,7 +21,6 @@ import {
 } from "./style";
 
 const PostList = () => {
-  const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
@@ -28,8 +28,6 @@ const PostList = () => {
 
   const currentUserId = localStorage.getItem("id");
   const myLikes = users.filter((user) => user.id == currentUserId);
-  const myLike = myLikes[0].like;
-  console.log(myLike);
 
   const navigate = useNavigate();
   if (error) {
@@ -38,20 +36,24 @@ const PostList = () => {
 
   // 좋아요 추가 함수
   const switchLikesHandler = (post) => {
-    const plusLike = {
-      ...post,
-      like: post.like + 1,
-    };
+    const isNotLike = post.like.filter((like) => like !== currentUserId);
+    const isLike = post.like.find((like) => like === currentUserId);
+
     const addLike = {
-      ...myLikes[0],
-      like: [post],
+      ...post,
+      like: [...post.like, currentUserId],
     };
-    if (myLike.find((like?) => like?.id !== post.id)) {
-      dispatch(__AddLikes(plusLike));
-      dispatch(__switchIsLogin(addLike));
+    const deleteLike = {
+      ...post,
+      like: isNotLike,
+    };
+    if (isLike !== currentUserId) {
+      dispatch(__AddLikes(addLike));
     }
-    if (myLikes[0].like !== null) {
+    if (isLike === currentUserId) {
+      dispatch(__AddLikes(deleteLike));
     }
+    console.log(post.like);
   };
 
   return (
@@ -100,9 +102,7 @@ const PostList = () => {
                 </div>
               </PostBox>
               <PostLike onClick={() => switchLikesHandler(post)}>
-                👍: {post.like}
-                <br />
-                카운트수 : {count}
+                👍: {post.like.length}
               </PostLike>
             </PostContainer>
             <GageBar>

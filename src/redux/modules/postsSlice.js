@@ -23,7 +23,6 @@ export const __getPosts = createAsyncThunk(
 export const __AddLikes = createAsyncThunk(
   "likes/Addlikes",
   async (payload, thunkAPI) => {
-    console.log(payload);
     try {
       await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
       const data = await axios.get("http://localhost:3001/posts");
