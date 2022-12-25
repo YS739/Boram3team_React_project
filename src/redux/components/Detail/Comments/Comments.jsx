@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deleteComment } from "../../../modules/commentsSlice";
 import { __changeComment } from "../../../modules/commentsSlice";
-import { Wrap, CategoryStyle, UserComment } from "./style";
+import { Wrap, CategoryStyle, ChangeInput } from "./style";
 
 const Comments = () => {
   const { error, comment } = useSelector((state) => state.comments);
@@ -30,7 +30,10 @@ const Comments = () => {
   };
 
   // 수정 버튼
+  let numb = 0;
   const changeButtonHandler = (id) => {
+    numb = 1;
+
     // prompt로 댓글수정
     // let input = prompt('댓글을 수정하시겠습니까??', '');
     // if (input !== null) {
@@ -62,22 +65,21 @@ const Comments = () => {
             <CategoryStyle color={color}>
               {co.isA === "true" ? theA : theB}
             </CategoryStyle>
-            <UserComment>
+            <div>
               <span>{co.comment}</span>
-              <div>
-                <span>{co.date.slice(0, 10)}</span>
-                <br />
-                <span>작성자 ID</span>
-              </div>
-              {/* TODO: 작성자에는 로그인한 사람의 id 넣기 */}
-            </UserComment>
-
-            <span id="comment">
-              <button type="button" onClick={() => changeButtonHandler(co.id)}>
-                수정
-              </button>
-              <button onClick={() => deleteButtonHandler(co.id)}>삭제</button>
-            </span>
+              <span>작성자 ID</span>
+              <span id="comment">
+                <ChangeInput ref={inputRef} />
+                <Modal numb={numb} changeButtonHandler={changeButtonHandler} />
+                <button
+                  type="button"
+                  onClick={() => changeButtonHandler(co.id)}
+                >
+                  수정
+                </button>
+                <button onClick={() => deleteButtonHandler(co.id)}>삭제</button>
+              </span>
+            </div>
           </div>
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가

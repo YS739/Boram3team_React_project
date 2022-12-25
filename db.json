@@ -2,48 +2,34 @@
   "users": [],
   "comments": [
     {
-      "id": "55c9cf24-a6f3-4751-8f90-9fda6e815b53",
-      "postId": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "comment": "ㄻㅇㄴㄹㅇㄴㄹ",
-      "isA": "true",
-      "date": "2022-12-25T10:02:39.462Z"
+      "id": "dcbe162f-de01-47fb-9fd1-cdb764ddc59f",
+      "postId": 1,
+      "comment": "확인용",
+      "isA": "true"
     },
     {
-      "id": "3a2f7d7f-690e-46f1-a0b1-acc541dbfd99",
-      "postId": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "comment": "ㅇㄻㄹㅇㅁㅇㄴㄹ",
-      "isA": "true",
-      "date": "2022-12-25T10:08:11.764Z"
+      "id": "8b287218-477b-49b2-b40a-3d01c96306ae",
+      "postId": 1,
+      "comment": "ㅇㅅㅅㅇㅈㄷ",
+      "isA": "false"
     },
     {
-      "id": "4fbfcfb9-2250-4543-87c1-4e87ab59b970",
-      "postId": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "comment": "ㄻㄴㅇㄹㄴㅇㄹㄴ",
-      "isA": "false",
-      "date": "2022-12-25T10:08:14.356Z"
-    }
-  ],
-  "posts": [
-    {
-      "id": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
-      "title": "당신의 연애 상대는?",
-      "categoryA": "내 선물 당근마켓에서 사는 남친",
-      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": []
+      "id": "909d357f-2dac-4582-a71c-d37153c19421",
+      "postId": 1,
+      "comment": "다시화면으로",
+      "isA": "true"
     },
     {
-      "id": "138b8776-6ce3-4e5b-9211-c38c94fa9a46",
-      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
-      "categoryA": "이혼한다",
-      "categoryB": "한번 눈감아준다",
-      "like": []
+      "id": "721c97c6-8f74-4292-b0a5-08f73caf5458",
+      "postId": 1,
+      "comment": "수정을누르고새로고침",
+      "isA": "false"
     },
     {
-      "id": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "title": "고기 먹고 후식으로 뭐 먹어?",
-      "categoryA": "냉면",
-      "categoryB": "된장찌개",
-      "like": []
+      "id": "b355744c-4150-47a8-b982-985b5b1c9f0d",
+      "postId": 1,
+      "comment": "인풋창 ->태그",
+      "isA": "false"
     }
   ]
 }
