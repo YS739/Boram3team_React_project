@@ -3,26 +3,31 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
+import useInput from "../../hooks/useInput";
 
 const UploadPage = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState();
-  const [categoryA, setCategoryA] = useState();
-  const [categoryB, setCategoryB] = useState();
+  // const [title, setTitle] = useState();
+  // const [categoryA, setCategoryA] = useState();
+  // const [categoryB, setCategoryB] = useState();
   const navigate = useNavigate();
 
+  const [title, setTitle, titleChange] = useInput();
+  const [categoryA, setCategoryA, categoryAsChange] = useInput();
+  const [categoryB, setCategoryB, categoryBChange] = useInput();
+
   //타이틀 input값
-  const titleChange = (event) => {
-    setTitle(event.target.value);
-  };
+  // const titleChange = (event) => {
+  //   setTitle(event.target.value);
+  // };
   //categoryA input값
-  const categoryAsChange = (event) => {
-    setCategoryA(event.target.value);
-  };
+  // const categoryAsChange = (event) => {
+  //   setCategoryA(event.target.value);
+  // };
   //타categoryB이틀 input값
-  const categoryBChange = (event) => {
-    setCategoryB(event.target.value);
-  };
+  // const categoryBChange = (event) => {
+  //   setCategoryB(event.target.value);
+  // };
 
   //추가하기 핸들러
   const addPostHandler = (e) => {
