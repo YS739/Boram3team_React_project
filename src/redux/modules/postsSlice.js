@@ -9,6 +9,7 @@ const initialState = {
   error: null,
 };
 
+
 // 본문 불러오기
 export const __getPosts = createAsyncThunk(
   "posts/getPosts",
@@ -29,6 +30,9 @@ export const __deletePost = createAsyncThunk(
     try {
       await axios.delete( `http://localhost:3001/posts/${payload}` );
       const data = await axios.get( "http://localhost:3001/posts" );
+      return thunkAPI.fulfillWithValue(data.data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );
@@ -56,23 +60,24 @@ const postsSlice = createSlice({
       state.isLoading = true;
     },
     [__getPosts.fulfilled]: (state, action) => {
-      state.isLoading = false; // 네트워크 요청이 끝났으니, false로 변경합니다.
+      state.isLoading = false;
       state.posts = action.payload;
     },
-    [__getPosts.rejected]: (state, action) => {
-      state.isLoading = false; // 에러가 발생했지만, 네트워크 요청이 끝났으니, false로 변경합니다.
-      state.error = action.payload; // catch 된 error 객체를 state.error에 넣습니다.
-    },
+  },
+  [__getPosts.rejected]: (state, action) => {
+    state.isLoading = false;
+    state.posts = action.payload;
+  },
     [__deletePost.pending]: (state) => {
       state.isLoading = true;
     },
     [__deletePost.fulfilled]: (state, action) => {
-      state.isLoading = false; // 네트워크 요청이 끝났으니, false로 변경합니다.
+      state.isLoading = false; 
       state.posts = action.payload;
     },
     [__deletePost.rejected]: (state, action) => {
-      state.isLoading = false; // 에러가 발생했지만, 네트워크 요청이 끝났으니, false로 변경합니다.
-      state.error = action.payload; // catch 된 error 객체를 state.error에 넣습니다.
+      state.isLoading = false; 
+      state.error = action.payload; 
       state.isLoading = false;
       state.posts = action.payload;
     },
