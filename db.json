@@ -5,7 +5,8 @@
       "userId": "s",
       "userPw": "s",
       "userName": "희령",
-      "isLogin": true
+      "isLogin": true,
+      "like": null
     },
     {
       "id": "5febb24b-12cc-4c0f-a5d9-a87d9f79da24",

@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __getComments } from "../../modules/commentsSlice";
-import { __getPosts } from "../../modules/postsSlice";
+import { __AddLikes, __getPosts } from "../../modules/postsSlice";
+import {
+  __signUp,
+  __getUsers,
+  __switchIsLogin,
+} from "../../modules/usersSlice";
 import {
   Article,
   H1,
@@ -15,12 +20,39 @@ import {
 } from "./style";
 
 const PostList = () => {
+  const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
+  const { users } = useSelector((state) => state.users);
+
+  const currentUserId = localStorage.getItem("id");
+  const myLikes = users.filter((user) => user.id == currentUserId);
+  const myLike = myLikes[0].like;
+  console.log(myLike);
+
   const navigate = useNavigate();
   if (error) {
     return <div>{error.message}</div>;
   }
+
+  // 좋아요 추가 함수
+  const switchLikesHandler = (post) => {
+    const plusLike = {
+      ...post,
+      like: post.like + 1,
+    };
+    const addLike = {
+      ...myLikes[0],
+      like: [post],
+    };
+    if (myLike.find((like?) => like?.id !== post.id)) {
+      dispatch(__AddLikes(plusLike));
+      dispatch(__switchIsLogin(addLike));
+    }
+    if (myLikes[0].like !== null) {
+    }
+  };
 
   return (
     <Section>
@@ -50,13 +82,12 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
-
         return (
           <Article
             key={post.id}
-            onClick={() => {
-              navigate(`/${post.id}`);
-            }}
+            // onClick={() => {
+            //   navigate(`/${post.id}`);
+            // }}
           >
             <PostContainer>
               <PostBox>
@@ -68,7 +99,11 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike>👍: {post.like}</PostLike>
+              <PostLike onClick={() => switchLikesHandler(post)}>
+                👍: {post.like}
+                <br />
+                카운트수 : {count}
+              </PostLike>
             </PostContainer>
             <GageBar>
               <BarA bg={ratioA} color={barA}>

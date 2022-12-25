@@ -19,7 +19,6 @@ const UserPosts = () => {
   const currentUserId = localStorage.getItem("id");
   const myPosts = posts.filter((post) => post.uid === currentUserId);
 
-  console.log(myPosts);
   if (error) {
     return <div>{error.message}</div>;
   }
