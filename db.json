@@ -1,70 +1,33 @@
 {
   "posts": [
     {
+      "id": 0,
+      "title": "탕수육",
+      "categoryA": "부먹",
+      "categoryB": "찍먹",
+      "like": 0
+    },
+    {
       "id": 1,
-      "title": "jsoaffd",
-      "aContents": "addfd",
-      "bContents": "afsdfd"
+      "title": "고기 먹고 후식으로",
+      "categoryA": "냉면",
+      "categoryB": "된장찌개",
+      "like": 0
     },
     {
       "id": 2,
-      "title": "탕수육을 맛있게 먹는 방법은?",
-      "aContents": "찍먹",
-      "bContents": "부먹"
+      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
+      "categoryA": "이혼한다",
+      "categoryB": "한번 눈감아준다",
+      "like": 0
     },
     {
-      "id": "0b652fca-3540-4f7c-a5b6-e8cf5f4e0628",
-      "title": "ㅇ",
-      "aContents": "ㅇ",
-      "bContents": "ㅇㅇ"
-    },
-    {
-      "id": "b3662d3d-a463-485e-936a-b1d4971b92fa",
-      "title": "sfdf",
-      "aContents": "dfdf",
-      "bContents": "dfdf"
-    },
-    {
-      "id": "acf61d42-5207-478a-9ea3-80f3a9acdf7b",
-      "title": "d",
-      "aContents": "d",
-      "bContents": "fd"
-    },
-    {
-      "id": "373ea9a4-a452-48d9-908e-0c043fc0c403",
-      "title": "df",
-      "aContents": "d",
-      "bContents": "d"
-    },
-    {
-      "id": "3b7444fd-d23a-4acc-9fef-670cab89aef2",
-      "title": "dff",
-      "aContents": "df",
-      "bContents": "d"
-    },
-    {
-      "id": "41296d69-4a30-4ee7-9b90-29b065a34b0d",
-      "title": "ddf",
-      "aContents": "dfdf",
-      "bContents": "df"
-    },
-    {
-      "id": "fe8d087c-8853-4068-aadd-c21c8893d435",
-      "title": "d",
-      "aContents": "d",
-      "bContents": "d"
-    },
-    {
-      "id": "cc3b1dda-ba83-4881-915c-6607698f55d6",
-      "title": "d",
-      "aContents": "f",
-      "bContents": "d"
-    },
-    {
-      "id": "b3147ab7-f9a9-482d-8ed5-4e072934cbfe",
-      "title": " fgffgd",
-      "aContents": "dfgfdg",
-      "bContents": "fgdfg"
+      "id": 3,
+      "title": "당신의 연애 상대는?",
+      "categoryA": "내 선물 당근마켓에서 사는 남친",
+      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
+      "like": 0
     }
   ]
 }
+
