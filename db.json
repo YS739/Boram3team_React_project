@@ -169,6 +169,20 @@
       "comment": "ㅇㅇ",
       "isA": "true",
       "date": "2022-12-25T07:45:56.443Z"
+    },
+    {
+      "id": "3c266cb6-7f74-44da-a174-8f85fb034269",
+      "postId": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
+      "comment": "ㅇㄹ",
+      "isA": "true",
+      "date": "2022-12-25T11:08:22.350Z"
+    },
+    {
+      "id": "be5a78a5-56d2-49e7-bb94-41f00e48e0f0",
+      "postId": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
+      "comment": "ㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T11:08:24.947Z"
     }
   ],
   "posts": [
@@ -188,7 +202,7 @@
     },
     {
       "id": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "title": "고기 먹고 후식으로",
+      "title": "고기 먹고 후식으로 뭐 먹지?",
       "categoryA": "냉면",
       "categoryB": "된장찌개",
       "like": []
