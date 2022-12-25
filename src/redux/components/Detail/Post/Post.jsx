@@ -10,7 +10,7 @@ const Post = () => {
   const navigate = useNavigate();
 
   // db.json에서 id값을 가져오기 id값 변경해주면됨
-  const thePost = posts.find(
+  const thePost = posts?.find(
     (post) => post.id === "6e967383-ffaf-41c5-b12a-6a42c903ff25"
   );
 

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __getUsers } from "../../redux/modules/usersSlice";
 import useInput from "../../hooks/useInput";
+import CustomButtons from "../../redux/components/CustomButtons";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -78,8 +79,8 @@ const LoginPage = () => {
           value={userPw}
           onChange={onChangeUserPwHandler}
         />
-        <button onClick={logInHandler}>로그인하기</button>
-        <button onClick={logoutHandler}>로그아웃</button>
+        <CustomButtons onClick={logInHandler}>로그인하기</CustomButtons>
+        <CustomButtons onClick={logoutHandler}>로그아웃</CustomButtons>
       </form>
     </div>
   );

@@ -54,6 +54,7 @@ export const __deletePost = createAsyncThunk(
 export const __editPost = createAsyncThunk(
   "posts/editPost",
   async (payload, thunkAPI) => {
+    console.log(payload);
     try {
       await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
       const data = await axios.get("http://localhost:3001/posts");

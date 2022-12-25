@@ -11,8 +11,8 @@ const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 40px;
 
   background-color: white;
 
@@ -20,10 +20,9 @@ const ButtonStyled = styled.button`
   border-radius: 30px;
   font-weight: bold;
 
+  /* props로 받을 부분 */
   color: ${(props) => (props.color ? props.color : "black")};
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "14px")};
-  flex-direction: ${(props) =>
-    props.flexDirection ? props.flexDirection : "row"};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "15px")};
   margin: ${(props) => props.margin};
   margin-top: ${(props) => props.marginTop};
   margin-left: ${(props) => props.marginLeft};
@@ -36,20 +35,5 @@ const ButtonStyled = styled.button`
     transition: 1s;
   }
 `;
-
-/* padding: ${(props) => props.padding};
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  background: ${(props) => props.background};
-  margin: ${(props) => props.margin};
-  margin-top: ${(props) => props.marginTop};
-  margin-left: ${(props) => props.marginLeft};
-  margin-right: ${(props) => props.marginRight};
-  margin-bottom: ${(props) => props.marginBottom};
-  font-size: ${(props) => props.textSize};
-  color: ${(props) => props.textColor};
-  font-weight: ${(props) => props.fontWeight};
-  border: ${(props) => props.border};
-  border-radius: ${(props) => props.radius}; */
 
 export default CustomButtons;

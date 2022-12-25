@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
+import CustomButtons from "../../redux/components/CustomButtons";
 
 const UploadPage = () => {
   const dispatch = useDispatch();
@@ -77,7 +78,7 @@ const UploadPage = () => {
           <input id="categoryA" value={categoryA} onChange={categoryAsChange} />
           <p>B</p> :
           <input id="categoryB" value={categoryB} onChange={categoryBChange} />
-          <button>등록</button>
+          <CustomButtons>등록</CustomButtons>
         </section>
       </form>
     </div>
