@@ -1,7 +1,5 @@
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { __getComments } from "../../modules/commentsSlice";
-import { __getPosts } from "../../modules/postsSlice";
 import {
   Article,
   H1,

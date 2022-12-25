@@ -11,27 +11,25 @@ const EditPage = () => {
     dispatch(__getPosts());
   }, [dispatch]);
 
-  const { posts } = useSelector((state) => state.posts);
+  const { posts, error } = useSelector((state) => state.posts);
   // TODO: 본문 클릭과 연결 되면 주석 해제
   // const param = useParams();
-  const { error } = useSelector((state) => state.posts);
 
   // TODO: 본문 등록 페이지 구현 완료 되면 2를 param.id로수정하기
   const thePost = posts?.find((post) => post.id === 1);
   const navigate = useNavigate();
 
   // TODO: useInput custom hook 쓰기
-  const [title, setTitle] = useState(thePost?.title); // thePost?.title
-  const [categoryA, setCategoryA] = useState(thePost?.categoryA); // thePost.categoryA
-  const [categoryB, setCategoryB] = useState(thePost?.categoryB); // thePost.categoryB
+  const [title, setTitle] = useState(thePost?.title);
+  const [categoryA, setCategoryA] = useState(thePost?.categoryA);
+  const [categoryB, setCategoryB] = useState(thePost?.categoryB);
 
+  // 새로고침 하면 input에 본문의 데이터가 사라져서 추가한 부분
   useEffect(() => {
     if (posts.length < 1) return;
 
     // TODO: 본문 등록 페이지 구현 완료 되면 param.id 등 수정하기
     const thePost = posts?.find((post) => post.id === 1);
-    // 새로고침 후 데이터가 들어왔을 때
-    // input에 가져온 posts 데이터를 넣음
     setTitle(thePost?.title);
     setCategoryA(thePost?.categoryA);
     setCategoryB(thePost?.categoryB);
@@ -70,10 +68,6 @@ const EditPage = () => {
           categoryB,
         };
         dispatch(__editPost(editPost));
-        // input 초기화
-        setTitle("");
-        setCategoryA("");
-        setCategoryB("");
       }
     }
 
