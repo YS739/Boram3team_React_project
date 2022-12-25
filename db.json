@@ -1,178 +1,29 @@
 {
-  "users": [
-    {
-      "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",
-      "userId": "s",
-      "userPw": "s",
-      "userName": "희령",
-      "isLogin": true
-    },
-    {
-      "id": "5febb24b-12cc-4c0f-a5d9-a87d9f79da24",
-      "userId": "q",
-      "userPw": "q",
-      "userName": "ㅎㅎ",
-      "isLogin": true
-    },
-    {
-      "id": "082bc644-763a-4e8c-a3a3-1a08c1b88d0b",
-      "userId": "d",
-      "userPw": "b",
-      "userName": "크리스마스",
-      "isLogin": true
-    },
-    {
-      "id": "15843ecd-cc6f-4a20-9868-fac65f84b7d7",
-      "userId": "x",
-      "userPw": "x",
-      "userName": "x",
-      "isLogin": true
-    },
-    {
-      "id": "c3ad60a5-5897-4fe9-9f6c-02b7558ba007",
-      "userId": "eeee",
-      "userPw": "12345678",
-      "userName": "이희령",
-      "isLogin": true
-    },
-    {
-      "id": "93e88455-88ac-4aa1-92f8-d02e06748d3a",
-      "userId": "eeee",
-      "userPw": "12345678",
-      "userName": "f",
-      "isLogin": true
-    },
-    {
-      "id": "8639a359-da1e-4381-bcb9-1dbc0bc4b67c",
-      "userId": "eeee",
-      "userPw": "12345678",
-      "userName": "e",
-      "isLogin": true
-    },
-    {
-      "id": "9b9de595-303b-4745-8fed-c79c9744c1f9",
-      "userId": "abcd",
-      "userPw": "12345678z",
-      "userName": "이희령",
-      "isLogin": true
-    }
-  ],
-
+  "users": [],
   "comments": [
     {
-      "id": "68c40af7-8fd7-481e-9ddd-c0bb076883c9",
-      "postId": 1,
-      "comment": "1번",
+      "id": "dfff78de-24bb-417c-8f62-56c808973a9a",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "dfadfsf",
       "isA": "true",
-      "date": "2022-12-24T13:17:26.068Z"
+      "date": "2022-12-25T11:49:19.487Z"
     },
     {
-      "id": "9fa4de90-893b-4f9c-b993-f1fc80670ce7",
-      "postId": 1,
-      "comment": "2번",
-      "isA": "true",
-      "date": "2022-12-24T13:17:27.782Z"
-    },
-    {
-      "id": "25ac6e36-15f8-422e-9247-b147560e6233",
-      "postId": 1,
-      "comment": "3번",
+      "id": "40fb3857-024b-4e4d-a5c1-bcbadaec9fa5",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "afsdfd",
       "isA": "false",
-      "date": "2022-12-24T13:17:31.931Z"
+      "date": "2022-12-25T11:49:21.831Z"
     },
     {
-      "id": "20dda62d-bf3b-4b39-90fd-ca82e5bf4452",
-      "postId": 1,
-      "comment": "ㅇㄻㄹㅇㄴㄹㅇㄹ",
-      "isA": "true",
-      "date": "2022-12-25T04:56:34.043Z"
-    },
-    {
-      "id": "976861a6-7158-48c1-ae71-36569ca3524f",
-      "postId": 1,
-      "comment": "ㅇㄻㅇㄹ",
+      "id": "865bdd7e-5474-4549-b891-5a99b37a80b8",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "dfaf",
       "isA": "false",
-      "date": "2022-12-25T04:56:39.197Z"
-    },
-    {
-      "id": "2cfda296-5f09-4cc8-bda3-37931c2c073e",
-      "postId": 1,
-      "comment": "ㄻㄹㅇㄹㅇㄹ",
-      "isA": "false",
-      "date": "2022-12-25T04:57:45.247Z"
-    },
-    {
-      "id": "1db41529-9232-4486-a52e-554c87a34b30",
-      "postId": 1,
-      "comment": "ㄻㄴㅇㄹㄴㅇㄹ",
-      "isA": "false",
-      "date": "2022-12-25T04:57:57.900Z"
-    },
-    {
-      "id": "ec3d5749-ce1e-4723-9856-cbc103ace030",
-      "postId": 1,
-      "comment": "ㄹㅇㄹ",
-      "isA": "false",
-      "date": "2022-12-25T06:17:45.297Z"
-    },
-    {
-      "id": "87a4a953-4d97-41f6-8d2c-00cafaf93151",
-      "postId": 1,
-      "comment": "ㄹㅇㄹ",
-      "isA": "false",
-      "date": "2022-12-25T06:18:03.439Z"
-    },
-    {
-      "id": "4916fdfa-be87-4f6f-8515-5b8fa36f1d49",
-      "postId": 1,
-      "comment": "ㄹㅇㄻㅇㄴㄹ",
-      "isA": "false",
-      "date": "2022-12-25T06:19:35.761Z"
-    },
-    {
-      "id": "4f13760d-b971-4aec-a2ba-5ca382b4c4f4",
-      "postId": 1,
-      "comment": "ㅇㄻㅇㄴㄹ",
-      "isA": "false",
-      "date": "2022-12-25T06:20:48.240Z"
-    },
-    {
-      "id": "a232cf89-8b32-4cad-a294-789747293cfa",
-      "postId": 1,
-      "comment": "ㅇㄴㄻㄴㅇㄹㅇ",
-      "isA": "true",
-      "date": "2022-12-25T06:20:51.282Z"
+      "date": "2022-12-25T11:56:12.125Z"
     }
   ],
   "posts": [
-    {
-      "id": 0,
-      "title": "탕수육",
-      "categoryA": "부먹",
-      "categoryB": "찍먹",
-      "like": 0
-    },
-    {
-      "id": 0,
-      "title": "탕수육",
-      "categoryA": "부먹",
-      "categoryB": "찍먹",
-      "like": 0
-    },
-    {
-      "id": "1133ca9b-4cea-4225-a85c-2a8c947f2dd7",
-      "title": "테스트",
-      "categoryA": "테스트",
-      "categoryB": "테스트",
-      "like": 0
-    },
-    {
-      "id": "9aff51b8-3c21-4537-beef-24e5898433b2",
-      "title": "ㅌㅌㅌㅌ",
-      "categoryA": "ㅌㅌㅌ",
-      "categoryB": "ㅌㅌㅌㅌㅌ",
-      "like": 0
-    },
     {
       "id": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
       "title": "당신의 연애 상대는?",
@@ -188,10 +39,17 @@
       "like": []
     },
     {
-      "id": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
-      "title": "고기 먹고 후식으로",
-      "categoryA": "냉면",
-      "categoryB": "된장찌개",
+      "id": "c4ab9238-4bf6-44f9-9382-5c1b785bb628",
+      "title": "fdfa",
+      "categoryA": "fdsfdsf",
+      "categoryB": "dsfdsf",
+      "like": []
+    },
+    {
+      "id": "b99ba743-5af2-42e6-95c4-93f30e48da43",
+      "title": "fasdfsadf",
+      "categoryA": "asdfsadf",
+      "categoryB": "afsdfsdafdsf",
       "like": []
     }
   ]

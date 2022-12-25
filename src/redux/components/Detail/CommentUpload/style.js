@@ -53,20 +53,6 @@ const InputBox = styled.div`
     height: 50px;
     margin-right: 20px;
   }
-
-  button {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 30px;
-    padding: 0 15px;
-
-    :hover {
-      background-color: black;
-      color: white;
-      transition: 1s;
-    }
-  }
 `;
 
 export {

@@ -12,11 +12,14 @@ import {
   CategoryB,
   InputBox,
 } from "./style";
+import CustomButtons from "../../CustomButtons";
 
 const CommentUpload = () => {
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
   const { posts } = useSelector((state) => state.posts);
-  const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+  const thePost = posts.find(
+    (post) => post.id === "6e967383-ffaf-41c5-b12a-6a42c903ff25"
+  ); // TODO: param.id로 바꾸기
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
   const theId = thePost?.id;
@@ -92,7 +95,7 @@ const CommentUpload = () => {
             placeholder="댓글을 입력해주세요."
             onChange={onChangeCommentHandler}
           ></input>
-          <button>댓글 등록</button>
+          <CustomButtons color="pink">댓글 등록</CustomButtons>
         </InputBox>
       </CommentForm>
     </CommentContainer>
