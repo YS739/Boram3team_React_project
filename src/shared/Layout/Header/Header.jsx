@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Head, Btn, Logo, Nav } from "./style";
 import { useEffect } from "react";
+import CustomButtons from "../../../redux/components/CustomButtons";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -11,8 +12,16 @@ const Header = () => {
 
   return (
     <Head>
-      <div>{/* 일부러 빈 태그 만든거에요*/}</div>
-      <Logo onClick={() => navigate("/")}>보람삼조 XX토론</Logo>
+      <CustomButtons btnName="home" onClick={() => navigate("/")}>
+        <img
+          src="https://user-images.githubusercontent.com/112805225/209471455-4dc00875-0deb-4679-8374-5a06b7b5b2b5.png"
+          alt="Boram3team logo"
+          height="70px"
+        />
+      </CustomButtons>
+      <CustomButtons btnName="home" onClick={() => navigate("/")}>
+        XX토론
+      </CustomButtons>
       <Nav>
         <Btn
           dp={currentUserId !== null ? "block" : "none"}
