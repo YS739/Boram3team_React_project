@@ -12,7 +12,7 @@ const DetailPage = () => {
   const post = posts.find((post) => post.id === 1);
 
   // 삭제버튼
-  const deletePost = (postId) => {
+  const deletePostHandler = (postId) => {
     if (window.confirm("삭제하시겠습니까")) {
       dispatch(__deletePost(postId));
       navigate("/");
@@ -31,9 +31,10 @@ const DetailPage = () => {
           B : {post?.categoryB}
           <input type="checkbox" />
         </p>
+        <p>like : {post?.like}</p>
         <button>수정</button>
 
-        <button type="button" onClick={() => deletePost(post?.id)}>
+        <button type="button" onClick={() => deletePostHandler(post?.id)}>
           삭제
         </button>
       </div>

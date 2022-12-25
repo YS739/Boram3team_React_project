@@ -1,10 +1,11 @@
 {
   "posts": [
     {
-      "id": 2,
-      "title": "json-ser",
-      "categoryA": "json-server를 배ㄴㅇㅁㄹㄴㅁㄹㄹㄴㅁ워봅시다.",
-      "categoryB": "json-server를 배워봅시다."
+      "id": 1,
+      "title": "탕수육",
+      "categoryA": "부먹",
+      "categoryB": "찍먹",
+      "like": 1
     }
   ]
 }
