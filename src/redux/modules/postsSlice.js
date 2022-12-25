@@ -10,9 +10,9 @@ const initialState = {
 };
 
 // 본문 불러오기
-export const __getPost = createAsyncThunk(
+export const __getPosts = createAsyncThunk(
   //1.action value
-  "posts/getPost",
+  "posts/getPosts",
   //2. 콜백함수임.
   async (payload, thunkAPI) => {
     try {
@@ -43,14 +43,14 @@ const postsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [__getPost.pending]: (state) => {
+    [__getPosts.pending]: (state) => {
       state.isLoading = true;
     },
-    [__getPost.fulfilled]: (state, action) => {
+    [__getPosts.fulfilled]: (state, action) => {
       state.isLoading = false; // 네트워크 요청이 끝났으니, false로 변경합니다.
       state.posts = action.payload;
     },
-    [__getPost.rejected]: (state, action) => {
+    [__getPosts.rejected]: (state, action) => {
       state.isLoading = false; // 에러가 발생했지만, 네트워크 요청이 끝났으니, false로 변경합니다.
       state.error = action.payload; // catch 된 error 객체를 state.error에 넣습니다.
     },
