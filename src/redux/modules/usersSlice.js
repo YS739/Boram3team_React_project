@@ -82,20 +82,8 @@ const usersSlice = createSlice({
     [__signUp.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
-    },
-
-    [__switchIsLogin.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [__switchIsLogin.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.users = action.payload;
-    },
-    [__switchIsLogin.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.error = action.payload;
     }
-    
+  
   }
 });
 
