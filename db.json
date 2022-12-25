@@ -1,16 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-se여기가rver",
-      "aContent": "json-server를 배ㄴㅇㅁㄹㄴㅁㄹㄹㄴㅁ워봅시다.",
-      "bContent": "json-server를 배워봅시다."
-    },
-    {
       "id": 2,
       "title": "json-ser",
-      "aContent": "json-serverㄴㅁ워봅시다.",
-      "bContent": "json- 배워봅시다."
+      "categoryA": "json-server를 배ㄴㅇㅁㄹㄴㅁㄹㄹㄴㅁ워봅시다.",
+      "categoryB": "json-server를 배워봅시다."
     }
   ]
 }

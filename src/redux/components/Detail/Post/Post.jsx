@@ -7,8 +7,11 @@ const DetailPage = () => {
   const { posts } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // db.json에서 id값을 가져오기 id값 변경해주면됨
   const post = posts.find((post) => post.id === 1);
 
+  // 삭제버튼
   const deletePost = (postId) => {
     if (window.confirm("삭제하시겠습니까")) {
       dispatch(__deletePost(postId));
@@ -22,13 +25,14 @@ const DetailPage = () => {
         <h1>토론주제 :{post?.title}</h1>
         <h2>선택분류</h2>
         <p>
-          A : {post?.aContent} <input type="checkbox" />
+          A : {post?.categoryA} <input type="checkbox" />
         </p>
         <p>
-          B : {post?.bContent}
+          B : {post?.categoryB}
           <input type="checkbox" />
         </p>
         <button>수정</button>
+
         <button type="button" onClick={() => deletePost(post?.id)}>
           삭제
         </button>
