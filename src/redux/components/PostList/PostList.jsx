@@ -87,14 +87,13 @@ const PostList = () => {
           ratioB = 50;
         }
         return (
-          <Article
-            key={post.id}
-            // onClick={() => {
-            //   navigate(`/${post.id}`);
-            // }}
-          >
+          <Article key={post.id}>
             <PostContainer>
-              <PostBox>
+              <PostBox
+                onClick={() => {
+                  navigate(`/${post.id}`);
+                }}
+              >
                 <div>논제: {post.title}</div>
                 <div>
                   <div>
