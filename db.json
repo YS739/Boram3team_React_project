@@ -56,6 +56,41 @@
       "comment": "ㄻㄴㅇㄹㄴㅇㄹ",
       "isA": "false",
       "date": "2022-12-25T04:57:57.900Z"
+    },
+    {
+      "id": "ec3d5749-ce1e-4723-9856-cbc103ace030",
+      "postId": 1,
+      "comment": "ㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:17:45.297Z"
+    },
+    {
+      "id": "87a4a953-4d97-41f6-8d2c-00cafaf93151",
+      "postId": 1,
+      "comment": "ㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:18:03.439Z"
+    },
+    {
+      "id": "4916fdfa-be87-4f6f-8515-5b8fa36f1d49",
+      "postId": 1,
+      "comment": "ㄹㅇㄻㅇㄴㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:19:35.761Z"
+    },
+    {
+      "id": "4f13760d-b971-4aec-a2ba-5ca382b4c4f4",
+      "postId": 1,
+      "comment": "ㅇㄻㅇㄴㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:20:48.240Z"
+    },
+    {
+      "id": "a232cf89-8b32-4cad-a294-789747293cfa",
+      "postId": 1,
+      "comment": "ㅇㄴㄻㄴㅇㄹㅇ",
+      "isA": "true",
+      "date": "2022-12-25T06:20:51.282Z"
     }
   ]
 }

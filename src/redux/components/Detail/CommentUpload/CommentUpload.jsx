@@ -48,7 +48,10 @@ const CommentUpload = () => {
 
       // input 초기화
       setComment("");
-      // TODO: 카테고리 선택부분 초기화
+      // category 선택 초기화
+      categories.forEach((category) => {
+        category.checked = false;
+      });
     }
     // 댓글을 작성하지 않았을 때 alert
     else if (!comment) {
