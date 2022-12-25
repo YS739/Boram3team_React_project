@@ -1,57 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 0,
-      "title": "탕수육",
-      "categoryA": "부먹",
-      "categoryB": "찍먹",
-      "like": 0
-    },
-    {
-      "id": 1,
-      "title": "고기 먹고 후식으로 먹을거?",
-      "categoryA": "냉면",
-      "categoryB": "된장찌개",
-      "like": 0
-    },
-    {
-      "id": 2,
-      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
-      "categoryA": "이혼한다",
-      "categoryB": "한번 눈감아준다",
-      "like": 0
-    },
-    {
-      "id": 3,
-      "title": "당신의 연애 상대는?",
-      "categoryA": "내 선물 당근마켓에서 사는 남친",
-      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": 0
-    }
-  ],
-  "comments": [
-    {
-      "id": "68c40af7-8fd7-481e-9ddd-c0bb076883c9",
-      "postId": 1,
-      "comment": "1번",
-      "isA": "true",
-      "date": "2022-12-24T13:17:26.068Z"
-    },
-    {
-      "id": "9fa4de90-893b-4f9c-b993-f1fc80670ce7",
-      "postId": 1,
-      "comment": "2번",
-      "isA": "true",
-      "date": "2022-12-24T13:17:27.782Z"
-    },
-    {
-      "id": "25ac6e36-15f8-422e-9247-b147560e6233",
-      "postId": 1,
-      "comment": "3번",
-      "isA": "false",
-      "date": "2022-12-24T13:17:31.931Z"
-    }
-  ],
   "users": [
     {
       "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",
@@ -108,6 +55,123 @@
       "userPw": "12345678z",
       "userName": "이희령",
       "isLogin": true
+    }
+  ],
+
+  "comments": [
+    {
+      "id": "68c40af7-8fd7-481e-9ddd-c0bb076883c9",
+      "postId": 1,
+      "comment": "1번",
+      "isA": "true",
+      "date": "2022-12-24T13:17:26.068Z"
+    },
+    {
+      "id": "9fa4de90-893b-4f9c-b993-f1fc80670ce7",
+      "postId": 1,
+      "comment": "2번",
+      "isA": "true",
+      "date": "2022-12-24T13:17:27.782Z"
+    },
+    {
+      "id": "25ac6e36-15f8-422e-9247-b147560e6233",
+      "postId": 1,
+      "comment": "3번",
+      "isA": "false",
+      "date": "2022-12-24T13:17:31.931Z"
+    },
+    {
+      "id": "20dda62d-bf3b-4b39-90fd-ca82e5bf4452",
+      "postId": 1,
+      "comment": "ㅇㄻㄹㅇㄴㄹㅇㄹ",
+      "isA": "true",
+      "date": "2022-12-25T04:56:34.043Z"
+    },
+    {
+      "id": "976861a6-7158-48c1-ae71-36569ca3524f",
+      "postId": 1,
+      "comment": "ㅇㄻㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T04:56:39.197Z"
+    },
+    {
+      "id": "2cfda296-5f09-4cc8-bda3-37931c2c073e",
+      "postId": 1,
+      "comment": "ㄻㄹㅇㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T04:57:45.247Z"
+    },
+    {
+      "id": "1db41529-9232-4486-a52e-554c87a34b30",
+      "postId": 1,
+      "comment": "ㄻㄴㅇㄹㄴㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T04:57:57.900Z"
+    },
+    {
+      "id": "ec3d5749-ce1e-4723-9856-cbc103ace030",
+      "postId": 1,
+      "comment": "ㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:17:45.297Z"
+    },
+    {
+      "id": "87a4a953-4d97-41f6-8d2c-00cafaf93151",
+      "postId": 1,
+      "comment": "ㄹㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:18:03.439Z"
+    },
+    {
+      "id": "4916fdfa-be87-4f6f-8515-5b8fa36f1d49",
+      "postId": 1,
+      "comment": "ㄹㅇㄻㅇㄴㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:19:35.761Z"
+    },
+    {
+      "id": "4f13760d-b971-4aec-a2ba-5ca382b4c4f4",
+      "postId": 1,
+      "comment": "ㅇㄻㅇㄴㄹ",
+      "isA": "false",
+      "date": "2022-12-25T06:20:48.240Z"
+    },
+    {
+      "id": "a232cf89-8b32-4cad-a294-789747293cfa",
+      "postId": 1,
+      "comment": "ㅇㄴㄻㄴㅇㄹㅇ",
+      "isA": "true",
+      "date": "2022-12-25T06:20:51.282Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "title": "탕수육",
+      "categoryA": "부먹",
+      "categoryB": "찍먹",
+      "like": 0
+    },
+    {
+      "id": 1,
+      "title": "고기 먹고 후식으로",
+      "categoryA": "냉면",
+      "categoryB": "된장찌개",
+      "like": 0
+    },
+    {
+      "id": 2,
+      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
+      "categoryA": "이혼한다",
+      "categoryB": "한번 눈감아준다",
+      "like": 0
+    },
+    {
+      "id": 3,
+      "title": "당신의 연애 상대는?",
+      "categoryA": "내 선물 당근마켓에서 사는 남친",
+      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
+      "like": 0
     }
   ]
 }

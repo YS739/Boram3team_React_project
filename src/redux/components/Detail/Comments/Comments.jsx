@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import { Wrap, CategoryStyle, UserComment } from "./style";
 
 const Comments = () => {
-  const { error } = useSelector((state) => state.comments);
-  const { comment } = useSelector((state) => state.comments);
+  const { error, comment } = useSelector((state) => state.comments);
 
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
   const { posts } = useSelector((state) => state.posts);

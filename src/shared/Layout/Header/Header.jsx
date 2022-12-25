@@ -8,11 +8,6 @@ const Header = () => {
 
   // 어느 페이지든 현재 로그인한 유저의 id를 가져오고 싶을 때
   let currentUserId = localStorage.getItem("id");
-  // useEffect(() => {
-  //   if (localStorage.getItem("id") === null) {
-
-  //   }
-  // }, []);
 
   return (
     <Head>
