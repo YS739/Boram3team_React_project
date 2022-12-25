@@ -7,7 +7,6 @@ const initialState = {
   error: null,
 };
 
-
 export const __getPosts = createAsyncThunk(
   "posts/getPosts",
   async (payload, thunkAPI) => {
@@ -33,13 +32,12 @@ export const __editPost = createAsyncThunk(
   }
 );
 
-
 const postsSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {},
   extraReducers: {
-   [__getPosts.pending]: (state) => {
+    [__getPosts.pending]: (state) => {
       state.isLoading = true;
     },
     [__getPosts.fulfilled]: (state, action) => {
@@ -50,18 +48,18 @@ const postsSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
-  [__editPost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__editPost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__editPost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
+    [__editPost.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__editPost.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
+    [__editPost.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
   },
 });
 
 export default postsSlice.reducer;
-
