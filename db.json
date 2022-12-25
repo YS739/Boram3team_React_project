@@ -63,7 +63,9 @@
       "title": "탕수육",
       "categoryA": "부먹",
       "categoryB": "찍먹",
-      "like": [],
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
       "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
     },
     {
@@ -71,7 +73,7 @@
       "title": "고기 먹고 후식으로",
       "categoryA": "냉면",
       "categoryB": "된장찌개",
-      "like": 2,
+      "like": [],
       "uid": "afsaasdfkl"
     },
     {
@@ -79,7 +81,9 @@
       "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
       "categoryA": "이혼한다",
       "categoryB": "한번 눈감아준다",
-      "like": 4,
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
       "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
     },
     {
@@ -87,7 +91,7 @@
       "title": "당신의 연애 상대는?",
       "categoryA": "내 선물 당근마켓에서 사는 남친",
       "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": 1,
+      "like": [],
       "uid": "afsaasdfkl"
     }
   ],

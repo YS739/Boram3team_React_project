@@ -36,6 +36,7 @@ const PostList = () => {
 
   // 좋아요 추가 함수
   const switchLikesHandler = (post) => {
+    //filter ,find 함수를 사용하여 like키값에 해당 값이 있는 판별
     const isNotLike = post.like.filter((like) => like !== currentUserId);
     const isLike = post.like.find((like) => like === currentUserId);
 
@@ -47,6 +48,7 @@ const PostList = () => {
       ...post,
       like: isNotLike,
     };
+    //  거짓이면 추가 참이면 삭제
     if (isLike !== currentUserId) {
       dispatch(__AddLikes(addLike));
     }
@@ -102,7 +104,8 @@ const PostList = () => {
                 </div>
               </PostBox>
               <PostLike onClick={() => switchLikesHandler(post)}>
-                👍: {post.like.length}
+                👍
+                <br />({post.like.length})
               </PostLike>
             </PostContainer>
             <GageBar>

@@ -68,7 +68,7 @@ const UserPosts = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike>👍: {post.like}</PostLike>
+              <PostLike>👍: {post.like.length}</PostLike>
             </PostContainer>
             <GageBar>
               <BarA bg={ratioA} color={barA}>
