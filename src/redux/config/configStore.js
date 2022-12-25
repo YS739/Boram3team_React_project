@@ -6,7 +6,7 @@ import usersSlice from "../modules/usersSlice";
 const store = configureStore({
   reducer: {
     commentsSlice: commentsSlice,
-    posts: posts,
+    posts,
     usersSlice: usersSlice,
   },
 });
