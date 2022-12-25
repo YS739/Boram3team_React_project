@@ -1,7 +1,7 @@
 {
   "users": [
     {
-     "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",
+      "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",
       "userId": "s",
       "userPw": "s",
       "userName": "희령",
@@ -55,8 +55,8 @@
       "userPw": "12345678z",
       "userName": "이희령",
       "isLogin": true
-    }],
-    
+    }
+  ],
 
   "comments": [
     {
@@ -141,9 +141,8 @@
       "postId": 1,
       "comment": "ㅇㄴㄻㄴㅇㄹㅇ",
       "isA": "true",
-      "date": "2022-12-25T06:20:51.282Z"}
-
-     
+      "date": "2022-12-25T06:20:51.282Z"
+    }
   ],
   "posts": [
     {
@@ -154,26 +153,46 @@
       "like": 0
     },
     {
-      "id": 1,
-      "title": "고기 먹고 후식으로",
-      "categoryA": "냉면",
-      "categoryB": "된장찌개",
+      "id": 0,
+      "title": "탕수육",
+      "categoryA": "부먹",
+      "categoryB": "찍먹",
       "like": 0
     },
     {
-      "id": 2,
-      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
-      "categoryA": "이혼한다",
-      "categoryB": "한번 눈감아준다",
+      "id": "1133ca9b-4cea-4225-a85c-2a8c947f2dd7",
+      "title": "테스트",
+      "categoryA": "테스트",
+      "categoryB": "테스트",
       "like": 0
     },
     {
-      "id": 3,
+      "id": "9aff51b8-3c21-4537-beef-24e5898433b2",
+      "title": "ㅌㅌㅌㅌ",
+      "categoryA": "ㅌㅌㅌ",
+      "categoryB": "ㅌㅌㅌㅌㅌ",
+      "like": 0
+    },
+    {
+      "id": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
       "title": "당신의 연애 상대는?",
       "categoryA": "내 선물 당근마켓에서 사는 남친",
       "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": 0
-
+      "like": []
+    },
+    {
+      "id": "138b8776-6ce3-4e5b-9211-c38c94fa9a46",
+      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
+      "categoryA": "이혼한다",
+      "categoryB": "한번 눈감아준다",
+      "like": []
+    },
+    {
+      "id": "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8",
+      "title": "고기 먹고 후식으로",
+      "categoryA": "냉면",
+      "categoryB": "된장찌개",
+      "like": []
     }
   ]
 }
