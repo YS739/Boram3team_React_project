@@ -4,6 +4,7 @@ import PostList from "../../redux/components/PostList";
 import { __getPosts } from "../../redux/modules/postsSlice";
 import { __getComments } from "../../redux/modules/commentsSlice";
 import { __getUsers } from "../../redux/modules/usersSlice";
+import { Container } from "./style";
 const HomePage = () => {
   const dispatch = useDispatch();
 
@@ -14,9 +15,9 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <Container>
       <PostList></PostList>
-    </div>
+    </Container>
   );
 };
 

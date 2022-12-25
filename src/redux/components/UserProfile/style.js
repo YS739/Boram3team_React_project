@@ -3,4 +3,19 @@ import styled from "styled-components";
 const Section = styled.section`
   border: 1px solid red;
 `;
-export { Section };
+
+const H1 = styled.h1`
+  margin-left: 10px;
+  font-size: 30px;
+`;
+
+const Article = styled.article`
+  border: 5px solid black;
+  margin: 10px;
+  font-size: 30px;
+  :hover {
+    background-color: lightblue;
+  }
+`;
+const Btn = styled.button``;
+export { Section, H1, Article, Btn };

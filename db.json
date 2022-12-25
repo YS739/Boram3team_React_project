@@ -4,7 +4,7 @@
       "id": "91afa703-0580-412f-93ad-7e2f6e91fc41",
       "userId": "s",
       "userPw": "s",
-      "userName": "희령",
+      "userName": "이게 되는거구나",
       "isLogin": true
     },
     {
@@ -63,9 +63,7 @@
       "title": "탕수육",
       "categoryA": "부먹",
       "categoryB": "찍먹",
-      "like": [
-        "91afa703-0580-412f-93ad-7e2f6e91fc41"
-      ],
+      "like": [],
       "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
     },
     {
@@ -73,7 +71,9 @@
       "title": "고기 먹고 후식으로",
       "categoryA": "냉면",
       "categoryB": "된장찌개",
-      "like": [],
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
       "uid": "afsaasdfkl"
     },
     {
