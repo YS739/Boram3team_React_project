@@ -2,13 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { __deleteComment } from '../../../modules/commentsSlice';
 import { __changeComment } from '../../../modules/commentsSlice';
-import { Wrap, CategoryStyle } from './style';
+import { Wrap, CategoryStyle, ChangeInput } from './style';
 
 const Comments = () => {
   const { error } = useSelector((state) => state.comments);
   const { comment } = useSelector((state) => state.comments);
-
-  // console.log(comment);
 
   const dispatch = useDispatch();
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
@@ -17,9 +15,13 @@ const Comments = () => {
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
 
+  const inputRef = React.useRef();
+
   if (error) {
     return <div>{error.message}</div>;
   }
+
+  // 수정 Input창
 
   // 삭제버튼
 
@@ -31,18 +33,22 @@ const Comments = () => {
     }
   };
 
+  // 수정 버튼
+  let numb = 0;
   const changeButtonHandler = (id) => {
-    let input = prompt();
-    console.log(input);
-    if (input !== null) {
-      const changeComment = {
-        id,
-        comment: input,
-      };
-      dispatch(__changeComment(changeComment));
-    } else if (input === null) {
-      return;
-    }
+    numb = 1;
+
+    // prompt로 댓글수정
+    // let input = prompt('댓글을 수정하시겠습니까??', '');
+    // if (input !== null) {
+    //   const changeComment = {
+    //     id,
+    //     comment: input,
+    //   };
+    //   dispatch(__changeComment(changeComment));
+    // } else if (input === null) {
+    //   return;
+    // }
   };
 
   return (
@@ -56,6 +62,7 @@ const Comments = () => {
         if (co.isA === 'false') {
           color = '#179bbf';
         }
+
         return (
           <div key={co.id}>
             <br />
@@ -66,9 +73,9 @@ const Comments = () => {
               <span>{co.comment}</span>
               <span>작성자 ID</span>
               <span id='comment'>
-                {/* {document.querySelector('#change') ? <input /> : null} */}
+                <ChangeInput ref={inputRef} />
+                <Modal numb={numb} changeButtonHandler={changeButtonHandler} />
                 <button
-                  id='changein'
                   type='button'
                   onClick={() => changeButtonHandler(co.id)}
                 >
@@ -85,18 +92,16 @@ const Comments = () => {
   );
 };
 
-function ChangeInput({ changeComment, dispatch }) {
-  // const changeComment = {
-  //   id,
-  //   comment: input,
-  // };
+const Modal = (props) => {
+  let numb = props.numb;
+  console.log(numb);
 
-  // dispatch(__changeComment(changeComment));
   return (
-    <>
-      <input />
-    </>
+    <div>
+      {numb === 1 ? <input /> : null}
+      {/* <input /> */}
+    </div>
   );
-}
+};
 
 export default Comments;
