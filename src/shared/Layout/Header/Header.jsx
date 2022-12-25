@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Head, Btn, Logo, Nav } from "./style";
-import { useEffect } from "react";
+import { Head, Nav } from "./style";
 import CustomButtons from "../../../redux/components/CustomButtons";
 
 const Header = () => {
@@ -23,24 +22,27 @@ const Header = () => {
         XX토론
       </CustomButtons>
       <Nav>
-        <Btn
+        <CustomButtons
+          btnName="dev"
           dp={currentUserId !== null ? "block" : "none"}
           onClick={() => navigate("/my")}
         >
           마이페이지
-        </Btn>
-        <Btn
+        </CustomButtons>
+        <CustomButtons
+          btnName="dev"
           dp={currentUserId !== null ? "block" : "none"}
           onClick={() => navigate("/upload")}
         >
           토론 등록
-        </Btn>
-        <Btn
+        </CustomButtons>
+        <CustomButtons
+          btnName="dev"
           dp={currentUserId === null ? "block" : "none"}
           onClick={() => navigate("/login")}
         >
           로그인
-        </Btn>
+        </CustomButtons>
       </Nav>
     </Head>
   );

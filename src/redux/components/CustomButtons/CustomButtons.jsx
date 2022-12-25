@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonStyled, HomeButtonStyled } from "./style";
+import { ButtonStyled, HomeButtonStyled, NavStyled } from "./style";
 
 const CustomButtons = (props) => {
   // 스타일을 조금 변경해야 하는 경우 버튼에 btnName="" 을 주고 case로 분류,
@@ -10,6 +10,13 @@ const CustomButtons = (props) => {
         <HomeButtonStyled onClick={props.onClick}>
           {props.children}
         </HomeButtonStyled>
+      );
+    }
+    case "dev": {
+      return (
+        <NavStyled dp={props.dp} onClick={props.onClick}>
+          {props.children}
+        </NavStyled>
       );
     }
 

@@ -30,8 +30,27 @@ const HomeButtonStyled = styled.button`
   color: darkgreen;
 
   border: none;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
 `;
 
-export { ButtonStyled, HomeButtonStyled };
+const NavStyled = styled.button`
+  cursor: pointer;
+
+  background-color: transparent;
+  color: darkgreen;
+
+  border: none;
+  font-size: 20px;
+
+  float: right;
+  padding-top: 18px;
+  padding-right: 10px;
+  display: ${(props) => props.dp};
+
+  :hover {
+    font-weight: 700;
+  }
+`;
+
+export { ButtonStyled, HomeButtonStyled, NavStyled };
