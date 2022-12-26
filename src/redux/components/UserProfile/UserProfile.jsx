@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Article, Section, H1, Btn } from "./style";
-import { useState, useRef, useEffect } from "react";
-import { __switchIsLogin } from "../../modules/usersSlice";
+import { useState } from "react";
+import { __editUserName } from "../../modules/usersSlice";
 
 const UserProfile = () => {
   const { users } = useSelector((state) => state.users);
@@ -16,7 +16,7 @@ const UserProfile = () => {
   };
   const changeNameHandler = (profile) => {
     const newProfile = { ...profile, userName: name };
-    dispatch(__switchIsLogin(newProfile));
+    dispatch(__editUserName(newProfile));
   };
 
   return (

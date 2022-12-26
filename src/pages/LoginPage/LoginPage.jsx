@@ -27,11 +27,6 @@ const LoginPage = () => {
   const logInHandler = (e) => {
     e.preventDefault();
 
-    // users에서 특정 유저의 userId와 userPw가 모두 일치하는지 확인한다.
-    const user = users.find(
-      (user) => user.userId === userId && user.userPw === userPw
-    );
-
     // 아이디를 입력하지 않았을 때
     if (!userId) {
         e.preventDefault();
@@ -68,7 +63,7 @@ const LoginPage = () => {
         localStorage.clear();
         localStorage.setItem("id", user.id)
     };
-    };
+};
 
     const logoutHandler = (e) => {
         e.preventDefault();
