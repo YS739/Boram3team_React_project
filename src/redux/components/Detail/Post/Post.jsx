@@ -1,15 +1,18 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { React } from "react";
+import styled from "styled-components";
+import { React ,useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
 import CustomButtons from "../../CustomButtons";
+import { Div } from "./style";
+
 
 const Post = () => {
   const { posts } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const param = useParams();
-
+  const currentUserId = localStorage.getItem("id");
   const thePost = posts.find((post) => post.id === param.id);
   // 삭제버튼
   const deletePostHandler = (postId) => {
@@ -27,15 +30,18 @@ const Post = () => {
         <p>A : {thePost?.categoryA}</p>
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
-        <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
+
+        <Div>{thePost?.uid===currentUserId ?   <div>
+        <button  onClick={() => navigate(`/edit/${thePost?.id}`)}>
           수정
-        </CustomButtons>
-        <CustomButtons
+          </button>
+        <button 
           type="button"
           onClick={() => deletePostHandler(thePost?.id)}
         >
           삭제
-        </CustomButtons>
+          </button>  
+        </div>:  ""  }</Div>
       </div>
     </div>
   );
