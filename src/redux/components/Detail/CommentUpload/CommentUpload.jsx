@@ -32,13 +32,11 @@ const CommentUpload = () => {
   const thePostComment = comments?.filter(
     (theCo) => theCo.postNumber === param.id
   );
-  console.log(thePostComment);
 
   //현재 포스트의 user 댓글
   const userComment = thePostComment?.find(
     (theCo) => theCo.user === currentUserDi
   );
-  console.log(userComment);
 
   // 댓글 등록 버튼
   const onSubmitCommentHandler = (e) => {
