@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
-import { Wrap, CategoryStyle } from "./style";
-import CommentEditDelete from "./CommentEditDelete";
-import { useParams } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { Wrap, CategoryStyle } from './style';
+import CommentEditDelete from './CommentEditDelete';
+import { useParams } from 'react-router-dom';
 
 const Comments = () => {
   const { error, comments } = useSelector((state) => state.comments);
@@ -23,22 +23,22 @@ const Comments = () => {
     <Wrap>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {detailComment?.map((comment) => {
-        let color = "";
-        if (comment.isA === "true") {
-          color = "#fa7d43";
+        let color = '';
+        if (comment.isA === 'true') {
+          color = '#fa7d43';
         }
-        if (comment.isA === "false") {
-          color = "#179bbf";
+        if (comment.isA === 'false') {
+          color = '#179bbf';
         }
 
         return (
           <div key={comment.id}>
             <br />
             <CategoryStyle color={color}>
-              {comment.isA === "true" ? theA : theB}
+              {comment.isA === 'true' ? theA : theB}
             </CategoryStyle>
             <div>
-              <span id="comment">
+              <span id='comment'>
                 <CommentEditDelete key={comment.id} comments={comment} />
               </span>
             </div>
