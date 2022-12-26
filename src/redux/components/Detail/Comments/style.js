@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrap = styled.div`
   width: 600px;
@@ -20,4 +20,7 @@ const Btn = styled.button`
   display: ${(props) => props.dp};
 `;
 
-export { Wrap, CategoryStyle, Btn };
+const DelBtn = styled.button`
+  display: ${(props) => props.dp};
+`;
+export { Wrap, CategoryStyle, Btn, DelBtn };
