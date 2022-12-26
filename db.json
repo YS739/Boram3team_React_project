@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "userId": "qwe123",
+      "userPw": "qwe123123",
+      "userName": "qwe"
+    }
+  ],
   "posts": [
     {
       "id": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
@@ -106,6 +113,22 @@
       "comment": "sdvasdvsadv",
       "isA": "false",
       "date": "2022-12-26T08:24:44.319Z"
+    },
+    {
+      "id": "91736c16-6c09-4ac1-9808-51d1c1081c79",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "sdafqwe",
+      "isA": "false",
+      "date": "2022-12-26T08:38:42.016Z"
+    },
+    {
+      "id": "0ef38bc7-6479-4592-9f3b-da8a6b361164",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qweqwe12eqwe",
+      "isA": "true",
+      "date": "2022-12-26T09:03:20.685Z"
     }
   ]
 }

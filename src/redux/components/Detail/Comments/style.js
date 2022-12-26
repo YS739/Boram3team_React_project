@@ -23,4 +23,5 @@ const Btn = styled.button`
 const DelBtn = styled.button`
   display: ${(props) => props.dp};
 `;
+
 export { Wrap, CategoryStyle, Btn, DelBtn };

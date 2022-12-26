@@ -4,7 +4,7 @@ import {
   __deleteComment,
 } from '../../../modules/commentsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Btn, DelBtn } from './style';
+import { Btn, DelBtn, ChangeCategory } from './style';
 
 const CommentEditDelete = ({ comments }) => {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ const CommentEditDelete = ({ comments }) => {
   const [completeDisplay, setCompleteDisplay] = useState('none');
   const [editDisplay, setEditDisplay] = useState('none');
   const [deleteDisplay, setDeleteDisplay] = useState('none');
+  const [categoryShow, setCategoryShow] = useState('none');
 
   const changeInput = useRef();
   const userComment = useRef();
