@@ -25,19 +25,19 @@ const CategoryBox = styled.div`
 `;
 
 const CategoryA = styled.span`
-  background-color: #fa7d43;
+  background-color: #ec5858;
   color: white;
 
-  border: 2px solid #fa7d43;
+  border: 2px solid #ec5858;
   border-radius: 10px;
   padding: 10px;
 `;
 
 const CategoryB = styled.span`
-  background-color: #179bbf;
+  background-color: #3e6d9c;
   color: white;
 
-  border: 2px solid #179bbf;
+  border: 2px solid #3e6d9c;
   border-radius: 10px;
   padding: 10px;
 `;

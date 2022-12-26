@@ -2,7 +2,17 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { __editPost, __getPosts } from "../../redux/modules/postsSlice";
+import {
+  AddPostContainer,
+  AddPostForm,
+  CategoryInput,
+  InputA,
+  InputB,
+  TitleInput,
+} from "./style";
+import CustomButton from "../../redux/components/CustomButtons";
 import useInput from "../../hooks/useInput";
+
 const EditPage = () => {
   const dispatch = useDispatch();
 
@@ -69,36 +79,40 @@ const EditPage = () => {
   };
 
   return (
-    <div>
-      <div>
-        <form onSubmit={editPostHandler}>
-          <section>
-            <h1>토론주제</h1>
-            <input
-              id="title"
-              value={title}
-              onChange={titleChangeHandler}
-              autoFocus
-            />
-            <br></br>
+    <AddPostContainer>
+      <AddPostForm onSubmit={editPostHandler}>
+        <section>
+          <h1>토론주제</h1>
+          <TitleInput
+            id="title"
+            value={title}
+            onChange={titleChangeHandler}
+            autoFocus
+          />
+          <br></br>
+          <CategoryInput>
             <h2>선택분류</h2>
-            <p>A</p> :
-            <input
-              id="categoryA"
-              value={categoryA}
-              onChange={categoryAChangeHandler}
-            />
-            <p>B</p> :
-            <input
-              id="categoryB"
-              value={categoryB}
-              onChange={categoryBChangeHandler}
-            />
-            <button>수정 완료</button>
-          </section>
-        </form>
-      </div>
-    </div>
+            <InputA>
+              <p>A</p> :
+              <input
+                id="categoryA"
+                value={categoryA}
+                onChange={categoryAChangeHandler}
+              />
+            </InputA>
+            <InputB>
+              <p>B</p> :
+              <input
+                id="categoryB"
+                value={categoryB}
+                onChange={categoryBChangeHandler}
+              />
+              <CustomButton>수정 완료</CustomButton>
+            </InputB>
+          </CategoryInput>
+        </section>
+      </AddPostForm>
+    </AddPostContainer>
   );
 };
 

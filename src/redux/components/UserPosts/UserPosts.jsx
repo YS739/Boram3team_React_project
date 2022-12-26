@@ -16,7 +16,7 @@ const UserPosts = () => {
   const { comments } = useSelector((state) => state.comments);
   const navigate = useNavigate();
   const currentUserDi = localStorage.getItem("id");
-  const myPosts = posts.filter((post) => post.uid === currentUserDi);
+  const myPosts = posts.filter((post) => post.user === currentUserDi);
 
   if (error) {
     return <div>{error.message}</div>;

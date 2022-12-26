@@ -25,10 +25,10 @@ const Comments = () => {
       {detailComment?.map((comment) => {
         let color = "";
         if (comment.isA === "true") {
-          color = "#fa7d43";
+          color = "#EC5858";
         }
         if (comment.isA === "false") {
-          color = "#179bbf";
+          color = "#3E6D9C";
         }
 
         return (

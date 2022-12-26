@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrap = styled.div`
   width: 600px;
@@ -16,6 +16,7 @@ const CategoryStyle = styled.span`
   padding: 2px 10px;
 `;
 
+// CommentEditDelete.jsx
 const Btn = styled.button`
   display: ${(props) => props.dp};
 `;

@@ -7,14 +7,17 @@
       "userName": "dfd"
     },
     {
+
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
       "userName": "바보"
+
     }
   ],
   "posts": [
     {
+
       "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
       "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "title": "111",

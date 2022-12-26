@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
-import { Div } from "./style";
+import { EditDeleteBtn, PostBox } from "./style";
 
 const Post = () => {
   const { posts } = useSelector((state) => state.posts);
@@ -20,7 +20,7 @@ const Post = () => {
   };
 
   return (
-    <div>
+    <PostBox>
       <div key={thePost?.id}>
         <h1>토론주제 :{thePost?.title}</h1>
         <h2>선택분류</h2>
@@ -28,7 +28,8 @@ const Post = () => {
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
 
-        <Div>
+
+        <EditDeleteBtn>
           {thePost?.user === currentUserDi ? (
             <div>
               <button onClick={() => navigate(`/edit/${thePost?.id}`)}>
@@ -44,9 +45,9 @@ const Post = () => {
           ) : (
             ""
           )}
-        </Div>
+        </EditDeleteBtn>
       </div>
-    </div>
+    </PostBox>
   );
 };
 
