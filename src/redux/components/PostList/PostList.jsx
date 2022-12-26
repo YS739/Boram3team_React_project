@@ -52,7 +52,7 @@ const PostList = () => {
     <Section>
       <H1>토론주제</H1>
 
-      {posts.map((post) => {
+      {posts?.map((post) => {
         let countA = 0;
         let countB = 0;
         let barA = "lightgray";
