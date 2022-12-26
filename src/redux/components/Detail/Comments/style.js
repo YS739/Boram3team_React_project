@@ -12,15 +12,12 @@ const Wrap = styled.div`
 const CategoryStyle = styled.span`
   background-color: ${(props) => props.color};
   color: white;
-
   border-radius: 6px;
   padding: 2px 10px;
 `;
 
-const UserComment = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
+const Btn = styled.button`
+  display: ${(props) => props.dp};
 `;
 
-export { Wrap, CategoryStyle, UserComment };
+export { Wrap, CategoryStyle, Btn };

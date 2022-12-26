@@ -1,11 +1,14 @@
 import { useRef, useState } from "react";
-import { __changeComment } from "../../../modules/commentsSlice";
+import {
+  __changeComment,
+  __deleteComment,
+} from "../../../modules/commentsSlice";
 import { useDispatch } from "react-redux";
 import { Btn } from "./style";
 
-const UpdateComment = ({ comment }) => {
+const CommentEditDelete = ({ comments }) => {
   const dispatch = useDispatch();
-  const [commentChange, setCommentChange] = useState(comment.comment);
+  const [commentChange, setCommentChange] = useState(comments?.comment);
   const [completeDisplay, setCompleteDisplay] = useState("none");
   const [editDisplay, setEditDisplay] = useState("block");
 
@@ -16,6 +19,7 @@ const UpdateComment = ({ comment }) => {
     setCommentChange(e.target.value);
   };
 
+  //수정 버튼
   const editButtonHandler = () => {
     changeInput.current.style = "display:block";
     userComment.current.style = "display:none";
@@ -24,7 +28,8 @@ const UpdateComment = ({ comment }) => {
     setEditDisplay("none");
   };
 
-  const changeButtonHandler = (id) => {
+  // 완료 버튼
+  const completeButtonHandler = (id) => {
     changeInput.current.style = "display:none";
     userComment.current.style = "display:block";
     setCompleteDisplay("none");
@@ -37,11 +42,20 @@ const UpdateComment = ({ comment }) => {
     }
   };
 
+  //삭제버튼
+  const deleteButtonHandler = (id) => {
+    if (window.confirm("삭제할까요??") === true) {
+      dispatch(__deleteComment(id));
+    } else {
+      return;
+    }
+  };
+
   return (
     <div>
       <br />
       <div>
-        <span ref={userComment}>{comment.comment}</span>
+        <span ref={userComment}>{comments?.comment}</span>
         <input
           style={{ display: "none" }}
           ref={changeInput}
@@ -56,20 +70,21 @@ const UpdateComment = ({ comment }) => {
           <Btn
             dp={completeDisplay}
             onClick={() =>
-              changeButtonHandler({
-                id: comment.id,
-                postId: comment.postId,
+              completeButtonHandler({
+                id: comments.id,
+                postId: comments.postId,
                 comment: commentChange,
-                isA: comment.isA,
+                isA: comments.isA,
               })
             }
           >
             완료
           </Btn>
+          <button onClick={() => deleteButtonHandler(comments.id)}>삭제</button>
         </span>
       </div>
     </div>
   );
 };
 
-export default UpdateComment;
+export default CommentEditDelete;
