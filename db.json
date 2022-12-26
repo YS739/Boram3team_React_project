@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "a1e6e26f-ba94-4fca-8255-867e18849488",
+      "userId": "11111",
+      "userPw": "1111qqqq",
+      "userName": "ssdfa"
+    },
+    {
+      "id": "1",
+      "userId": "22222",
+      "userPw": "2222qqqq",
+      "userName": "hi"
+    }
+  ],
+  "posts": [
+    {
+      "id": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "625a7f76-eedd-440b-b6c2-480098cbcdcd",
+      "title": "2",
+      "categoryA": "2",
+      "categoryB": "2",
+      "like": []
+    }
+  ],
+  "comments": [
+    {
+      "id": "4f932828-7eb9-4c02-aeb0-5b9c0ad36e3d",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "41444319-4522-4614-bfc3-36a2cf6d58ba",
+      "comment": "afsfdsfsdf",
+      "isA": "true",
+      "date": "2022-12-26T06:16:55.552Z"
+    },
+    {
+      "id": "9db59135-9819-4733-9047-d91f9bdec284",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "41444319-4522-4614-bfc3-36a2cf6d58ba",
+      "comment": "adfsdf",
+      "isA": "false",
+      "date": "2022-12-26T06:16:58.000Z"
+    }
+  ]
+}
