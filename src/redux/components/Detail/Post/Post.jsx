@@ -4,7 +4,7 @@ import { React ,useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
 import CustomButtons from "../../CustomButtons";
-import { Btn } from "./style";
+import { Div } from "./style";
 
 
 const Post = () => {
@@ -66,7 +66,7 @@ const Post = () => {
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
 
-        <Btn >{thePost?.uid===currentUserId ?   <div>
+        <Div>{thePost?.uid===currentUserId ?   <div>
         <button  onClick={() => navigate(`/edit/${thePost?.id}`)}>
           수정
           </button>
@@ -76,7 +76,7 @@ const Post = () => {
         >
           삭제
           </button>  
-        </div>:  ""  }</Btn>
+        </div>:  ""  }</Div>
       </div>
     </div>
   );

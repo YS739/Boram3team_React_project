@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Btn = styled.div`
+const Div = styled.div`
   display: ${(props) => props.dp};
 `;
 
-export {Btn}
+export {Div}
