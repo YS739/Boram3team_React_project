@@ -11,58 +11,63 @@ const LoginPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        dispatch(__getUsers())
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(__getUsers());
+  }, [dispatch]);
 
-    const { error, users } = useSelector((state) => state.users);
+  const { error, users } = useSelector((state) => state.users);
 
-    const [userId, setUserId, onChangeUserIdHandler] = useInput();
-    const [userPw, setUserPw, onChangeUserPwHandler] = useInput();
+  const [userId, setUserId, onChangeUserIdHandler] = useInput();
+  const [userPw, setUserPw, onChangeUserPwHandler] = useInput();
+  
+  const userId_input = useRef();
+  const userPw_input = useRef();
+  const loginMsg = useRef();
 
-    const userId_input = useRef();
-    const userPw_input = useRef();
-    const loginMsg = useRef();
+  const logInHandler = (e) => {
+    e.preventDefault();
 
-    const logInHandler = (e) => {
+    // users에서 특정 유저의 userId와 userPw가 모두 일치하는지 확인한다.
+    const user = users.find(
+      (user) => user.userId === userId && user.userPw === userPw
+    );
+
+    // 아이디를 입력하지 않았을 때
+    if (!userId) {
         e.preventDefault();
+        loginMsg.current.innerText = "아이디를 입력하세요."
+        loginMsg.current.style = "display:block"
+        userId_input.current.focus();
+        return false;
+    }
 
-        // 아이디를 입력하지 않았을 때
-        if (!userId) {
-            e.preventDefault();
-            loginMsg.current.innerText = "아이디를 입력하세요."
-            loginMsg.current.style = "display:block"
-            userId_input.current.focus();
-            return false;
-        }
+    // 비밀번호를 입력하지 않았을 때
+    if (!userPw) {
+        e.preventDefault();
+        loginMsg.current.innerText = "비밀번호를 입력하세요."
+        loginMsg.current.style = "display:block"
+        userPw_input.current.focus();
+        return false;
+    }
 
-        // 비밀번호를 입력하지 않았을 때
-        if (!userPw) {
-            e.preventDefault();
-            loginMsg.current.innerText = "비밀번호를 입력하세요."
-            loginMsg.current.style = "display:block"
-            userPw_input.current.focus();
-            return false;
-        }
+    // users에서 특정 유저의 userId와 userPw가 모두 일치하는지 확인한다.
+    const user = users.find((user) => user.userId === userId && user.userPw === userPw)
 
-        // users에서 특정 유저의 userId와 userPw가 모두 일치하는지 확인한다.
-        const user = users.find((user) => user.userId === userId && user.userPw === userPw)
-
-        // 일치하지 않을 때
-        if (user === undefined) {
-            loginMsg.current.innerText = "아이디 또는 비밀번호를 잘못 입력했습니다."
-            loginMsg.current.style = "display:block"
-            return false;
+    // 일치하지 않을 때
+    if (user === undefined) {
+        loginMsg.current.innerText = "아이디 또는 비밀번호를 잘못 입력했습니다."
+        loginMsg.current.style = "display:block"
+        return false;
 
         // 모두 일치할 때
         } else {
             navigate("/")
 
-            // 로그인한 특정 유저의 id를 localStorage에 저장함
-            // 저장하는 이유는 어느 페이지에 가든 현재 로그인한 유저의 id를 불러오기 위해서
-            localStorage.clear();
-            localStorage.setItem("id", user.id)
-        };
+        // 로그인한 특정 유저의 id를 localStorage에 저장함
+        // 저장하는 이유는 어느 페이지에 가든 현재 로그인한 유저의 id를 불러오기 위해서
+        localStorage.clear();
+        localStorage.setItem("id", user.id)
+    };
     };
 
     const logoutHandler = (e) => {

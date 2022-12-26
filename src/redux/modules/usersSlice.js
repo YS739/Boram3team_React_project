@@ -13,7 +13,7 @@ const initialState = {
 export const __getUsers = createAsyncThunk(
   "users/getUsers",
   async (payload, thunkAPI) => {
-    try { 
+    try {
       const data = await axios.get("http://localhost:3001/users");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
