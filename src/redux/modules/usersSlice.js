@@ -13,7 +13,7 @@ const initialState = {
 export const __getUsers = createAsyncThunk(
   "users/getUsers",
   async (payload, thunkAPI) => {
-    try { 
+    try {
       const data = await axios.get("http://localhost:3001/users");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -43,7 +43,7 @@ export const __switchIsLogin = createAsyncThunk(
   "users/switchLoggedIn",
   async (payload, thunkAPI) => {
     try {
-      await axios.patch(`http://localhost:3001/users/${payload.id}`, payload)
+      await axios.patch(`http://localhost:3001/users/${payload.id}`, payload);
       const data = await axios.get("http://localhost:3001/users");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -71,19 +71,18 @@ const usersSlice = createSlice({
 
     [__signUp.pending]: (state) => {
       state.isLoading = true;
-      console.log("pengding")
+      console.log("pengding");
     },
     [__signUp.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.users = action.payload;
-      console.log("fulfilled")
-      console.log("state.users:", state.users)
+      console.log("fulfilled");
+      console.log("state.users:", state.users);
     },
     [__signUp.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     }
-  
   }
 });
 

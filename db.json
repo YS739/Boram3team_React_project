@@ -1,36 +1,6 @@
 {
   "users": [
     {
-      "id": "9b9de595-303b-4745-8fed-c79c9744c1f9",
-      "userId": "abcde",
-      "userPw": "12345678z",
-      "userName": "이희령"
-    },
-    {
-      "id": "b8b9a04a-0b7e-4342-9512-45fd3ec6ff4b",
-      "userId": "hello",
-      "userPw": "12345678z",
-      "userName": "spd"
-    },
-    {
-      "id": "c6a12454-7c48-42a3-afb7-d48f812a5de9",
-      "userId": "christmas",
-      "userPw": "12345678z",
-      "userName": "메리"
-    },
-    {
-      "id": "8273d582-9188-418d-ac27-3e8ac70b6ac5",
-      "userId": "edsjj",
-      "userPw": "dlss8d5s",
-      "userName": "gg"
-    },
-    {
-      "id": "6f3a3049-75b6-47a8-8e57-67a3d946d995",
-      "userId": "dsde",
-      "userPw": "djfmddls5s",
-      "userName": "하하핫"
-    },
-    {
       "id": "715286bc-b276-4877-9523-2e38aae38a84",
       "userId": "dsdsd",
       "userPw": "dsdsd5s5s8s8",
@@ -41,6 +11,86 @@
       "userId": "dsds52",
       "userPw": "dsds2s5d8d5",
       "userName": "ssss"
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "title": "탕수육",
+      "categoryA": "부먹",
+      "categoryB": "찍먹",
+      "like": ["91afa703-0580-412f-93ad-7e2f6e91fc41"],
+      "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
+    },
+    {
+      "id": 1,
+      "title": "고기 먹고 후식으로",
+      "categoryA": "냉면",
+      "categoryB": "된장찌개",
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
+      "uid": "afsaasdfkl"
+    },
+    {
+      "id": 2,
+      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
+      "categoryA": "이혼한다",
+      "categoryB": "한번 눈감아준다",
+      "like": ["91afa703-0580-412f-93ad-7e2f6e91fc41"],
+      "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
+    },
+    {
+      "id": 3,
+      "title": "당신의 연애 상대는?",
+      "categoryA": "내 선물 당근마켓에서 사는 남친",
+      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
+      "like": [],
+      "uid": "afsaasdfkl"
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 1,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
+    },
+    {
+      "id": 2,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 3,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 4,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
+    },
+    {
+      "id": 5,
+      "comment": "나는 부먹이 좋다!",
+      "isA": true,
+      "postId": 0
+    },
+    {
+      "id": 6,
+      "comment": "나는 찍먹이 좋다!",
+      "isA": false,
+      "postId": 0
     }
   ]
 }
