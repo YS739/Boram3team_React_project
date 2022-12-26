@@ -12,11 +12,7 @@ const Post = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const param = useParams();
-  const [editDisplay, setEditDisplay] = useState("block");
-
   const currentUserId = localStorage.getItem("id");
-  
-
   const thePost = posts.find((post) => post.id === param.id);
   // 삭제버튼
   const deletePostHandler = (postId) => {
@@ -25,37 +21,6 @@ const Post = () => {
       navigate("/");
     }
   };
-
-
-  // 완료 버튼
-  const completeButtonHandler = () => {
-    if(thePost.uid===currentUserId){
-    setEditDisplay("none");
-  }else(
-    setEditDisplay("none")
-  );
-  }
-
-  
-  // console.log(thePost.uid)
-  // // console.log(posts[1].uid)
-  // console.log(currentUserId)
-
-  // const btn =()=>{
-  //   if(thePost.uid===currentUserId){
-  //     console.log('성공')
-  //   }
-  // }
-
-  // const showBtn = ()=>{
-  //   if( thePost.uid===currentUserId){
-  //     console.log('성공')
-  //     // {<CustomButtons style="display:block"/>}
-  //   }else{
-  //     // {<CustomButtons style="display:none"/>}
-  //     console.log('실패')
-  //   }
-  // };
 
   return (
     <div>
