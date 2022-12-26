@@ -5,12 +5,26 @@
       "userDi": "1111",
       "userPw": "1234qwer",
       "userName": "dfd"
+    },
+    {
+      "id": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "userDi": "1111111",
+      "userPw": "1234qwer",
+      "userName": "래미"
     }
   ],
   "posts": [
     {
       "id": "f94f264c-3037-43d9-97d6-12620eb8d888",
       "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
+      "title": "1",
+      "categoryA": "1",
+      "categoryB": "1",
+      "like": []
+    },
+    {
+      "id": "80f7d2d9-8087-4861-8185-76101afe79ab",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
       "title": "1",
       "categoryA": "1",
       "categoryB": "1",
@@ -33,6 +47,14 @@
       "comment": "dfasdf",
       "isA": "false",
       "date": "2022-12-26T09:22:51.059Z"
+    },
+    {
+      "id": "9a03974f-d3ac-47ec-ac0c-58555823fcb7",
+      "postNumber": "80f7d2d9-8087-4861-8185-76101afe79ab",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅁㄹㄴㅇㄹㄴㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-26T09:44:33.602Z"
     }
   ]
 }

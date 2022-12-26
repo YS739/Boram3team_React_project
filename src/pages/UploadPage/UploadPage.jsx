@@ -3,6 +3,15 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
+import {
+  AddPostContainer,
+  AddPostForm,
+  CategoryInput,
+  InputA,
+  InputB,
+  TitleInput,
+} from "./style";
+import CustomButton from "../../redux/components/CustomButtons";
 
 const UploadPage = () => {
   const dispatch = useDispatch();
@@ -68,21 +77,35 @@ const UploadPage = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={addPostHandler}>
+    <AddPostContainer>
+      <AddPostForm onSubmit={addPostHandler}>
         <section>
           <h1>토론주제</h1>
-          <input id="title" value={title} onChange={titleChange} />
+          <TitleInput id="title" value={title} onChange={titleChange} />
           <br></br>
-          <h2>선택분류</h2>
-          <p>A</p> :
-          <input id="categoryA" value={categoryA} onChange={categoryAsChange} />
-          <p>B</p> :
-          <input id="categoryB" value={categoryB} onChange={categoryBChange} />
-          <button>등록</button>
+          <CategoryInput>
+            <h2>선택분류</h2>
+            <InputA>
+              <h2>A</h2> :
+              <input
+                id="categoryA"
+                value={categoryA}
+                onChange={categoryAsChange}
+              />
+            </InputA>
+            <InputB>
+              <h2>B</h2> :
+              <input
+                id="categoryB"
+                value={categoryB}
+                onChange={categoryBChange}
+              />
+              <CustomButton>등록</CustomButton>
+            </InputB>
+          </CategoryInput>
         </section>
-      </form>
-    </div>
+      </AddPostForm>
+    </AddPostContainer>
   );
 };
 
