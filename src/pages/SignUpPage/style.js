@@ -65,6 +65,19 @@ const ButtonBox = styled.div`
     margin-top: 15px;
 `
 
+const SwitchText = styled.div`
+    margin-top: 15px;
 
+    span {
+        text-decoration: underline;
+        text-underline-position: under;
+        cursor: pointer;
+        margin-left: 7px;
 
-export { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox };
+        :hover{
+            color: skyblue
+        }
+    }
+`
+
+export { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox, SwitchText };

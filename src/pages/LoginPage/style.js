@@ -64,4 +64,20 @@ const Button = styled.button`
 const ButtonBox = styled.div`
     margin-top: 15px;
 `
-export { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox };
+
+const SwitchText = styled.div`
+    margin-top: 15px;
+
+    span {
+        text-decoration: underline;
+        text-underline-position: under;
+        cursor: pointer;
+        margin-left: 7px;
+
+        :hover{
+            color: skyblue
+        }
+    }
+`
+
+export { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox, SwitchText };

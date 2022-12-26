@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __getUsers } from "../../redux/modules/usersSlice";
 import useInput from "../../hooks/useInput";
-import { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox } from "./style";
+import { Wrap, SignUpContainer, SignUpForm, InputBox, CheckMsg, Button, ButtonBox, SwitchText } from "./style";
 
 
 const LoginPage = () => {
@@ -19,13 +19,6 @@ const LoginPage = () => {
 
     const [userId, setUserId, onChangeUserIdHandler] = useInput();
     const [userPw, setUserPw, onChangeUserPwHandler] = useInput();
-
-    // 어느 페이지든 현재 로그인한 유저의 id를 가져오고 싶을 때
-    // let currentUserId = localStorage.getItem("id");
-    // console.log(currentUserId)
-
-    // const [userId, setUserId] = useState("");
-    // const [userPw, setUserPw] = useState("");
 
     const userId_input = useRef();
     const userPw_input = useRef();
@@ -58,6 +51,7 @@ const LoginPage = () => {
         // 일치하지 않을 때
         if (user === undefined) {
             loginMsg.current.innerText = "아이디 또는 비밀번호를 잘못 입력했습니다."
+            loginMsg.current.style = "display:block"
             return false;
 
         // 모두 일치할 때
@@ -76,7 +70,6 @@ const LoginPage = () => {
         e.preventDefault();
         alert("로그아웃 완료")
         localStorage.clear();
-
     };
 
     if (error) {
@@ -91,22 +84,21 @@ const LoginPage = () => {
                     <InputBox>
                         <h4>아이디*</h4>
                         <input type="text" id="userId" name="userId" method="post"
-                        placeholder="아이디를 입력하세요."
                         ref={userId_input} value={userId} onChange={onChangeUserIdHandler}/>
                         {/* <CheckMsg ref={userId_msg} /> */}
                     </InputBox>  
                     <InputBox>
                         <h4>비밀번호*</h4>
                         <input type="password" id="userPw" name="userPw" method="post"
-                        placeholder="비밀번호를 입력하세요."
                         ref={userPw_input} value={userPw} onChange={onChangeUserPwHandler}/>
                         <CheckMsg ref={loginMsg} />
                     </InputBox>  
                     <ButtonBox>
                         <Button onClick={logInHandler}>로그인하기</Button>    
-                        {/* TODO: 회원가입 이동 버튼 추가                  */}
-                        {/* <button onClick={logoutHandler}>로그아웃</button> */}
                     </ButtonBox>
+                    <SwitchText>처음 방문하셨나요? 
+                        <span onClick={() => navigate("/signUp")}>회원가입</span>
+                    </SwitchText>
                 </SignUpForm>
             </SignUpContainer>
         </Wrap>

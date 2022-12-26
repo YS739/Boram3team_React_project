@@ -32,7 +32,7 @@ export default Layout;
 
 // styled-components
 const Head = styled.div`
-  /* max-width: 1200px; */
+  max-width: 1200px;
   min-width: 800px;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@ const Head = styled.div`
 `;
 
 const Foot = styled.div`
-  /* max-width: 1200px; */
+  max-width: 1200px;
   min-width: 800px;
   display: flex;
   justify-content: space-around;
