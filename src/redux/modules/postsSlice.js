@@ -15,7 +15,9 @@ export const __uploadPost = createAsyncThunk(
     try {
       await axios.post("http://localhost:3001/posts", payload);
       // 최신 데이터를 불러오기 위해 get 추가
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get(
+        "http://localhost:3001/posts?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -28,7 +30,9 @@ export const __getPosts = createAsyncThunk(
   "posts/getPosts",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get(
+        "http://localhost:3001/posts?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -42,7 +46,9 @@ export const __AddLikes = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get(
+        "http://localhost:3001/posts?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -56,7 +62,9 @@ export const __deletePost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.delete(`http://localhost:3001/posts/${payload}`);
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get(
+        "http://localhost:3001/posts?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -70,7 +78,9 @@ export const __editPost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get(
+        "http://localhost:3001/posts?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

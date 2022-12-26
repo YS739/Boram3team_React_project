@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -12,27 +12,17 @@ import {
   TitleInput,
 } from "./style";
 import CustomButton from "../../redux/components/CustomButtons";
+import useInput from "../../hooks/useInput";
 
 const UploadPage = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState();
-  const [categoryA, setCategoryA] = useState();
-  const [categoryB, setCategoryB] = useState();
   const navigate = useNavigate();
   const currentUserDi = localStorage.getItem("id");
 
-  //타이틀 input값
-  const titleChange = (event) => {
-    setTitle(event.target.value);
-  };
-  //categoryA input값
-  const categoryAsChange = (event) => {
-    setCategoryA(event.target.value);
-  };
-  //타categoryB이틀 input값
-  const categoryBChange = (event) => {
-    setCategoryB(event.target.value);
-  };
+  //use Input
+  const [title, setTitle, titleChangeHandler] = useInput();
+  const [categoryA, setCategoryA, categoryAChangeHandler] = useInput();
+  const [categoryB, setCategoryB, categoryBChangeHandler] = useInput();
 
   //추가하기 핸들러
   const addPostHandler = (e) => {
@@ -46,6 +36,7 @@ const UploadPage = () => {
         title,
         categoryA,
         categoryB,
+        date: new Date(),
         like: [],
       };
       //값이 모두 입력되고 실행되면 navigate로 해당 생성된 id의 디테일페이지로 이동
@@ -103,6 +94,7 @@ const UploadPage = () => {
               <CustomButton>등록</CustomButton>
             </InputB>
           </CategoryInput>
+
         </section>
       </AddPostForm>
     </AddPostContainer>

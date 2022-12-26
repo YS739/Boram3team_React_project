@@ -1,19 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Article, Section, H1, Btn } from "./style";
-import { useState } from "react";
 import { __editUserName } from "../../modules/usersSlice";
+import useInput from "../../../hooks/useInput";
 
 const UserProfile = () => {
   const { users } = useSelector((state) => state.users);
   const currentUserDi = localStorage.getItem("id");
   const profile = users.find((user) => user.id === currentUserDi);
   const dispatch = useDispatch();
-  const [name, setName] = useState(profile?.userName);
 
-  const inputNameHandler = (e) => {
-    setName(e.target.value);
-    console.log(name);
-  };
+  // //useINput
+  const [name, setName, inputNameHandler] = useInput();
+
   const changeNameHandler = (profile) => {
     const newProfile = { ...profile, userName: name };
     dispatch(__editUserName(newProfile));

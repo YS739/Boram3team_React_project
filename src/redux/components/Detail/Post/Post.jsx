@@ -28,6 +28,7 @@ const Post = () => {
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
 
+
         <EditDeleteBtn>
           {thePost?.user === currentUserDi ? (
             <div>
