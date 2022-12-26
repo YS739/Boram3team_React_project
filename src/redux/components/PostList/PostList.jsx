@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __AddLikes } from "../../modules/postsSlice";
@@ -16,6 +17,7 @@ const PostList = () => {
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
+  const [dp, setDp] = useState("block");
 
   const currentUserDi = localStorage.getItem("id");
 
@@ -94,7 +96,7 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike onClick={() => switchLikesHandler(post)}>
+              <PostLike dp={dp} onClick={() => switchLikesHandler(post)}>
                 👍
                 <br />({post.like.length})
               </PostLike>
