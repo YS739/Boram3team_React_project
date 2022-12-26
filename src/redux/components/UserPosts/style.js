@@ -30,6 +30,9 @@ const PostBox = styled.div`
 `;
 const PostLike = styled.div`
   border: 1px solid green;
+  font-size: 50px;
+  color: red;
+  display: ${(props) => props.dp};
 `;
 
 const GageBar = styled.div`

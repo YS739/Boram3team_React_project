@@ -31,9 +31,8 @@ const PostBox = styled.div`
 `;
 const PostLike = styled.div`
   border: 1px solid green;
-  :hover {
-    font-size: 40px;
-  }
+  font-size: 50px;
+  color: red;
   display: ${(props) => props.dp};
 `;
 

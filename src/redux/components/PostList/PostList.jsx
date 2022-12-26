@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __AddLikes } from "../../modules/postsSlice";
@@ -17,7 +17,6 @@ const PostList = () => {
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
-  const [dp, setDp] = useState("block");
 
   const currentUserDi = localStorage.getItem("id");
 
@@ -60,17 +59,17 @@ const PostList = () => {
         let barA = "lightgray";
         let barB = "gray";
         comments.map((comment) => {
-          if (comment.isA === "false" && comment.postNumber === post.id) {
+          if (comment.isA === "true" && comment.postNumber === post.id) {
             countA = countA + 1;
             barA = "coral";
           }
-          if (comment.isA === "true" && comment.postNumber === post.id) {
+          if (comment.isA === "false" && comment.postNumber === post.id) {
             countB = countB + 1;
             barB = "skyblue";
           }
         });
-        let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
-        let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+        let ratioA = Math.round(100 - (countB / (countA + countB)) * 100);
+        let ratioB = Math.round(100 - (countA / (countA + countB)) * 100);
 
         if (countA === 0) {
           ratioA = 50;
@@ -78,8 +77,15 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
+        if (countA > 0 && countB === 0) {
+          ratioA = 100;
+          ratioB = 0;
+        }
+        if (countB > 0 && countA === 0) {
+          ratioB = 100;
+          ratioA = 0;
+        }
 
-        console.log(countA);
         return (
           <Article key={post.id}>
             <PostContainer>
@@ -96,17 +102,30 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike dp={dp} onClick={() => switchLikesHandler(post)}>
-                👍
-                <br />({post.like.length})
+              <PostLike
+                dp={post.like[0] === currentUserDi ? "none" : "block"}
+                onClick={() => switchLikesHandler(post)}
+              >
+                ♡
               </PostLike>
+              <PostLike
+                dp={post.like[0] === currentUserDi ? "block" : "none"}
+                onClick={() => switchLikesHandler(post)}
+              >
+                ♥
+              </PostLike>
+              <br />({post.like.length})
             </PostContainer>
             <GageBar>
-              <BarA bg={ratioA} color={barA}>
-                {ratioA}%
+              <BarA bg={ratioA} color={ratioA === 100 ? "red" : barA}>
+                <span style={{ display: ratioA === 0 ? "none" : "block" }}>
+                  {ratioA}%
+                </span>
               </BarA>
-              <BarA bg={ratioB} color={barB}>
-                {ratioB}%
+              <BarA bg={ratioB} color={ratioB === 100 ? "blue" : barB}>
+                <span style={{ display: ratioB === 0 ? "none" : "block" }}>
+                  {ratioB}%
+                </span>
               </BarA>
             </GageBar>
           </Article>

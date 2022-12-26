@@ -27,9 +27,7 @@
       "categoryA": "111",
       "categoryB": "111",
       "date": "2022-12-26T11:45:01.744Z",
-      "like": [
-        "9645534e-6895-4fff-b18a-cea16febb5e1"
-      ]
+      "like": []
     },
     {
       "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
@@ -38,9 +36,7 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": [
-        "9645534e-6895-4fff-b18a-cea16febb5e1"
-      ]
+      "like": []
     },
     {
       "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
@@ -52,6 +48,15 @@
       "like": [
         "9645534e-6895-4fff-b18a-cea16febb5e1"
       ]
+    },
+    {
+      "id": "4eb2e0bb-eca2-4cb5-a597-99818e0d8216",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "title": " 프론트 VS 백엔드 누가더 꿀 빠나?",
+      "categoryA": "프론트",
+      "categoryB": "백엔드",
+      "date": "2022-12-26T14:57:16.238Z",
+      "like": []
     }
   ],
   "comments": [
@@ -158,6 +163,22 @@
       "comment": "이게 더 올라가야 되는데 반대로 됬다?",
       "isA": "true",
       "date": "2022-12-26T12:56:42.170Z"
+    },
+    {
+      "id": "0ffcf02d-eb1d-4d06-9a50-e5ba12672692",
+      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "이게 하나일 경우...",
+      "isA": "true",
+      "date": "2022-12-26T14:09:10.400Z"
+    },
+    {
+      "id": "b8837811-0290-44c9-b1cc-fcd9ad5802cb",
+      "postNumber": "4eb2e0bb-eca2-4cb5-a597-99818e0d8216",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "백앤드가 더 달콤하지... ",
+      "isA": "false",
+      "date": "2022-12-26T14:57:26.540Z"
     }
   ]
 }
