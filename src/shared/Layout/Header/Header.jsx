@@ -19,7 +19,7 @@ const Header = () => {
         />
       </CustomButtons>
       <CustomButtons btnName="home" onClick={() => navigate("/")}>
-        XX토론
+        사망토론
       </CustomButtons>
       <Nav>
         <CustomButtons
