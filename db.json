@@ -7,17 +7,20 @@
       "userName": "dfd"
     },
     {
-
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
       "userName": "바보"
-
+    },
+    {
+      "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "userDi": "willaim",
+      "userPw": "tjdghks12",
+      "userName": "성환임"
     }
   ],
   "posts": [
     {
-
       "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
       "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "title": "111",
@@ -84,6 +87,38 @@
       "comment": "멍청이",
       "isA": "true",
       "date": "2022-12-26T11:39:38.322Z"
+    },
+    {
+      "id": "a1c96a37-dc96-4ee6-9828-7a8b3115d8af",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 123",
+      "isA": "true",
+      "date": "2022-12-26T12:37:28.095Z"
+    },
+    {
+      "id": "7590d477-0728-4d0e-abef-63b4e45a78c0",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 223",
+      "isA": "false",
+      "date": "2022-12-26T12:37:31.583Z"
+    },
+    {
+      "id": "b5585d29-2b59-43b0-a1c7-9b732c55cb46",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 334",
+      "isA": "true",
+      "date": "2022-12-26T12:37:35.828Z"
+    },
+    {
+      "id": "4e33272b-1476-46c1-9e75-f45b4754d31d",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테슽 4",
+      "isA": "false",
+      "date": "2022-12-26T12:37:40.660Z"
     }
   ]
 }

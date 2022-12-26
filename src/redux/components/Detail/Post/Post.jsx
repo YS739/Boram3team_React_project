@@ -1,11 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { __deletePost } from "../../../modules/postsSlice";
+import { __deletePost, __AddLikes } from "../../../modules/postsSlice";
 import { EditDeleteBtn, PostBox } from "./style";
+import { GageBar, BarA } from "./style";
 
 const Post = () => {
   const { posts } = useSelector((state) => state.posts);
+  const { comments } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const param = useParams();
@@ -18,6 +20,54 @@ const Post = () => {
       navigate("/");
     }
   };
+  //좋아요 버튼 함수
+  const switchLikesHandler = (post) => {
+    //filter ,find 함수를 사용하여 like키값에 해당 값이 있는 판별
+    const isNotLike = post.like.filter((like) => like !== currentUserDi);
+    const isLike = post.like.find((like) => like === currentUserDi);
+
+    const addLike = {
+      ...post,
+      like: [...post.like, currentUserDi],
+    };
+    const deleteLike = {
+      ...post,
+      like: isNotLike,
+    };
+    //  거짓이면 추가 참이면 삭제
+    if (currentUserDi === null) {
+      alert("로그인이 필요합니다.");
+    } else if (isLike !== currentUserDi) {
+      dispatch(__AddLikes(addLike));
+    } else {
+      dispatch(__AddLikes(deleteLike));
+    }
+  };
+
+  //게이지바 관련 코드
+  let countA = 0;
+  let countB = 0;
+  let barA = "lightgray";
+  let barB = "gray";
+  comments.map((comment) => {
+    if (comment.isA === true && comment.postId === thePost.id) {
+      countA = countA + 1;
+      barA = "coral";
+    }
+    if (comment.isA === false && comment.postId === thePost.id) {
+      countB = countB + 1;
+      barB = "skyblue";
+    }
+  });
+  let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
+  let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+
+  if (countA === 0) {
+    ratioA = 50;
+  }
+  if (countB === 0) {
+    ratioB = 50;
+  }
 
   return (
     <PostBox>
@@ -27,7 +77,17 @@ const Post = () => {
         <p>A : {thePost?.categoryA}</p>
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
-
+        <button onClick={() => switchLikesHandler(thePost)}>
+          좋아요 버튼임
+        </button>
+        <GageBar>
+          <BarA bg={ratioA} color={barA}>
+            {ratioA}%
+          </BarA>
+          <BarA bg={ratioB} color={barB}>
+            {ratioB}%
+          </BarA>
+        </GageBar>
 
         <EditDeleteBtn>
           {thePost?.user === currentUserDi ? (
