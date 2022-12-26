@@ -1,4 +1,14 @@
 {
+
+  "posts": [
+    {
+      "id": 1,
+      "title": "탕수육",
+      "categoryA": "찍먹",
+      "categoryB": "부먹",
+      "like": 1
+    }
+  ],
   "users": [],
   "comments": [
     {
@@ -23,34 +33,4 @@
       "date": "2022-12-25T11:56:12.125Z"
     }
   ],
-  "posts": [
-    {
-      "id": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
-      "title": "당신의 연애 상대는?",
-      "categoryA": "내 선물 당근마켓에서 사는 남친",
-      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": []
-    },
-    {
-      "id": "138b8776-6ce3-4e5b-9211-c38c94fa9a46",
-      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
-      "categoryA": "이혼한다",
-      "categoryB": "한번 눈감아준다",
-      "like": []
-    },
-    {
-      "id": "c4ab9238-4bf6-44f9-9382-5c1b785bb628",
-      "title": "fdfa",
-      "categoryA": "fdsfdsf",
-      "categoryB": "dsfdsf",
-      "like": []
-    },
-    {
-      "id": "b99ba743-5af2-42e6-95c4-93f30e48da43",
-      "title": "fasdfsadf",
-      "categoryA": "asdfsadf",
-      "categoryB": "afsdfsdafdsf",
-      "like": []
-    }
-  ]
 }
