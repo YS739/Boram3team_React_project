@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __AddLikes } from "../../modules/postsSlice";
@@ -16,6 +17,7 @@ const PostList = () => {
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
+  const [dp, setDp] = useState("block");
 
   const currentUserDi = localStorage.getItem("id");
 
@@ -58,11 +60,11 @@ const PostList = () => {
         let barA = "lightgray";
         let barB = "gray";
         comments.map((comment) => {
-          if (comment.isA === true && comment.postId === post.id) {
+          if (comment.isA === "false" && comment.postNumber === post.id) {
             countA = countA + 1;
             barA = "coral";
           }
-          if (comment.isA === false && comment.postId === post.id) {
+          if (comment.isA === "true" && comment.postNumber === post.id) {
             countB = countB + 1;
             barB = "skyblue";
           }
@@ -76,6 +78,8 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
+
+        console.log(countA);
         return (
           <Article key={post.id}>
             <PostContainer>
@@ -92,7 +96,7 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike onClick={() => switchLikesHandler(post)}>
+              <PostLike dp={dp} onClick={() => switchLikesHandler(post)}>
                 👍
                 <br />({post.like.length})
               </PostLike>

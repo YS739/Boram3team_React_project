@@ -5,6 +5,19 @@
       "userDi": "12345",
       "userPw": "1234qwer",
       "userName": "ㅇ옹"
+    },
+    {
+      "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "userDi": "c9926",
+      "userPw": "a123456789",
+      "userName": "바보"
+    },
+    {
+      "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "userDi": "willaim",
+      "userPw": "tjdghks12",
+      "userName": "성환임"
+
     }
   ],
   "posts": [
@@ -24,7 +37,20 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": []
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
+    },
+    {
+      "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "title": "해보면 되겠구나",
+      "categoryA": "하지마",
+      "categoryB": "하자",
+      "date": "2022-12-26T13:04:07.074Z",
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
     }
   ],
   "comments": [

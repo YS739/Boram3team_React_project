@@ -34,6 +34,7 @@ const PostLike = styled.div`
   :hover {
     font-size: 40px;
   }
+  display: ${(props) => props.dp};
 `;
 
 const GageBar = styled.div`
