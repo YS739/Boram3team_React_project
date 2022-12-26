@@ -1,29 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
-
+import useInput from "../../hooks/useInput";
 const UploadPage = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState();
-  const [categoryA, setCategoryA] = useState();
-  const [categoryB, setCategoryB] = useState();
   const navigate = useNavigate();
   const currentUserDi = localStorage.getItem("id");
 
-  //타이틀 input값
-  const titleChange = (event) => {
-    setTitle(event.target.value);
-  };
-  //categoryA input값
-  const categoryAsChange = (event) => {
-    setCategoryA(event.target.value);
-  };
-  //타categoryB이틀 input값
-  const categoryBChange = (event) => {
-    setCategoryB(event.target.value);
-  };
+  //use Input
+  const [title, setTitle, titleChangeHandler] = useInput();
+  const [categoryA, setCategoryA, categoryAChangeHandler] = useInput();
+  const [categoryB, setCategoryB, categoryBChangeHandler] = useInput();
 
   //추가하기 핸들러
   const addPostHandler = (e) => {
@@ -37,6 +26,7 @@ const UploadPage = () => {
         title,
         categoryA,
         categoryB,
+        date: new Date(),
         like: [],
       };
       //값이 모두 입력되고 실행되면 navigate로 해당 생성된 id의 디테일페이지로 이동
@@ -72,13 +62,21 @@ const UploadPage = () => {
       <form onSubmit={addPostHandler}>
         <section>
           <h1>토론주제</h1>
-          <input id="title" value={title} onChange={titleChange} />
+          <input id="title" value={title} onChange={titleChangeHandler} />
           <br></br>
           <h2>선택분류</h2>
           <p>A</p> :
-          <input id="categoryA" value={categoryA} onChange={categoryAsChange} />
+          <input
+            id="categoryA"
+            value={categoryA}
+            onChange={categoryAChangeHandler}
+          />
           <p>B</p> :
-          <input id="categoryB" value={categoryB} onChange={categoryBChange} />
+          <input
+            id="categoryB"
+            value={categoryB}
+            onChange={categoryBChangeHandler}
+          />
           <button>등록</button>
         </section>
       </form>

@@ -5,15 +5,31 @@
       "userDi": "1111",
       "userPw": "1234qwer",
       "userName": "dfd"
+    },
+    {
+      "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "userDi": "c9926",
+      "userPw": "a123456789",
+      "userName": "바보"
     }
   ],
   "posts": [
     {
-      "id": "f94f264c-3037-43d9-97d6-12620eb8d888",
-      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
-      "title": "1",
-      "categoryA": "1",
-      "categoryB": "1",
+      "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "title": "111",
+      "categoryA": "111",
+      "categoryB": "111",
+      "date": "2022-12-26T11:45:01.744Z",
+      "like": []
+    },
+    {
+      "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "title": "222",
+      "categoryA": "222",
+      "categoryB": "222",
+      "date": "2022-12-26T11:45:07.960Z",
       "like": []
     }
   ],
@@ -33,6 +49,38 @@
       "comment": "dfasdf",
       "isA": "false",
       "date": "2022-12-26T09:22:51.059Z"
+    },
+    {
+      "id": "4419e40b-3ced-4fca-952e-7a6636216207",
+      "postNumber": "d2a9870b-68f2-40b2-834c-929ddd7c83c6",
+      "user": "34127065-a6f8-4938-8cef-93de93a87a51",
+      "comment": "dd",
+      "isA": "false",
+      "date": "2022-12-26T11:23:56.234Z"
+    },
+    {
+      "id": "319d2bb9-ed65-4238-b05c-07f701121a43",
+      "postNumber": "d2a9870b-68f2-40b2-834c-929ddd7c83c6",
+      "user": "34127065-a6f8-4938-8cef-93de93a87a51",
+      "comment": "test",
+      "isA": "true",
+      "date": "2022-12-26T11:24:02.985Z"
+    },
+    {
+      "id": "5deb297b-342f-43e6-acfc-74c03b228628",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "comment": "바보ㅇㅇㅇ",
+      "isA": "true",
+      "date": "2022-12-26T11:37:03.109Z"
+    },
+    {
+      "id": "b82268a7-4162-4cbd-a240-a16d76b206c4",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "comment": "멍청이",
+      "isA": "true",
+      "date": "2022-12-26T11:39:38.322Z"
     }
   ]
 }
