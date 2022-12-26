@@ -49,12 +49,12 @@ const Post = () => {
   let countB = 0;
   let barA = "lightgray";
   let barB = "gray";
-  comments.map((comment) => {
-    if (comment.isA === true && comment.postId === thePost.id) {
+  comments?.map((comment) => {
+    if (comment?.isA === "false" && comment?.postNumber === thePost?.id) {
       countA = countA + 1;
       barA = "coral";
     }
-    if (comment.isA === false && comment.postId === thePost.id) {
+    if (comment?.isA === "true" && comment?.postNumber === thePost?.id) {
       countB = countB + 1;
       barB = "skyblue";
     }

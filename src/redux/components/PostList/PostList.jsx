@@ -58,11 +58,11 @@ const PostList = () => {
         let barA = "lightgray";
         let barB = "gray";
         comments.map((comment) => {
-          if (comment.isA === true && comment.postId === post.id) {
+          if (comment.isA === "false" && comment.postNumber === post.id) {
             countA = countA + 1;
             barA = "coral";
           }
-          if (comment.isA === false && comment.postId === post.id) {
+          if (comment.isA === "true" && comment.postNumber === post.id) {
             countB = countB + 1;
             barB = "skyblue";
           }
@@ -76,6 +76,8 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
+
+        console.log(countA);
         return (
           <Article key={post.id}>
             <PostContainer>
