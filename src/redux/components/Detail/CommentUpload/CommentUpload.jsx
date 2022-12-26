@@ -20,7 +20,7 @@ const CommentUpload = () => {
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
   const theId = thePost?.id;
-  const currentUserId = localStorage.getItem("id");
+  const currentUserDi = localStorage.getItem("id");
 
   // TODO: useInput custom hook 쓰기
   const [comment, setComment] = useState();
@@ -40,8 +40,8 @@ const CommentUpload = () => {
       e.preventDefault();
       const newComment = {
         id: uuidv4(),
-        postId: theId,
-        uid: currentUserId,
+        postNumber: theId,
+        user: currentUserDi,
         comment,
         isA: selected.value,
         date: new Date(),

@@ -1,16 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   __changeComment,
   __deleteComment,
 } from "../../../modules/commentsSlice";
 import { useDispatch } from "react-redux";
-import { Btn } from "./style";
+import { Btn, DelBtn } from "./style";
 
 const CommentEditDelete = ({ comments }) => {
   const dispatch = useDispatch();
   const [commentChange, setCommentChange] = useState(comments?.comment);
   const [completeDisplay, setCompleteDisplay] = useState("none");
-  const [editDisplay, setEditDisplay] = useState("block");
+  const [editDisplay, setEditDisplay] = useState("none");
+  const [deleteDisplay, setDeleteDisplay] = useState("none");
 
   const changeInput = useRef();
   const userComment = useRef();
@@ -19,7 +20,17 @@ const CommentEditDelete = ({ comments }) => {
     setCommentChange(e.target.value);
   };
 
+  // 작성자 ID 확인
+  const currentUserDi = localStorage.getItem("id");
+
   //수정 버튼
+  useEffect(() => {
+    if (comments.uid === currentUserDi) {
+      setEditDisplay("block");
+      setDeleteDisplay("block");
+    }
+  }, []);
+
   const editButtonHandler = () => {
     changeInput.current.style = "display:block";
     userComment.current.style = "display:none";
@@ -80,7 +91,13 @@ const CommentEditDelete = ({ comments }) => {
           >
             완료
           </Btn>
-          <button onClick={() => deleteButtonHandler(comments.id)}>삭제</button>
+          <DelBtn
+            type="button"
+            dp={deleteDisplay}
+            onClick={() => deleteButtonHandler(comments.id)}
+          >
+            삭제
+          </DelBtn>
         </span>
       </div>
     </div>

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
@@ -16,8 +15,8 @@ const UserPosts = () => {
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
   const navigate = useNavigate();
-  const currentUserId = localStorage.getItem("id");
-  const myPosts = posts.filter((post) => post.uid === currentUserId);
+  const currentUserDi = localStorage.getItem("id");
+  const myPosts = posts.filter((post) => post.uid === currentUserDi);
 
   if (error) {
     return <div>{error.message}</div>;

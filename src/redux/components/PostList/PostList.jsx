@@ -1,13 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { __getComments } from "../../modules/commentsSlice";
-import { __AddLikes, __getPosts } from "../../modules/postsSlice";
-import {
-  __signUp,
-  __getUsers,
-  __switchIsLogin,
-  __userLikes,
-} from "../../modules/usersSlice";
+import { __AddLikes } from "../../modules/postsSlice";
 import {
   Article,
   H1,
@@ -24,7 +17,7 @@ const PostList = () => {
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
 
-  const currentUserId = localStorage.getItem("id");
+  const currentUserDi = localStorage.getItem("id");
 
   const navigate = useNavigate();
   if (error) {
@@ -34,22 +27,22 @@ const PostList = () => {
   // 좋아요 추가 함수
   const switchLikesHandler = (post) => {
     //filter ,find 함수를 사용하여 like키값에 해당 값이 있는 판별
-    const isNotLike = post.like.filter((like) => like !== currentUserId);
-    const isLike = post.like.find((like) => like === currentUserId);
+    const isNotLike = post.like.filter((like) => like !== currentUserDi);
+    const isLike = post.like.find((like) => like === currentUserDi);
 
     const addLike = {
       ...post,
-      like: [...post.like, currentUserId],
+      like: [...post.like, currentUserDi],
     };
     const deleteLike = {
       ...post,
       like: isNotLike,
     };
     //  거짓이면 추가 참이면 삭제
-    if (isLike !== currentUserId) {
+    if (isLike !== currentUserDi) {
       dispatch(__AddLikes(addLike));
     }
-    if (isLike === currentUserId) {
+    if (isLike === currentUserDi) {
       dispatch(__AddLikes(deleteLike));
     }
     console.log(post.like);

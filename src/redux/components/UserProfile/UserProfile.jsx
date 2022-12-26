@@ -5,8 +5,8 @@ import { __editUserName } from "../../modules/usersSlice";
 
 const UserProfile = () => {
   const { users } = useSelector((state) => state.users);
-  const currentUserId = localStorage.getItem("id");
-  const profile = users.find((user) => user.id === currentUserId);
+  const currentUserDi = localStorage.getItem("id");
+  const profile = users.find((user) => user.id === currentUserDi);
   const dispatch = useDispatch();
   const [name, setName] = useState(profile?.userName);
 
@@ -23,7 +23,7 @@ const UserProfile = () => {
     <Section>
       <H1>마이 프로필</H1>
       <Article>
-        ID:{profile?.userId} 입니다. 닉네임은 {profile?.userName}입니다.
+        ID:{profile?.userDi} 입니다. 닉네임은 {profile?.userName}입니다.
         <input value={name} onChange={inputNameHandler} />
         <Btn onClick={() => changeNameHandler(profile)}>닉네임 변경</Btn>
       </Article>

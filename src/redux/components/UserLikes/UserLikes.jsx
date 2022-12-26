@@ -15,8 +15,8 @@ const UserLikes = () => {
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
   const navigate = useNavigate();
-  const currentUserId = localStorage.getItem("id");
-  const myLikes = posts.filter((post) => post.like[0] === currentUserId);
+  const currentUserDi = localStorage.getItem("id");
+  const myLikes = posts.filter((post) => post.like[0] === currentUserDi);
 
   if (error) {
     return <div>{error.message}</div>;
