@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __getComments } from "../../modules/commentsSlice";
@@ -27,7 +26,6 @@ const PostList = () => {
   const { users } = useSelector((state) => state.users);
 
   const currentUserId = localStorage.getItem("id");
-  const myLikes = users.filter((user) => user.id == currentUserId);
 
   const navigate = useNavigate();
   if (error) {
