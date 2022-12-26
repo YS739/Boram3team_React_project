@@ -27,7 +27,9 @@ export const __postComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post("http://localhost:3001/comments", payload);
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "http://localhost:3001/comments?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -41,7 +43,9 @@ export const __deleteComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.delete(`http://localhost:3001/comments/${payload}`);
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "http://localhost:3001/comments?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -58,7 +62,9 @@ export const __changeComment = createAsyncThunk(
         `http://localhost:3001/comments/${payload.id}`,
         payload
       );
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "http://localhost:3001/comments?_sort=date&_order=DESC"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

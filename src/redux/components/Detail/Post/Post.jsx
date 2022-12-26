@@ -29,7 +29,7 @@ const Post = () => {
         <p>like : {thePost?.like.length}</p>
 
         <Div>
-          {thePost?.uid === currentUserDi ? (
+          {thePost?.user === currentUserDi ? (
             <div>
               <button onClick={() => navigate(`/edit/${thePost?.id}`)}>
                 수정

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { __editPost, __getPosts } from "../../redux/modules/postsSlice";
-
+import useInput from "../../hooks/useInput";
 const EditPage = () => {
   const dispatch = useDispatch();
 
@@ -17,15 +17,14 @@ const EditPage = () => {
   const thePost = posts?.find((post) => post.id === param.id);
   const navigate = useNavigate();
 
-  // TODO: useInput custom hook 쓰기
-  const [title, setTitle] = useState(thePost?.title);
-  const [categoryA, setCategoryA] = useState(thePost?.categoryA);
-  const [categoryB, setCategoryB] = useState(thePost?.categoryB);
+  //use Input
+  const [title, setTitle, titleChangeHandler] = useInput();
+  const [categoryA, setCategoryA, categoryAChangeHandler] = useInput();
+  const [categoryB, setCategoryB, categoryBChangeHandler] = useInput();
 
   // 새로고침 하면 input에 본문의 데이터가 사라져서 추가한 부분
   useEffect(() => {
     if (posts.length < 1) return;
-
     const thePost = posts?.find((post) => post.id === param.id);
     setTitle(thePost?.title);
     setCategoryA(thePost?.categoryA);
@@ -35,22 +34,6 @@ const EditPage = () => {
   if (error) {
     return <div>{error.massage}</div>;
   }
-
-  // input창에 새로운 값 입력할 때
-  const titleChangeHandler = (e) => {
-    e.preventDefault();
-    setTitle(e.target.value);
-  };
-
-  const categoryAChangeHandler = (e) => {
-    e.preventDefault();
-    setCategoryA(e.target.value);
-  };
-
-  const categoryBChangeHandler = (e) => {
-    e.preventDefault();
-    setCategoryB(e.target.value);
-  };
 
   // 수정 완료 버튼 눌렀을 때
   const editPostHandler = (e) => {

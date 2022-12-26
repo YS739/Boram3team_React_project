@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -12,6 +12,7 @@ import {
   InputBox,
 } from "./style";
 import CustomButtons from "../../CustomButtons";
+import useInput from "../../../../hooks/useInput";
 
 const CommentUpload = () => {
   const param = useParams();
@@ -21,15 +22,9 @@ const CommentUpload = () => {
   const theB = thePost?.categoryB;
   const theId = thePost?.id;
   const currentUserDi = localStorage.getItem("id");
-
-  // TODO: useInput custom hook 쓰기
-  const [comment, setComment] = useState();
   const dispatch = useDispatch();
-
-  const onChangeCommentHandler = (e) => {
-    setComment(e.target.value);
-  };
-
+  //useInput
+  const [comment, setComment, onChangeCommentHandler] = useInput();
   const onSubmitCommentHandler = (e) => {
     // A,B 중 선택한 값 찾기 - 해당 value가 isA에 들어감
     const categories = document.getElementsByName("category");
