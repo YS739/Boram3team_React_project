@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-// import { useParams } from "react-router-dom";
-// TODO: Param 쓸 때 주석해제
+import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 import {
@@ -16,14 +14,13 @@ import {
 import CustomButtons from "../../CustomButtons";
 
 const CommentUpload = () => {
-  // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
+  const param = useParams();
   const { posts } = useSelector((state) => state.posts);
-  const thePost = posts.find(
-    (post) => post.id === "6e967383-ffaf-41c5-b12a-6a42c903ff25"
-  ); // TODO: param.id로 바꾸기
+  const thePost = posts.find((post) => post.id === param.id);
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
   const theId = thePost?.id;
+  const currentUserId = localStorage.getItem("id");
 
   // TODO: useInput custom hook 쓰기
   const [comment, setComment] = useState();
@@ -44,6 +41,7 @@ const CommentUpload = () => {
       const newComment = {
         id: uuidv4(),
         postId: theId,
+        uid: currentUserId,
         comment,
         isA: selected.value,
         date: new Date(),
@@ -83,8 +81,6 @@ const CommentUpload = () => {
             <input type="radio" name="category" id="B" value="false" />
             <label htmlFor="B">B: {theB}</label>
           </CategoryB>
-          {/* TODO: 메인 페이지에서 해당 A,B 가져오기 */}
-          {/* TODO: A, B 중 선택한 내용이 댓글을 가져올 때 보여야 한다 */}
         </CategoryBox>
 
         {/* 댓글 입력 */}

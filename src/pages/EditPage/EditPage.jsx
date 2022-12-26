@@ -12,13 +12,9 @@ const EditPage = () => {
   }, [dispatch]);
 
   const { posts, error } = useSelector((state) => state.posts);
-  // TODO: 본문 클릭과 연결 되면 주석 해제
-  // const param = useParams();
+  const param = useParams();
 
-  // TODO: 본문 등록 페이지 구현 완료 되면 2를 param.id로수정하기
-  const thePost = posts?.find(
-    (post) => post.id === "a039541e-6fd4-417b-9d7b-8adc5a9f4bc8"
-  );
+  const thePost = posts?.find((post) => post.id === param.id);
   const navigate = useNavigate();
 
   // TODO: useInput custom hook 쓰기
@@ -30,10 +26,7 @@ const EditPage = () => {
   useEffect(() => {
     if (posts.length < 1) return;
 
-    // TODO: 본문 등록 페이지 구현 완료 되면 param.id 등 수정하기
-    const thePost = posts?.find(
-      (post) => post.id === "6e967383-ffaf-41c5-b12a-6a42c903ff25"
-    );
+    const thePost = posts?.find((post) => post.id === param.id);
     setTitle(thePost?.title);
     setCategoryA(thePost?.categoryA);
     setCategoryB(thePost?.categoryB);

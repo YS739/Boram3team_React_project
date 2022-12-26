@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
@@ -8,12 +8,9 @@ const Post = () => {
   const { posts } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const param = useParams();
 
-  // db.json에서 id값을 가져오기 id값 변경해주면됨
-
-  const thePost = posts.find((post) => post.id === 1);
-
-
+  const thePost = posts.find((post) => post.id === param.id);
   // 삭제버튼
   const deletePostHandler = (postId) => {
     if (window.confirm("삭제하시겠습니까")) {
@@ -29,7 +26,7 @@ const Post = () => {
         <h2>선택분류</h2>
         <p>A : {thePost?.categoryA}</p>
         <p>B : {thePost?.categoryB}</p>
-        <p>like : {thePost?.like}</p>
+        <p>like : {thePost?.like.length}</p>
         <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
           수정
         </CustomButtons>

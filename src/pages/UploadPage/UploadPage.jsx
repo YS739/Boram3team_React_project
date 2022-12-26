@@ -10,6 +10,7 @@ const UploadPage = () => {
   const [categoryA, setCategoryA] = useState();
   const [categoryB, setCategoryB] = useState();
   const navigate = useNavigate();
+  const currentUserId = localStorage.getItem("id");
 
   //타이틀 input값
   const titleChange = (event) => {
@@ -32,6 +33,7 @@ const UploadPage = () => {
       // 새로운 post
       const newPost = {
         id: uuidv4(),
+        uid: currentUserId,
         title,
         categoryA,
         categoryB,

@@ -1,112 +1,44 @@
 {
   "users": [
     {
-      "id": "715286bc-b276-4877-9523-2e38aae38a84",
-      "userId": "dsdsd",
-      "userPw": "dsdsd5s5s8s8",
-      "userName": "dwewews"
+      "id": "a1e6e26f-ba94-4fca-8255-867e18849488",
+      "userId": "11111",
+      "userPw": "1111qqqq",
+      "userName": "ssdfa"
     },
     {
-      "id": "cc2442f9-fbd1-43a8-bbcb-f26ac4c11f99",
-      "userId": "dsds52",
-      "userPw": "dsds2s5d8d5",
-      "userName": "ssss22"
-    },
-    {
-      "id": "2b18c331-3e52-425e-8d30-e7768c9bf530",
-      "userId": "2513",
-      "userPw": "ds2d5f8d5",
-      "userName": "d테스트"
-    },
-    {
-      "id": "1ff659c2-8c1a-4295-b999-7979601fe065",
-      "userId": "ds2d5s8",
-      "userPw": "12345678z",
-      "userName": "1234"
+      "id": "1",
+      "userId": "22222",
+      "userPw": "2222qqqq",
+      "userName": "hi"
     }
   ],
   "posts": [
     {
-      "id": 0,
-      "title": "탕수육",
-      "categoryA": "부먹",
-      "categoryB": "찍먹",
-      "like": [
-        "91afa703-0580-412f-93ad-7e2f6e91fc41"
-      ],
-      "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
-    },
-    {
-      "id": 1,
-      "title": "고기 먹고 후식으로",
-      "categoryA": "냉면",
-      "categoryB": "된장찌개",
-      "like": [
-        "91afa703-0580-412f-93ad-7e2f6e91fc41"
-      ],
-      "uid": "afsaasdfkl"
-    },
-    {
-      "id": 2,
-      "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
-      "categoryA": "이혼한다",
-      "categoryB": "한번 눈감아준다",
-      "like": [
-        "91afa703-0580-412f-93ad-7e2f6e91fc41"
-      ],
-      "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
-    },
-    {
-      "id": 3,
-      "title": "당신의 연애 상대는?",
-      "categoryA": "내 선물 당근마켓에서 사는 남친",
-      "categoryB": "내가 준 선물 당근마켓에 파는 남친",
-      "like": [],
-      "uid": "afsaasdfkl"
+      "id": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "625a7f76-eedd-440b-b6c2-480098cbcdcd",
+      "title": "2",
+      "categoryA": "2",
+      "categoryB": "2",
+      "like": []
     }
   ],
   "comments": [
     {
-      "id": 0,
-      "comment": "나는 부먹이 좋다!",
-      "isA": true,
-      "postId": 0
+      "id": "4f932828-7eb9-4c02-aeb0-5b9c0ad36e3d",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "41444319-4522-4614-bfc3-36a2cf6d58ba",
+      "comment": "afsfdsfsdf",
+      "isA": "true",
+      "date": "2022-12-26T06:16:55.552Z"
     },
     {
-      "id": 1,
-      "comment": "나는 찍먹이 좋다!",
-      "isA": false,
-      "postId": 0
-    },
-    {
-      "id": 2,
-      "comment": "나는 부먹이 좋다!",
-      "isA": true,
-      "postId": 0
-    },
-    {
-      "id": 3,
-      "comment": "나는 부먹이 좋다!",
-      "isA": true,
-      "postId": 0
-    },
-    {
-      "id": 4,
-      "comment": "나는 찍먹이 좋다!",
-      "isA": false,
-      "postId": 0
-    },
-    {
-      "id": 5,
-      "comment": "나는 부먹이 좋다!",
-      "isA": true,
-      "postId": 0
-    },
-    {
-      "id": 6,
-      "comment": "나는 찍먹이 좋다!",
-      "isA": false,
-      "postId": 0
+      "id": "9db59135-9819-4733-9047-d91f9bdec284",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "41444319-4522-4614-bfc3-36a2cf6d58ba",
+      "comment": "adfsdf",
+      "isA": "false",
+      "date": "2022-12-26T06:16:58.000Z"
     }
   ]
 }
