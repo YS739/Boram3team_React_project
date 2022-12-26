@@ -18,13 +18,16 @@ const SignUpPage = () => {
 
   const [userId, setUserId] = useState("");
   const [userPw, setUserPw] = useState("");
+  const [checkUserPw, setCheckUserPw] = useState("");
   const [userName, setUserName] = useState("");
 
   const userId_input = useRef();
   const userPw_input = useRef();
   const userName_input = useRef();
+  const checkUserPw_input = useRef();
   const userId_msg = useRef();
   const userPw_msg = useRef();
+  const checkUserPw_msg = useRef();
   const userName_msg = useRef();
   const singUpBtn = useRef();
 
@@ -41,6 +44,12 @@ const SignUpPage = () => {
     onChangeUserPwHandler()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userPw]);
+
+  useEffect(() => {
+    if (!checkUserPw) return ; 
+    onChangeUserPwCheckHandler()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [checkUserPw]);
 
   // TODO: 커스텀 훅 가능?
   // 아이디 입력 시 유효성 검사 및 중복 아이디 확인
@@ -90,6 +99,22 @@ const SignUpPage = () => {
     }
   };
 
+  const onChangeUserPwCheckHandler = () => {
+    setCheckUserPw(checkUserPw_input.current.value);
+
+    if (userPw !== checkUserPw) {
+      checkUserPw_msg.current.innerText = "비밀번호가 일치하지 않습니다."
+      checkUserPw_msg.current.style = "display:block"
+      checkUserPw_input.current.focus();
+      return false;
+
+    } else if (userPw === checkUserPw) {
+      checkUserPw_msg.current.innerText = "비밀번호가 일치합니다."
+      checkUserPw_msg.current.style = "display:block; color:green"
+      return true;
+    }
+  };
+
   const onChangeUserNameHandler = () => {
     setUserName(userName_input.current.value);
     // const isAllValid = !(onChangeUserIdHandler() === true && onChangeUserPwHandler() === true && userId && userPw && userName)
@@ -111,7 +136,8 @@ const SignUpPage = () => {
     };
 
     // 유효성 검사 조건 충족 및 input이 빈 칸이 아닐 때
-    const isAllValid = onChangeUserIdHandler() === true && onChangeUserPwHandler() === true && userId && userPw && userName
+    const isAllValid = onChangeUserIdHandler() === true && onChangeUserPwHandler() === true && onChangeUserPwCheckHandler() === true 
+                      && userId && userPw && userName
     
     // 회원가입 성공
     if (isAllValid) {
@@ -128,7 +154,9 @@ const SignUpPage = () => {
       // FIXME: 클릭해야 작동하는 함수 안에 disabled 코드를 작성하니까 이상해짐
       // singUpBtn.current.disabled = false;
       // singUpBtn.current.style = "background-color: skyblue"
-    } 
+    } else {
+      e.preventDefault();
+    }
     
     // 아이디를 입력하지 않았을 때
     if (!userId) {
@@ -178,6 +206,12 @@ const SignUpPage = () => {
             <input type="password" id="userPw" name="userPw" method="post"
             ref={userPw_input} value={userPw} onChange={onChangeUserPwHandler} />
             <CheckMsg ref={userPw_msg} />
+          </InputBox>
+          <InputBox>
+            <h4>비밀번호 확인*</h4>
+            <input type="password" id="checkUserPw" name="checkUserPw" method="post"
+            ref={checkUserPw_input} value={checkUserPw} onChange={onChangeUserPwCheckHandler} />
+            <CheckMsg ref={checkUserPw_msg} />
           </InputBox>
           <InputBox>
             <h4>닉네임*</h4>

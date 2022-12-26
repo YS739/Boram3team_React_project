@@ -10,7 +10,19 @@
       "id": "cc2442f9-fbd1-43a8-bbcb-f26ac4c11f99",
       "userId": "dsds52",
       "userPw": "dsds2s5d8d5",
-      "userName": "ssss"
+      "userName": "ssss22"
+    },
+    {
+      "id": "2b18c331-3e52-425e-8d30-e7768c9bf530",
+      "userId": "2513",
+      "userPw": "ds2d5f8d5",
+      "userName": "d테스트"
+    },
+    {
+      "id": "1ff659c2-8c1a-4295-b999-7979601fe065",
+      "userId": "ds2d5s8",
+      "userPw": "12345678z",
+      "userName": "1234"
     }
   ],
   "posts": [
@@ -19,7 +31,9 @@
       "title": "탕수육",
       "categoryA": "부먹",
       "categoryB": "찍먹",
-      "like": ["91afa703-0580-412f-93ad-7e2f6e91fc41"],
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
       "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
     },
     {
@@ -37,7 +51,9 @@
       "title": "도박 중독자 아내에게, '한 번만 더 도박을 할 경우 이혼하겠다' 라고 했는데.. 10억을 따왔다면?",
       "categoryA": "이혼한다",
       "categoryB": "한번 눈감아준다",
-      "like": ["91afa703-0580-412f-93ad-7e2f6e91fc41"],
+      "like": [
+        "91afa703-0580-412f-93ad-7e2f6e91fc41"
+      ],
       "uid": "91afa703-0580-412f-93ad-7e2f6e91fc41"
     },
     {
