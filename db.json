@@ -7,17 +7,20 @@
       "userName": "dfd"
     },
     {
-
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
       "userName": "바보"
-
+    },
+    {
+      "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "userDi": "willaim",
+      "userPw": "tjdghks12",
+      "userName": "성환임"
     }
   ],
   "posts": [
     {
-
       "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
       "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "title": "111",
@@ -33,7 +36,20 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": []
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
+    },
+    {
+      "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "title": "해보면 되겠구나",
+      "categoryA": "하지마",
+      "categoryB": "하자",
+      "date": "2022-12-26T13:04:07.074Z",
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
     }
   ],
   "comments": [
@@ -84,6 +100,62 @@
       "comment": "멍청이",
       "isA": "true",
       "date": "2022-12-26T11:39:38.322Z"
+    },
+    {
+      "id": "a1c96a37-dc96-4ee6-9828-7a8b3115d8af",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 123",
+      "isA": "true",
+      "date": "2022-12-26T12:37:28.095Z"
+    },
+    {
+      "id": "7590d477-0728-4d0e-abef-63b4e45a78c0",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 223",
+      "isA": "false",
+      "date": "2022-12-26T12:37:31.583Z"
+    },
+    {
+      "id": "b5585d29-2b59-43b0-a1c7-9b732c55cb46",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테스트 334",
+      "isA": "true",
+      "date": "2022-12-26T12:37:35.828Z"
+    },
+    {
+      "id": "4e33272b-1476-46c1-9e75-f45b4754d31d",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "테슽 4",
+      "isA": "false",
+      "date": "2022-12-26T12:37:40.660Z"
+    },
+    {
+      "id": "0da93e73-2889-4f3e-a158-63535bb73787",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "지금단거",
+      "isA": "true",
+      "date": "2022-12-26T12:52:17.525Z"
+    },
+    {
+      "id": "bd95b1c8-b91e-4709-8f3c-4a787743ae1b",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "이제 50대 오십 될거임",
+      "isA": "true",
+      "date": "2022-12-26T12:56:20.150Z"
+    },
+    {
+      "id": "50c5fdec-d065-45e0-b25f-49fbe2ed908c",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "comment": "이게 더 올라가야 되는데 반대로 됬다?",
+      "isA": "true",
+      "date": "2022-12-26T12:56:42.170Z"
     }
   ]
 }
