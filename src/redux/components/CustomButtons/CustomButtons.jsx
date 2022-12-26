@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const CustomButtons = ({ children }) => {
-  return <ButtonStyled>{children}</ButtonStyled>;
+const CustomButtons = ({ children, ...rest }) => {
+  return <ButtonStyled {...rest}>{children}</ButtonStyled>;
 };
 
 const ButtonStyled = styled.button`
+  /* 공통 부분 */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -17,10 +18,12 @@ const ButtonStyled = styled.button`
 
   border: 2px solid black;
   border-radius: 30px;
-  font-size: 16px;
   font-weight: bold;
 
-  color: ${(props) => props.color};
+  color: ${(props) => (props.color ? props.color : "black")};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "14px")};
+  flex-direction: ${(props) =>
+    props.flexDirection ? props.flexDirection : "row"};
   margin: ${(props) => props.margin};
   margin-top: ${(props) => props.marginTop};
   margin-left: ${(props) => props.marginLeft};

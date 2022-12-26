@@ -2,14 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
+import CustomButtons from "../../CustomButtons";
 
-const DetailPage = () => {
+const Post = () => {
   const { posts } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   // db.json에서 id값을 가져오기 id값 변경해주면됨
+
   const thePost = posts.find((post) => post.id === 1);
+
 
   // 삭제버튼
   const deletePostHandler = (postId) => {
@@ -27,13 +30,18 @@ const DetailPage = () => {
         <p>A : {thePost?.categoryA}</p>
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like}</p>
-        <button onClick={() => navigate(`/edit/${thePost?.id}`)}>수정</button>
-        <button type="button" onClick={() => deletePostHandler(thePost?.id)}>
+        <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
+          수정
+        </CustomButtons>
+        <CustomButtons
+          type="button"
+          onClick={() => deletePostHandler(thePost?.id)}
+        >
           삭제
-        </button>
+        </CustomButtons>
       </div>
     </div>
   );
 };
 
-export default DetailPage;
+export default Post;

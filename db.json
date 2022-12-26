@@ -1,4 +1,5 @@
 {
+
   "posts": [
     {
       "id": 1,
@@ -11,34 +12,25 @@
   "users": [],
   "comments": [
     {
-      "id": "dcbe162f-de01-47fb-9fd1-cdb764ddc59f",
-      "postId": 1,
-      "comment": "희령의 염원을 담아",
-      "isA": "true"
+      "id": "dfff78de-24bb-417c-8f62-56c808973a9a",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "dfadfsf",
+      "isA": "true",
+      "date": "2022-12-25T11:49:19.487Z"
     },
     {
-      "id": "8b287218-477b-49b2-b40a-3d01c96306ae",
-      "postId": 1,
-      "comment": "ㅇㅅㅅㅇㅈㄷ",
-      "isA": "false"
+      "id": "40fb3857-024b-4e4d-a5c1-bcbadaec9fa5",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "afsdfd",
+      "isA": "false",
+      "date": "2022-12-25T11:49:21.831Z"
     },
     {
-      "id": "909d357f-2dac-4582-a71c-d37153c19421",
-      "postId": 2,
-      "comment": "다시화면으로",
-      "isA": "true"
-    },
-    {
-      "id": "721c97c6-8f74-4292-b0a5-08f73caf5458",
-      "postId": 2,
-      "comment": "수정을누르고새로고침",
-      "isA": "false"
-    },
-    {
-      "id": "b355744c-4150-47a8-b982-985b5b1c9f0d",
-      "postId": 2,
-      "comment": "인풋창 ->태그",
-      "isA": "false"
+      "id": "865bdd7e-5474-4549-b891-5a99b37a80b8",
+      "postId": "6e967383-ffaf-41c5-b12a-6a42c903ff25",
+      "comment": "dfaf",
+      "isA": "false",
+      "date": "2022-12-25T11:56:12.125Z"
     }
-  ]
+  ],
 }

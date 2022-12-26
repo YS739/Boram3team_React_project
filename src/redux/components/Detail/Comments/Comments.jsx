@@ -7,7 +7,9 @@ const Comments = () => {
   const detailComment = comments?.filter((comment) => comment?.postId === 1);
   // const param = useParams(); TODO: 페이지들 연결 되면 주석 해제
   const { posts } = useSelector((state) => state.posts);
+
   const thePost = posts.find((post) => post.id === 1); // TODO: param.id로 바꾸기
+
   const theA = thePost?.categoryA;
   const theB = thePost?.categoryB;
 

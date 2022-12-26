@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-//3. inintiaal Sate
-
+//3. initial Sate
 const initialState = {
   posts: [],
   isLoading: false,
@@ -11,7 +10,7 @@ const initialState = {
 
 //본문등록하기
 export const __uploadPost = createAsyncThunk(
-  "post/uploadPost",
+  "posts/uploadPost",
   async (payload, thunkAPI) => {
     try {
       await axios.post("http://localhost:3001/posts", payload);
@@ -39,7 +38,7 @@ export const __getPosts = createAsyncThunk(
 
 //본문 삭제하기
 export const __deletePost = createAsyncThunk(
-  "posts/deltePost",
+  "posts/deletePost",
   async (payload, thunkAPI) => {
     try {
       await axios.delete(`http://localhost:3001/posts/${payload}`);
@@ -77,83 +76,45 @@ const postsSlice = createSlice({
       state.isLoading = false;
       state.posts = action.payload;
     },
-  },
-  [__getPosts.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
+    [__getPosts.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
 
-  [__deletePost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__deletePost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__deletePost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.error = action.payload;
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__editPost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__editPost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__editPost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
+    [__deletePost.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__deletePost.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
+    [__deletePost.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+    [__uploadPost.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__uploadPost.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
+    [__uploadPost.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
 
-  [__uploadPost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__uploadPost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.comment = action.payload;
-  },
-  [__uploadPost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.error = action.payload;
-  },
-
-  [__getPosts.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__getPosts.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__getPosts.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__deletePost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__deletePost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__deletePost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.error = action.payload;
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__editPost.pending]: (state) => {
-    state.isLoading = true;
-  },
-  [__editPost.fulfilled]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
-  },
-  [__editPost.rejected]: (state, action) => {
-    state.isLoading = false;
-    state.posts = action.payload;
+    [__editPost.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__editPost.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
+    [__editPost.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
   },
 });
 
