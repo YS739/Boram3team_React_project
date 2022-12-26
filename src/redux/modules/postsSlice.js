@@ -36,6 +36,20 @@ export const __getPosts = createAsyncThunk(
   }
 );
 
+// 좋아요 추가
+export const __AddLikes = createAsyncThunk(
+  "likes/Addlikes",
+  async (payload, thunkAPI) => {
+    try {
+      await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
+      const data = await axios.get("http://localhost:3001/posts");
+      return thunkAPI.fulfillWithValue(data.data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 //본문 삭제하기
 export const __deletePost = createAsyncThunk(
   "posts/deletePost",
@@ -89,6 +103,17 @@ const postsSlice = createSlice({
       state.posts = action.payload;
     },
     [__deletePost.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+    [__AddLikes.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [__AddLikes.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.posts = action.payload;
+    },
+    [__AddLikes.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     },

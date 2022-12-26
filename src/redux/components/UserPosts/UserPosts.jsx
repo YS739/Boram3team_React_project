@@ -1,13 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { __getComments } from "../../modules/commentsSlice";
-import { __AddLikes, __getPosts } from "../../modules/postsSlice";
-import {
-  __signUp,
-  __getUsers,
-  __switchIsLogin,
-  __userLikes,
-} from "../../modules/usersSlice";
 import {
   Article,
   H1,
@@ -19,48 +12,21 @@ import {
   BarA,
 } from "./style";
 
-const PostList = () => {
-  const dispatch = useDispatch();
+const UserPosts = () => {
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
-  const { users } = useSelector((state) => state.users);
-
-  const currentUserId = localStorage.getItem("id");
-
   const navigate = useNavigate();
+  const currentUserId = localStorage.getItem("id");
+  const myPosts = posts.filter((post) => post.uid === currentUserId);
+
   if (error) {
     return <div>{error.message}</div>;
   }
-
-  // 좋아요 추가 함수
-  const switchLikesHandler = (post) => {
-    //filter ,find 함수를 사용하여 like키값에 해당 값이 있는 판별
-    const isNotLike = post.like.filter((like) => like !== currentUserId);
-    const isLike = post.like.find((like) => like === currentUserId);
-
-    const addLike = {
-      ...post,
-      like: [...post.like, currentUserId],
-    };
-    const deleteLike = {
-      ...post,
-      like: isNotLike,
-    };
-    //  거짓이면 추가 참이면 삭제
-    if (isLike !== currentUserId) {
-      dispatch(__AddLikes(addLike));
-    }
-    if (isLike === currentUserId) {
-      dispatch(__AddLikes(deleteLike));
-    }
-    console.log(post.like);
-  };
-
   return (
     <Section>
-      <H1>토론주제</H1>
+      <H1>내가 등록한 토론</H1>
 
-      {posts.map((post) => {
+      {myPosts.map((post) => {
         let countA = 0;
         let countB = 0;
         let barA = "lightgray";
@@ -84,14 +50,16 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
+
         return (
-          <Article key={post.id}>
+          <Article
+            key={post.id}
+            onClick={() => {
+              navigate(`/${post.id}`);
+            }}
+          >
             <PostContainer>
-              <PostBox
-                onClick={() => {
-                  navigate(`/${post.id}`);
-                }}
-              >
+              <PostBox>
                 <div>논제: {post.title}</div>
                 <div>
                   <div>
@@ -100,10 +68,7 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike onClick={() => switchLikesHandler(post)}>
-                👍
-                <br />({post.like.length})
-              </PostLike>
+              <PostLike>👍: {post.like.length}</PostLike>
             </PostContainer>
             <GageBar>
               <BarA bg={ratioA} color={barA}>
@@ -119,4 +84,4 @@ const PostList = () => {
     </Section>
   );
 };
-export default PostList;
+export default UserPosts;
