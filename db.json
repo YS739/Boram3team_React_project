@@ -4,7 +4,7 @@
       "id": "a1e6e26f-ba94-4fca-8255-867e18849488",
       "userId": "11111",
       "userPw": "1111qqqq",
-      "userName": "ssdfa"
+      "userName": "ddd"
     },
     {
       "id": "1",
@@ -20,7 +20,9 @@
       "title": "2",
       "categoryA": "2",
       "categoryB": "2",
-      "like": []
+      "like": [
+        "a1e6e26f-ba94-4fca-8255-867e18849488"
+      ]
     }
   ],
   "comments": [
@@ -39,6 +41,22 @@
       "comment": "adfsdf",
       "isA": "false",
       "date": "2022-12-26T06:16:58.000Z"
+    },
+    {
+      "id": "13d021e8-0746-48e8-9802-262551792b7c",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "a1e6e26f-ba94-4fca-8255-867e18849488",
+      "comment": "kk",
+      "isA": "true",
+      "date": "2022-12-26T07:03:37.628Z"
+    },
+    {
+      "id": "bf03d2ef-a949-421f-9a3f-0432f4c80647",
+      "postId": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",
+      "uid": "a1e6e26f-ba94-4fca-8255-867e18849488",
+      "comment": "fafd",
+      "isA": "true",
+      "date": "2022-12-26T07:38:46.621Z"
     }
   ]
 }
