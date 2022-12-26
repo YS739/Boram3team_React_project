@@ -1,36 +1,6 @@
 {
   "users": [
     {
-      "id": "9b9de595-303b-4745-8fed-c79c9744c1f9",
-      "userId": "abcde",
-      "userPw": "12345678z",
-      "userName": "이희령"
-    },
-    {
-      "id": "b8b9a04a-0b7e-4342-9512-45fd3ec6ff4b",
-      "userId": "hello",
-      "userPw": "12345678z",
-      "userName": "spd"
-    },
-    {
-      "id": "c6a12454-7c48-42a3-afb7-d48f812a5de9",
-      "userId": "christmas",
-      "userPw": "12345678z",
-      "userName": "메리"
-    },
-    {
-      "id": "8273d582-9188-418d-ac27-3e8ac70b6ac5",
-      "userId": "edsjj",
-      "userPw": "dlss8d5s",
-      "userName": "gg"
-    },
-    {
-      "id": "6f3a3049-75b6-47a8-8e57-67a3d946d995",
-      "userId": "dsde",
-      "userPw": "djfmddls5s",
-      "userName": "하하핫"
-    },
-    {
       "id": "715286bc-b276-4877-9523-2e38aae38a84",
       "userId": "dsdsd",
       "userPw": "dsdsd5s5s8s8",

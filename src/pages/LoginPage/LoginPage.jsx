@@ -56,7 +56,6 @@ const LoginPage = () => {
 
         // 모두 일치할 때
         } else {
-            alert("로그인 성공")
             navigate("/")
 
             // 로그인한 특정 유저의 id를 localStorage에 저장함

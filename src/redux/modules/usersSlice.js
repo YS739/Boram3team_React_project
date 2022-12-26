@@ -38,20 +38,6 @@ export const __signUp = createAsyncThunk(
   }
 );
 
-// 로그인했을 때 loggedIn을 true로 변경함
-export const __switchIsLogin = createAsyncThunk(
-  "users/switchLoggedIn",
-  async (payload, thunkAPI) => {
-    try {
-      await axios.patch(`http://localhost:3001/users/${payload.id}`, payload)
-      const data = await axios.get("http://localhost:3001/users");
-      return thunkAPI.fulfillWithValue(data.data);
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
-
 const usersSlice = createSlice({
   name: "users",
   initialState,
@@ -71,19 +57,15 @@ const usersSlice = createSlice({
 
     [__signUp.pending]: (state) => {
       state.isLoading = true;
-      console.log("pengding")
     },
     [__signUp.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.users = action.payload;
-      console.log("fulfilled")
-      console.log("state.users:", state.users)
     },
     [__signUp.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
     }
-  
   }
 });
 

@@ -66,7 +66,7 @@ const SignUpPage = () => {
 
     } else {
       userId_msg.current.innerText = "사용 가능한 아이디입니다."
-      userId_msg.current.style = "color:green"
+      userId_msg.current.style = "display:block; color:green"
       return true;
     }
   };
@@ -128,7 +128,6 @@ const SignUpPage = () => {
       // FIXME: 클릭해야 작동하는 함수 안에 disabled 코드를 작성하니까 이상해짐
       // singUpBtn.current.disabled = false;
       // singUpBtn.current.style = "background-color: skyblue"
-
     } 
     
     // 아이디를 입력하지 않았을 때
