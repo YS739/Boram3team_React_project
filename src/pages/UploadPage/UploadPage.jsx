@@ -33,7 +33,7 @@ const UploadPage = () => {
       // 새로운 post
       const newPost = {
         id: uuidv4(),
-        uid: currentUserDi,
+        user: currentUserDi,
         title,
         categoryA,
         categoryB,

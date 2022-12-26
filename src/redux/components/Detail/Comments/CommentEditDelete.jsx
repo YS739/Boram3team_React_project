@@ -25,7 +25,7 @@ const CommentEditDelete = ({ comments }) => {
 
   //수정 버튼
   useEffect(() => {
-    if (comments.uid === currentUserDi) {
+    if (comments.user === currentUserDi) {
       setEditDisplay("block");
       setDeleteDisplay("block");
     }
@@ -83,7 +83,7 @@ const CommentEditDelete = ({ comments }) => {
             onClick={() =>
               completeButtonHandler({
                 id: comments.id,
-                postId: comments.postId,
+                postNumber: comments.postNumber,
                 comment: commentChange,
                 isA: comments.isA,
               })

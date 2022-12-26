@@ -1,5 +1,38 @@
 {
-  "users": [],
-  "posts": [],
-  "comments": []
+  "users": [
+    {
+      "id": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
+      "userDi": "1111",
+      "userPw": "1234qwer",
+      "userName": "dfd"
+    }
+  ],
+  "posts": [
+    {
+      "id": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
+      "title": "1",
+      "categoryA": "1",
+      "categoryB": "1",
+      "like": []
+    }
+  ],
+  "comments": [
+    {
+      "id": "98bb8bb4-cc7d-4688-98b1-a5b7d4bf91fd",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
+      "comment": " dff",
+      "isA": "true",
+      "date": "2022-12-26T09:22:49.324Z"
+    },
+    {
+      "id": "94c1f7a6-6f03-44af-a1aa-8e3b0d9bc397",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
+      "comment": "dfasdf",
+      "isA": "false",
+      "date": "2022-12-26T09:22:51.059Z"
+    }
+  ]
 }
