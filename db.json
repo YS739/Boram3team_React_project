@@ -1,18 +1,5 @@
 {
-  "users": [
-    {
-      "id": "a1e6e26f-ba94-4fca-8255-867e18849488",
-      "userId": "11111",
-      "userPw": "1111qqqq",
-      "userName": "ssdfa"
-    },
-    {
-      "id": "1",
-      "userId": "22222",
-      "userPw": "2222qqqq",
-      "userName": "hi"
-    }
-  ],
+  "users": [],
   "posts": [
     {
       "id": "fce7df61-5af2-4ec2-94f1-1634cb5d7b6d",

@@ -1,14 +1,21 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { React } from "react";
+import styled from "styled-components";
+import { React ,useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost } from "../../../modules/postsSlice";
 import CustomButtons from "../../CustomButtons";
+import { Btn } from "./style";
+
 
 const Post = () => {
   const { posts } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const param = useParams();
+  const [editDisplay, setEditDisplay] = useState("block");
+
+  const currentUserId = localStorage.getItem("id");
+  
 
   const thePost = posts.find((post) => post.id === param.id);
   // 삭제버튼
@@ -19,6 +26,37 @@ const Post = () => {
     }
   };
 
+
+  // 완료 버튼
+  const completeButtonHandler = () => {
+    if(thePost.uid===currentUserId){
+    setEditDisplay("none");
+  }else(
+    setEditDisplay("none")
+  );
+  }
+
+  
+  // console.log(thePost.uid)
+  // // console.log(posts[1].uid)
+  // console.log(currentUserId)
+
+  // const btn =()=>{
+  //   if(thePost.uid===currentUserId){
+  //     console.log('성공')
+  //   }
+  // }
+
+  // const showBtn = ()=>{
+  //   if( thePost.uid===currentUserId){
+  //     console.log('성공')
+  //     // {<CustomButtons style="display:block"/>}
+  //   }else{
+  //     // {<CustomButtons style="display:none"/>}
+  //     console.log('실패')
+  //   }
+  // };
+
   return (
     <div>
       <div key={thePost?.id}>
@@ -27,15 +65,18 @@ const Post = () => {
         <p>A : {thePost?.categoryA}</p>
         <p>B : {thePost?.categoryB}</p>
         <p>like : {thePost?.like.length}</p>
-        <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
+
+        <Btn >{thePost?.uid===currentUserId ?   <div>
+        <button  onClick={() => navigate(`/edit/${thePost?.id}`)}>
           수정
-        </CustomButtons>
-        <CustomButtons
+          </button>
+        <button 
           type="button"
           onClick={() => deletePostHandler(thePost?.id)}
         >
           삭제
-        </CustomButtons>
+          </button>  
+        </div>:  ""  }</Btn>
       </div>
     </div>
   );

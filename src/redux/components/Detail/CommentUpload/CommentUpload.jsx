@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 import {
-  //테스트중입니다
   CommentContainer,
   CommentForm,
   CategoryBox,
