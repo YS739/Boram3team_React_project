@@ -20,7 +20,9 @@
       "title": "1",
       "categoryA": "1",
       "categoryB": "1",
-      "like": []
+      "like": [
+        "e8762afe-a4a3-4a33-a790-c77e3fa64e41"
+      ]
     },
     {
       "id": "80f7d2d9-8087-4861-8185-76101afe79ab",
@@ -28,6 +30,14 @@
       "title": "1",
       "categoryA": "1",
       "categoryB": "1",
+      "like": []
+    },
+    {
+      "id": "108d9c2d-98ca-4006-be3e-dcd2920be3d6",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "title": "탕수육을 제일 맛있게 먹는 방법은?",
+      "categoryA": "찍먹",
+      "categoryB": "부먹",
       "like": []
     }
   ],
@@ -55,6 +65,86 @@
       "comment": "ㅁㄹㄴㅇㄹㄴㅇㄹ",
       "isA": "false",
       "date": "2022-12-26T09:44:33.602Z"
+    },
+    {
+      "id": "5da14151-f7db-49b2-8ffb-3c950365b354",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "asfsdf",
+      "isA": "true",
+      "date": "2022-12-26T11:09:15.330Z"
+    },
+    {
+      "id": "98f3d91d-d447-4c73-926c-ca1bac9e4673",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "afdf",
+      "isA": "true",
+      "date": "2022-12-26T11:09:17.056Z"
+    },
+    {
+      "id": "72b394d2-bb38-4b0f-9a7b-41ab4e0cd545",
+      "postNumber": "80f7d2d9-8087-4861-8185-76101afe79ab",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "fasdfsdf",
+      "isA": "true",
+      "date": "2022-12-26T11:09:25.491Z"
+    },
+    {
+      "id": "3e9861e3-6cee-40ba-b69b-5242acdcacfc",
+      "postNumber": "80f7d2d9-8087-4861-8185-76101afe79ab",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "dfafdfadfsdf",
+      "isA": "true",
+      "date": "2022-12-26T11:09:45.707Z"
+    },
+    {
+      "id": "15659946-ab77-4681-ba4b-236da9486769",
+      "postNumber": "80f7d2d9-8087-4861-8185-76101afe79ab",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "fasfsdf",
+      "isA": "true",
+      "date": "2022-12-26T11:09:47.307Z"
+    },
+    {
+      "id": "e4f9e839-9eee-40ff-b4db-cbfa56f88138",
+      "postNumber": "108d9c2d-98ca-4006-be3e-dcd2920be3d6",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅁㄹㄴㅇㄹㄹ",
+      "isA": "true",
+      "date": "2022-12-26T11:15:23.756Z"
+    },
+    {
+      "id": "c9ddf838-10f0-4b4e-9f01-4ce0f1383008",
+      "postNumber": "108d9c2d-98ca-4006-be3e-dcd2920be3d6",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅇㄻㅇㄹㄹㄴㅇㄹㄴㅇ",
+      "isA": "false",
+      "date": "2022-12-26T11:18:33.982Z"
+    },
+    {
+      "id": "cf627128-85af-4989-be80-844759db85c2",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㄹㄴㄹㄴㅇㄹㄴㅇㄹ",
+      "isA": "true",
+      "date": "2022-12-26T11:37:42.456Z"
+    },
+    {
+      "id": "7fdd3e8f-165d-4eff-bb26-cce589516746",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅁㄴㅇㄹㄴㅇㄹㄴㅁㅇㄹ",
+      "isA": "false",
+      "date": "2022-12-26T11:37:46.718Z"
+    },
+    {
+      "id": "d24ac922-937e-4712-91fd-5ac71cf26868",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㄻㄴㄹㄴㅇㄹㄴㅇㄹ",
+      "isA": "true",
+      "date": "2022-12-26T11:37:50.374Z"
     }
   ]
 }

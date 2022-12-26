@@ -6,11 +6,9 @@ const Head = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   align-items: center;
-  border: 1px solid red;
 `;
 
 const Nav = styled.ul`
-  border: 1px solid black;
   list-style-type: none;
   font-size: 20px;
 `;
