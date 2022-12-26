@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
+import { AddPostBox, AddPost } from "./style";
 
 const UploadPage = () => {
   const dispatch = useDispatch();
@@ -68,10 +69,10 @@ const UploadPage = () => {
   };
 
   return (
-    <div>
+    <AddPostBox>
       <form onSubmit={addPostHandler}>
-        <section>
-          <h1>토론주제</h1>
+        <AddPost>
+          <h2>토론주제</h2>
           <input id="title" value={title} onChange={titleChange} />
           <br></br>
           <h2>선택분류</h2>
@@ -80,9 +81,9 @@ const UploadPage = () => {
           <p>B</p> :
           <input id="categoryB" value={categoryB} onChange={categoryBChange} />
           <button>등록</button>
-        </section>
+        </AddPost>
       </form>
-    </div>
+    </AddPostBox>
   );
 };
 

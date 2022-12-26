@@ -87,34 +87,32 @@ const EditPage = () => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={editPostHandler}>
-          <section>
-            <h1>토론주제</h1>
-            <input
-              id="title"
-              value={title}
-              onChange={titleChangeHandler}
-              autoFocus
-            />
-            <br></br>
-            <h2>선택분류</h2>
-            <p>A</p> :
-            <input
-              id="categoryA"
-              value={categoryA}
-              onChange={categoryAChangeHandler}
-            />
-            <p>B</p> :
-            <input
-              id="categoryB"
-              value={categoryB}
-              onChange={categoryBChangeHandler}
-            />
-            <button>수정 완료</button>
-          </section>
-        </form>
-      </div>
+      <form onSubmit={editPostHandler}>
+        <section>
+          <h1>토론주제</h1>
+          <input
+            id="title"
+            value={title}
+            onChange={titleChangeHandler}
+            autoFocus
+          />
+          <br></br>
+          <h2>선택분류</h2>
+          <p>A</p> :
+          <input
+            id="categoryA"
+            value={categoryA}
+            onChange={categoryAChangeHandler}
+          />
+          <p>B</p> :
+          <input
+            id="categoryB"
+            value={categoryB}
+            onChange={categoryBChangeHandler}
+          />
+          <button>수정 완료</button>
+        </section>
+      </form>
     </div>
   );
 };
