@@ -50,6 +50,8 @@ const BarA = styled.div`
   text-align: center;
 `;
 
+const Btn = styled.button``;
+
 export {
   Article,
   Section,
@@ -59,4 +61,5 @@ export {
   PostContainer,
   GageBar,
   BarA,
+  Btn,
 };

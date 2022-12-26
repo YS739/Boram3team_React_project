@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __getComments } from "../../modules/commentsSlice";
@@ -17,15 +18,14 @@ import {
   PostContainer,
   GageBar,
   BarA,
+  Btn,
 } from "./style";
 
 const PostList = () => {
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
-
   const currentUserId = localStorage.getItem("id");
-
   const navigate = useNavigate();
   if (error) {
     return <div>{error.message}</div>;
@@ -46,18 +46,23 @@ const PostList = () => {
       like: isNotLike,
     };
     //  거짓이면 추가 참이면 삭제
-    if (isLike !== currentUserId) {
+    if (currentUserId === null) {
+      alert("로그인이 필요합니다.");
+    } else if (isLike !== currentUserId) {
       dispatch(__AddLikes(addLike));
-    }
-    if (isLike === currentUserId) {
+    } else {
       dispatch(__AddLikes(deleteLike));
     }
-    console.log(post.like);
   };
+
+  posts.map((post) => {
+    console.log(post.like.length);
+  });
 
   return (
     <Section>
       <H1>토론주제</H1>
+      <Btn>등록순</Btn>
 
       {posts.map((post) => {
         let countA = 0;

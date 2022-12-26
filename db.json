@@ -11,6 +11,12 @@
       "userId": "22222",
       "userPw": "2222qqqq",
       "userName": "hi"
+    },
+    {
+      "id": "af86338d-4be6-4af4-b1f7-6d1fb97b2daa",
+      "userId": "william910",
+      "userPw": "tjdghks12",
+      "userName": "박성환입니다람쥐"
     }
   ],
   "posts": [
@@ -21,6 +27,22 @@
       "categoryA": "2",
       "categoryB": "2",
       "like": []
+    },
+    {
+      "id": "c6025f80-d78d-4754-ae69-9c4f6b0ba713",
+      "uid": "af86338d-4be6-4af4-b1f7-6d1fb97b2daa",
+      "title": "고기먹고 후식으로",
+      "categoryA": "냉면",
+      "categoryB": "된장찌개",
+      "like": []
+    },
+    {
+      "id": "44a73847-63ba-44c0-a47d-cf257787312e",
+      "uid": "af86338d-4be6-4af4-b1f7-6d1fb97b2daa",
+      "title": "프론트&백앤드 누가 더 꿀빠는가?",
+      "categoryA": "프론트",
+      "categoryB": "백앤드",
+      "like": ["af86338d-4be6-4af4-b1f7-6d1fb97b2daa"]
     }
   ],
   "comments": [
