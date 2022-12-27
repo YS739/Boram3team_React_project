@@ -21,6 +21,8 @@ const Head = styled.div`
 const Nav = styled.ul`
   list-style-type: none;
   font-size: 20px;
+  position: relative;
+  top: -8px;
 `;
 
 export { Head, Nav, HeaderDiv };
