@@ -17,7 +17,6 @@
       "userDi": "willaim",
       "userPw": "tjdghks12",
       "userName": "성환임"
-
     }
   ],
   "posts": [
@@ -37,9 +36,7 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": [
-        "9645534e-6895-4fff-b18a-cea16febb5e1"
-      ]
+      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
     },
     {
       "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
@@ -48,9 +45,7 @@
       "categoryA": "하지마",
       "categoryB": "하자",
       "date": "2022-12-26T13:04:07.074Z",
-      "like": [
-        "9645534e-6895-4fff-b18a-cea16febb5e1"
-      ]
+      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
     }
   ],
   "comments": [
@@ -87,12 +82,91 @@
       "date": "2022-12-26T13:14:00.616Z"
     },
     {
-      "id": "9a3568e3-5aa5-4978-8837-43610d974495",
-      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
-      "user": "524674ef-fb8b-4e18-b9b5-9777ac698ca9",
-      "comment": "ㅇㄹㄴㅇㄹㄹㄴㅇㄹㄴㅇㄹ",
+      "id": "319d2bb9-ed65-4238-b05c-07f701121a43",
+      "postNumber": "d2a9870b-68f2-40b2-834c-929ddd7c83c6",
+      "user": "34127065-a6f8-4938-8cef-93de93a87a51",
+      "comment": "test",
+      "isA": "true",
+      "date": "2022-12-26T11:24:02.985Z"
+    },
+    {
+      "id": "5deb297b-342f-43e6-acfc-74c03b228628",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "comment": "바보ㅇㅇㅇ",
+      "isA": "true",
+      "date": "2022-12-26T11:37:03.109Z"
+    },
+    {
+      "id": "b82268a7-4162-4cbd-a240-a16d76b206c4",
+      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "comment": "멍청이",
+      "isA": "true",
+      "date": "2022-12-26T11:39:38.322Z"
+    },
+    {
+      "id": "71790b85-346a-42fb-94e7-46984f4d0968",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qwe12e",
       "isA": "false",
-      "date": "2022-12-26T13:59:12.498Z"
+      "date": "2022-12-26T13:12:17.317Z"
+    },
+    {
+      "id": "c8029972-01de-48e4-ab61-6b82d26cecf9",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qwe12e",
+      "isA": "false",
+      "date": "2022-12-26T13:12:20.414Z"
+    },
+    {
+      "id": "aa3c657b-8ee4-449d-abc7-2ff87d3f8096",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글 수정",
+      "isA": "true",
+      "date": "2022-12-26T13:54:29.091Z"
+    },
+    {
+      "id": "fc6e6ff3-f724-4981-847b-11bb392318a5",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글수정1",
+      "isA": "true",
+      "date": "2022-12-26T14:09:35.644Z"
+    },
+    {
+      "id": "fb04576d-0158-4dc6-9263-78c6322d91b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "wqe12e",
+      "isA": "true",
+      "date": "2022-12-27T00:41:05.484Z"
+    },
+    {
+      "id": "ff781e46-2367-4eba-a790-387d10b3d028",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글수정2",
+      "isA": "true",
+      "date": "2022-12-27T01:22:19.539Z"
+    },
+    {
+      "id": "261d9f4f-d8c2-4e77-9390-b42d6159b8db",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "테스트 수정10",
+      "isA": "true",
+      "date": "2022-12-27T01:32:18.180Z"
+    },
+    {
+      "id": "d06af330-029b-47ba-bae9-1bd789ab3992",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "테스트 댓글1",
+      "isA": "false",
+      "date": "2022-12-27T01:39:12.469Z"
     }
   ]
 }
