@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __AddLikes } from "../../modules/postsSlice";
@@ -17,9 +18,21 @@ const PostList = () => {
   const dispatch = useDispatch();
   const { error, posts } = useSelector((state) => state.posts);
   const { comments } = useSelector((state) => state.comments);
-  const [dp, setDp] = useState("block");
-
   const currentUserDi = localStorage.getItem("id");
+
+  // 인기순 정렬
+  const array = [];
+  let orderByList = [];
+  for (let i = 0; i < posts.length; i++) {
+    const element = posts[i].like.length;
+
+    array.push({
+      ...posts[i],
+      likeCount: element,
+    });
+    // 인기순 정렬 배열
+    orderByList = array.sort((a, b) => b.likeCount - a.likeCount);
+  }
 
   const navigate = useNavigate();
   if (error) {
@@ -47,30 +60,29 @@ const PostList = () => {
     if (isLike === currentUserDi) {
       dispatch(__AddLikes(deleteLike));
     }
-    console.log(post.like);
   };
 
   return (
     <Section>
       <H1>토론주제</H1>
-
-      {posts.map((post) => {
+      {posts?.map((post) => {
         let countA = 0;
         let countB = 0;
         let barA = "lightgray";
         let barB = "gray";
+
         comments.map((comment) => {
-          if (comment.isA === "false" && comment.postNumber === post.id) {
-            countA = countA + 1;
-            barA = "coral";
-          }
           if (comment.isA === "true" && comment.postNumber === post.id) {
+            countA = countA + 1;
+            barA = "#EC5858";
+          }
+          if (comment.isA === "false" && comment.postNumber === post.id) {
             countB = countB + 1;
-            barB = "skyblue";
+            barB = "#3E6D9C";
           }
         });
-        let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
-        let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+        let ratioA = Math.round(100 - (countB / (countA + countB)) * 100);
+        let ratioB = Math.round(100 - (countA / (countA + countB)) * 100);
 
         if (countA === 0) {
           ratioA = 50;
@@ -78,8 +90,15 @@ const PostList = () => {
         if (countB === 0) {
           ratioB = 50;
         }
+        if (countA > 0 && countB === 0) {
+          ratioA = 100;
+          ratioB = 0;
+        }
+        if (countB > 0 && countA === 0) {
+          ratioB = 100;
+          ratioA = 0;
+        }
 
-        console.log(countA);
         return (
           <Article key={post.id}>
             <PostContainer>
@@ -96,17 +115,38 @@ const PostList = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike dp={dp} onClick={() => switchLikesHandler(post)}>
-                👍
-                <br />({post.like.length})
+              <PostLike
+                dp={
+                  post.like.find((like) => like === currentUserDi) !== undefined
+                    ? "none"
+                    : "block"
+                }
+                onClick={() => switchLikesHandler(post)}
+              >
+                ♡
               </PostLike>
+              <PostLike
+                dp={
+                  post.like.find((like) => like === currentUserDi) !== undefined
+                    ? "block"
+                    : "none"
+                }
+                onClick={() => switchLikesHandler(post)}
+              >
+                ♥
+              </PostLike>
+              <br />({post.like.length})
             </PostContainer>
             <GageBar>
-              <BarA bg={ratioA} color={barA}>
-                {ratioA}%
+              <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>
+                <span style={{ display: ratioA === 0 ? "none" : "block" }}>
+                  {ratioA}%
+                </span>
               </BarA>
-              <BarA bg={ratioB} color={barB}>
-                {ratioB}%
+              <BarA bg={ratioB} color={ratioB === 100 ? "#3E6D9C" : barB}>
+                <span style={{ display: ratioB === 0 ? "none" : "block" }}>
+                  {ratioB}%
+                </span>
               </BarA>
             </GageBar>
           </Article>

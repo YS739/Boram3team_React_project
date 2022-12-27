@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const Section = styled.section`
-
-`;
+const Section = styled.section``;
 const H1 = styled.h1`
   margin-left: 10px;
   font-size: 30px;
@@ -10,8 +8,8 @@ const H1 = styled.h1`
 
 const Article = styled.article`
   border: 1px solid gray;
-  border-radius :20px;
-  padding :20px;
+  border-radius: 20px;
+  padding: 20px;
   margin: 10px 10px 30px 10px;
   font-size: 30px;
   :hover {
@@ -25,13 +23,15 @@ const PostContainer = styled.div`
 `;
 
 const PostBox = styled.div`
-
   width: 85%;
   margin-right: 10px;
   padding: 10px;
 `;
 const PostLike = styled.div`
-
+  border: 1px solid green;
+  font-size: 50px;
+  color: red;
+  display: ${(props) => props.dp};
 `;
 
 const GageBar = styled.div`

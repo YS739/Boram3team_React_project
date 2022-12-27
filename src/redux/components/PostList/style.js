@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const Section = styled.section`
-  border: 5px solid red;
-`;
+const Section = styled.section``;
 
 const H1 = styled.h1`
   margin-left: 10px;
@@ -12,7 +10,7 @@ const H1 = styled.h1`
 const Article = styled.article`
   border: 5px solid black;
   margin: 10px;
-  
+
   font-size: 30px;
 `;
 
@@ -31,10 +29,8 @@ const PostBox = styled.div`
   }
 `;
 const PostLike = styled.div`
-  border: 1px solid green;
-  :hover {
-    font-size: 40px;
-  }
+  font-size: 50px;
+  color: red;
   display: ${(props) => props.dp};
 `;
 
