@@ -4,7 +4,7 @@
       "id": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
       "userDi": "111111",
       "userPw": "1234qwer",
-      "userName": "래미"
+      "userName": "ㄹ32ㄹ"
     }
   ],
   "posts": [
@@ -31,20 +31,22 @@
   ],
   "comments": [
     {
-      "id": "5a29bb9c-ca90-4fce-8f36-922d1dce5f1d",
-      "postNumber": "4b056164-2c70-46c8-bb82-25283e34d8d8",
-      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "comment": "ㄻㅇㄹㄻㄴㅇㄹㄹ",
-      "isA": "true",
-      "date": "2022-12-27T02:35:25.992Z"
-    },
-    {
-      "id": "99b03fb3-fa99-4b6c-b19a-ee9f3fb104d8",
+      "id": "8fd49d27-15c8-494b-bb6b-1a9264664dbd",
       "postNumber": "20107257-c2d1-4fb1-b0da-5429d8c92205",
       "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
+      "comment": "ㅁㄹㄴㅇㄹ4ㄱㅀ퓨ㅗㅓㅑㅕㅛㅅㄱ",
       "userName": "래미",
       "isA": "true",
-      "date": "2022-12-27T06:43:49.140Z"
+      "date": "2022-12-27T07:38:36.051Z"
+    },
+    {
+      "id": "7bfc8e8f-00a1-4a0a-a891-4736ce6820e7",
+      "postNumber": "b171c490-03c0-4ddf-b364-3357fd7d04df",
+      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
+      "comment": "ㄻㄹㄴㅇㄹㄻㄴㄹㄴㅇㄹ",
+      "userName": "래미",
+      "isA": "true",
+      "date": "2022-12-27T07:53:54.615Z"
     }
   ]
 }

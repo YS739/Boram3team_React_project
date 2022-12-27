@@ -74,6 +74,7 @@ const CommentUpload = () => {
           id: uuidv4(),
           postNumber: theId,
           user: currentUserDi,
+          comment,
           userName: currentUser.userName,
           isA: selected.value,
           date: new Date(),

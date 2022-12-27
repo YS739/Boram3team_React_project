@@ -15,14 +15,24 @@ const CategoryStyle = styled.span`
 
 // CommentEditDelete.jsx
 
-const CategoryBox = styled.div`
-  width: 700px;
-  height: 100%;
-  margin-top: 20px;
+const EditCommentsBox = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-top: 20px;
+  }
+`;
+
+const Categories = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 700px;
+  height: 100%;
+  margin-top: 10px;
+
   display: ${(props) => props.dp};
 `;
 
@@ -51,4 +61,37 @@ const CategoryB = styled.div`
   padding: 10px;
 `;
 
-export { CommentsBox, CategoryStyle, CategoryA, CategoryB, CategoryBox };
+const CommentBtnS = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  display: ${(props) => props.dp};
+`;
+
+const UserComment = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    margin: 20px 0;
+  }
+
+  input {
+    width: 500px;
+    height: 40px;
+
+    margin: 20px 0;
+  }
+`;
+
+export {
+  CommentsBox,
+  EditCommentsBox,
+  CategoryStyle,
+  Categories,
+  CategoryA,
+  CategoryB,
+  UserComment,
+  CommentBtnS,
+};

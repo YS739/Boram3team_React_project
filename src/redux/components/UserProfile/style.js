@@ -17,5 +17,5 @@ const Article = styled.article`
     background-color: lightblue;
   }
 `;
-const Btn = styled.button``;
-export { Section, H1, Article, Btn };
+
+export { Section, H1, Article };

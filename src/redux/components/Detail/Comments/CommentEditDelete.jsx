@@ -5,7 +5,14 @@ import {
   __deleteComment,
 } from "../../../modules/commentsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { CategoryA, CategoryB, CategoryBox } from "./style";
+import {
+  EditCommentsBox,
+  CommentBtnS,
+  CategoryA,
+  CategoryB,
+  UserComment,
+  Categories,
+} from "./style";
 import CustomButtons from "../../CustomButtons";
 
 const CommentEditDelete = ({ comments }) => {
@@ -63,6 +70,7 @@ const CommentEditDelete = ({ comments }) => {
     const editComment = {
       id: comments.id,
       postNumber: comments.postNumber,
+      userName: comments.userName,
       comment: commentChange,
       isA: selected.value,
       date: comments.date,
@@ -86,8 +94,8 @@ const CommentEditDelete = ({ comments }) => {
   };
 
   return (
-    <div>
-      <CategoryBox dp={categoryDisplay} value={commentChange}>
+    <EditCommentsBox>
+      <Categories dp={categoryDisplay} value={commentChange}>
         <CategoryA>
           <input type="radio" name="category" id="a" value="true" />
           <label htmlFor="a">A: {theA}</label>
@@ -96,16 +104,21 @@ const CommentEditDelete = ({ comments }) => {
           <input type="radio" name="category" id="b" value="false" />
           <label htmlFor="b">B: {theB}</label>
         </CategoryB>
-      </CategoryBox>
+      </Categories>
+
       <span ref={userComment}>{comments?.comment}</span>
-      <input
-        style={{ display: "none" }}
-        ref={changeInput}
-        value={commentChange}
-        onChange={changeShow}
-      />
-      <div>{comments.userName}</div>
-      <div id="comment">
+
+      <UserComment>
+        <input
+          style={{ display: "none" }}
+          ref={changeInput}
+          value={commentChange}
+          onChange={changeShow}
+        />
+        <h3>{comments.userName}</h3>
+      </UserComment>
+
+      <CommentBtnS id="comment">
         <CustomButtons
           dp={editDisplay}
           type="button"
@@ -123,8 +136,8 @@ const CommentEditDelete = ({ comments }) => {
         >
           삭제
         </CustomButtons>
-      </div>
-    </div>
+      </CommentBtnS>
+    </EditCommentsBox>
   );
 };
 

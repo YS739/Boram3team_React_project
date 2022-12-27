@@ -47,7 +47,7 @@ const Categories = styled.div`
     box-shadow: 0 0 3px 1px gray;
     border: 1px solid gray;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
   }
 
   span {
@@ -60,6 +60,7 @@ const EditButtons = styled.div`
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  margin-top: 20px;
 `;
 
 const EditDeleteBtn = styled.div`
@@ -69,7 +70,7 @@ const EditDeleteBtn = styled.div`
 const GageBar = styled.div`
   border: none;
   height: 40px;
-  margin: 5px;
+  margin: 30px 5px 5px 5px;
   display: flex;
 `;
 
