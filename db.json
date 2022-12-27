@@ -1,169 +1,101 @@
 {
   "users": [
     {
-      "id": "524674ef-fb8b-4e18-b9b5-9777ac698ca9",
-      "userDi": "12345",
-      "userPw": "1234qwer",
-      "userName": "ㅇ옹"
-    },
-    {
-      "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
-      "userDi": "c9926",
-      "userPw": "a123456789",
-      "userName": "바보"
-    },
-    {
-      "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
-      "userDi": "willaim",
-      "userPw": "tjdghks12",
-      "userName": "성환임"
-    },
-    {
-      "id": "9c02bc16-7407-499d-be32-335578640faa",
+      "id": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
       "userDi": "psh5575",
       "userPw": "tjdghks12",
-      "userName": "성환쓰"
+      "userName": "성환"
     }
   ],
   "posts": [
     {
-      "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
-      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
-      "title": "111",
-      "categoryA": "111",
-      "categoryB": "111",
-      "date": "2022-12-26T11:45:01.744Z",
-      "like": ["9c02bc16-7407-499d-be32-335578640faa"],
-      "likeCount": 0
+      "id": "ce1856ed-70ed-44c7-bf53-1824851b2527",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "title": "냉장고 살때",
+      "categoryA": "엘지",
+      "categoryB": "삼성",
+      "date": "2022-12-27T02:40:06.535Z",
+      "like": []
     },
     {
-      "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
-      "title": "222",
-      "categoryA": "222",
-      "categoryB": "222",
-      "date": "2022-12-26T11:45:07.960Z",
-      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
+      "id": "fed3ca12-3fed-4be4-b01e-c1f6916d48d5",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "title": "엄마와 아내가 물에 빠졌다 누구를 먼저 구할건가?",
+      "categoryA": "엄마",
+      "categoryB": "아내",
+      "date": "2022-12-27T02:40:51.573Z",
+      "like": []
     },
     {
-      "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
-      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
-      "title": "해보면 되겠구나",
-      "categoryA": "하지마",
-      "categoryB": "하자",
-      "date": "2022-12-26T13:04:07.074Z"
+      "id": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "title": "도박중독자 아내에게 \"한번만 더 도박을 하면 이혼하겠다\" 라고 선언한뒤 아내가 도박에서 10억을 따왔다.",
+      "categoryA": "이혼한다",
+      "categoryB": "눈감아준다",
+      "date": "2022-12-27T02:42:23.404Z",
+      "like": [
+        "92fbbcc5-b694-41f9-9e56-e294d27e613b"
+      ]
+    },
+    {
+      "id": "8b229530-07a1-40b7-b126-cc392c832b3d",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "title": "콜라 vs 사이다",
+      "categoryA": "콜라",
+      "categoryB": "사이다",
+      "date": "2022-12-27T02:43:22.181Z",
+      "like": []
+    },
+    {
+      "id": "4a61d394-04c3-4626-a632-14f4677d1332",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "title": "아이폰 vs 갤럭시 ",
+      "categoryA": "아이폰",
+      "categoryB": "갤럭시 ",
+      "date": "2022-12-27T02:43:52.173Z",
+      "like": []
     }
   ],
   "comments": [
     {
-      "id": "b2587a23-cc31-44f5-ac67-12f43fc44166",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
-      "comment": "ㄴㅇㄻㄴㅇㄹ",
-      "isA": "true",
-      "date": "2022-12-26T12:27:56.159Z"
-    },
-    {
-      "id": "6175232a-52f8-4f70-bbd8-c1a2bd7dde58",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
-      "comment": "ㅇㅁㄹㄴㅇㄹ",
+      "id": "171f017e-e73d-4463-903b-30e068963b37",
+      "postNumber": "8b229530-07a1-40b7-b126-cc392c832b3d",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "comment": "제로콜라 아니면 사이다가 진리임",
       "isA": "false",
-      "date": "2022-12-26T12:52:00.305Z"
+      "date": "2022-12-27T05:22:56.458Z"
     },
     {
-      "id": "f5ccbf40-6e75-4b21-aec0-987f0269d62d",
-      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
-      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
-      "comment": "ㅁㄹㄴㅇㄹ",
+      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea9860",
+      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
+      "comment": "또 도박할거임",
       "isA": "true",
-      "date": "2022-12-26T13:13:58.332Z"
+      "date": "2022-12-27T05:51:25.594Z"
     },
     {
-      "id": "d79ed13b-1d23-42dc-9551-5b0380c7c1f3",
-      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
-      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
-      "comment": "ㅁㄹㄴㅇㄹㄴㅇㄹ",
+      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
+      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
+      "comment": "도박으로 딴 돈 도박으로 잃을거임",
+      "isA": "true",
+      "date": "2022-12-27T05:51:25.594Z"
+    },
+    {
+      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
+      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
+      "comment": "도박하는 사람을 왜 만남?",
+      "isA": "true",
+      "date": "2022-12-27T05:51:25.594Z"
+    },
+    {
+      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
+      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
+      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
+      "comment": "10억인데?",
       "isA": "false",
-      "date": "2022-12-26T13:14:00.616Z"
-    },
-    {
-      "id": "319d2bb9-ed65-4238-b05c-07f701121a43",
-      "postNumber": "d2a9870b-68f2-40b2-834c-929ddd7c83c6",
-      "user": "34127065-a6f8-4938-8cef-93de93a87a51",
-      "comment": "test",
-      "isA": "true",
-      "date": "2022-12-26T11:24:02.985Z"
-    },
-    {
-      "id": "5deb297b-342f-43e6-acfc-74c03b228628",
-      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
-      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
-      "comment": "바보ㅇㅇㅇ",
-      "isA": "true",
-      "date": "2022-12-26T11:37:03.109Z"
-    },
-    {
-      "id": "b82268a7-4162-4cbd-a240-a16d76b206c4",
-      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
-      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
-      "comment": "멍청이",
-      "isA": "true",
-      "date": "2022-12-26T11:39:38.322Z"
-    },
-    {
-      "id": "71790b85-346a-42fb-94e7-46984f4d0968",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "qwe12e",
-      "isA": "false",
-      "date": "2022-12-26T13:12:17.317Z"
-    },
-    {
-      "id": "c8029972-01de-48e4-ab61-6b82d26cecf9",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "qwe12e",
-      "isA": "false",
-      "date": "2022-12-26T13:12:20.414Z"
-    },
-    {
-      "id": "aa3c657b-8ee4-449d-abc7-2ff87d3f8096",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "댓글 수정",
-      "isA": "true",
-      "date": "2022-12-26T13:54:29.091Z"
-    },
-    {
-      "id": "fc6e6ff3-f724-4981-847b-11bb392318a5",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "댓글수정1",
-      "isA": "true",
-      "date": "2022-12-26T14:09:35.644Z"
-    },
-    {
-      "id": "fb04576d-0158-4dc6-9263-78c6322d91b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "wqe12e",
-      "isA": "true",
-      "date": "2022-12-27T00:41:05.484Z"
-    },
-    {
-      "id": "ff781e46-2367-4eba-a790-387d10b3d028",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "댓글수정2",
-      "isA": "true",
-      "date": "2022-12-27T01:22:19.539Z"
-    },
-    {
-      "id": "261d9f4f-d8c2-4e77-9390-b42d6159b8db",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "테스트 수정10",
-      "isA": "true"
+      "date": "2022-12-27T05:51:25.594Z"
     }
   ]
 }
