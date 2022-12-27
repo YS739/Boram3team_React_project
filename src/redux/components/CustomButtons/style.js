@@ -6,7 +6,7 @@ const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 100px;
   height: 40px;
 
   background-color: white;
@@ -15,6 +15,10 @@ const ButtonStyled = styled.button`
   border: 2px solid black;
   border-radius: 30px;
   font-weight: bold;
+  font-size: 15px;
+  margin: 5px;
+
+  display: ${(props) => props.dp};
 
   :hover {
     background-color: black;

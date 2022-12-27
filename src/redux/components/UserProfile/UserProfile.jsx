@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Article, Section, H1, Btn, Logout } from "./style";
 import { __editUserName } from "../../modules/usersSlice";
 import useInput from "../../../hooks/useInput";
 import { useNavigate } from "react-router-dom";
+import CustomButtons from "../CustomButtons";
 
 const UserProfile = () => {
   const { users } = useSelector((state) => state.users);
@@ -22,6 +23,9 @@ const UserProfile = () => {
 
   //닉네임 변경 핸들러
   const changeNameHandler = (profile) => {
+    const newProfile = { ...profile, userName: name };
+    dispatch(__editUserName(newProfile));
+    setName("");
     changeInput.current.style = "display:block";
     userComment.current.style = "display:none";
     changeBtn.current.style = "display:block";
@@ -50,7 +54,7 @@ const UserProfile = () => {
     localStorage.clear();
     navigate("/");
   };
-  
+
   return (
     <div>
       <Logout onClick={logoutHandler}>로그아웃</Logout>
