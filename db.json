@@ -17,6 +17,12 @@
       "userDi": "willaim",
       "userPw": "tjdghks12",
       "userName": "성환임"
+    },
+    {
+      "id": "9c02bc16-7407-499d-be32-335578640faa",
+      "userDi": "psh5575",
+      "userPw": "tjdghks12",
+      "userName": "성환쓰"
     }
   ],
   "posts": [
@@ -27,7 +33,10 @@
       "categoryA": "111",
       "categoryB": "111",
       "date": "2022-12-26T11:45:01.744Z",
-      "like": []
+      "like": [
+        "9c02bc16-7407-499d-be32-335578640faa"
+      ],
+      "likeCount": 0
     },
     {
       "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
@@ -36,7 +45,11 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": []
+      "like": [
+        "9c02bc16-7407-499d-be32-335578640faa"
+      ],
+      "leng": 1,
+      "likeCount": 0
     },
     {
       "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
@@ -46,8 +59,11 @@
       "categoryB": "하자",
       "date": "2022-12-26T13:04:07.074Z",
       "like": [
-        "9645534e-6895-4fff-b18a-cea16febb5e1"
-      ]
+        "9645534e-6895-4fff-b18a-cea16febb5e1",
+        "9c02bc16-7407-499d-be32-335578640faa"
+      ],
+      "leng": 2,
+      "likeCount": 1
     },
     {
       "id": "4eb2e0bb-eca2-4cb5-a597-99818e0d8216",
@@ -56,6 +72,20 @@
       "categoryA": "프론트",
       "categoryB": "백엔드",
       "date": "2022-12-26T14:57:16.238Z",
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1",
+        "9c02bc16-7407-499d-be32-335578640faa"
+      ],
+      "leng": 2,
+      "likeCount": 2
+    },
+    {
+      "id": "060f39bf-251f-4eb3-a88c-a045fe42d964",
+      "user": "9c02bc16-7407-499d-be32-335578640faa",
+      "title": "test",
+      "categoryA": "1",
+      "categoryB": "2",
+      "date": "2022-12-27T02:03:58.056Z",
       "like": []
     }
   ],
@@ -179,6 +209,22 @@
       "comment": "백앤드가 더 달콤하지... ",
       "isA": "false",
       "date": "2022-12-26T14:57:26.540Z"
+    },
+    {
+      "id": "ce4b53d2-105c-4e98-9dae-7f73ec22cea9",
+      "postNumber": "4eb2e0bb-eca2-4cb5-a597-99818e0d8216",
+      "user": "9c02bc16-7407-499d-be32-335578640faa",
+      "comment": "프론트는 새벽까지 일 안함",
+      "isA": "true",
+      "date": "2022-12-27T00:22:04.319Z"
+    },
+    {
+      "id": "3cca31aa-f7d9-482d-93a7-594475180854",
+      "postNumber": "4eb2e0bb-eca2-4cb5-a597-99818e0d8216",
+      "user": "9c02bc16-7407-499d-be32-335578640faa",
+      "comment": "ㅇㅈ",
+      "isA": "true",
+      "date": "2022-12-27T00:22:19.705Z"
     }
   ]
 }
