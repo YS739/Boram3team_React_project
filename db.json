@@ -1,99 +1,23 @@
 {
   "users": [
     {
-      "id": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "userDi": "psh5575",
-      "userPw": "tjdghks12",
-      "userName": "성환"
+      "id": "994a5401-4dfc-4446-8196-9fa854d7cc85",
+      "userDi": "winter",
+      "userPw": "12345678z",
+      "userName": "dd"
     }
   ],
   "posts": [
     {
-      "id": "ce1856ed-70ed-44c7-bf53-1824851b2527",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "title": "냉장고 살때",
-      "categoryA": "엘지",
-      "categoryB": "삼성",
-      "date": "2022-12-27T02:40:06.535Z",
-      "like": []
-    },
-    {
-      "id": "fed3ca12-3fed-4be4-b01e-c1f6916d48d5",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "title": "엄마와 아내가 물에 빠졌다 누구를 먼저 구할건가?",
-      "categoryA": "엄마",
-      "categoryB": "아내",
-      "date": "2022-12-27T02:40:51.573Z",
-      "like": []
-    },
-    {
-      "id": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "title": "도박중독자 아내에게 \"한번만 더 도박을 하면 이혼하겠다\" 라고 선언한뒤 아내가 도박에서 10억을 따왔다.",
-      "categoryA": "이혼한다",
-      "categoryB": "눈감아준다",
-      "date": "2022-12-27T02:42:23.404Z",
-      "like": ["92fbbcc5-b694-41f9-9e56-e294d27e613b"]
-    },
-    {
-      "id": "8b229530-07a1-40b7-b126-cc392c832b3d",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "title": "콜라 vs 사이다",
-      "categoryA": "콜라",
-      "categoryB": "사이다",
-      "date": "2022-12-27T02:43:22.181Z",
-      "like": []
-    },
-    {
-      "id": "4a61d394-04c3-4626-a632-14f4677d1332",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "title": "아이폰 vs 갤럭시 ",
-      "categoryA": "아이폰",
-      "categoryB": "갤럭시 ",
-      "date": "2022-12-27T02:43:52.173Z",
+      "id": "c91c08f4-ffe3-40e8-b056-9657ec492c11",
+      "user": "994a5401-4dfc-4446-8196-9fa854d7cc85",
+      "title": "dfdfd",
+      "userName": "dd",
+      "categoryA": "dfdf",
+      "categoryB": "df",
+      "date": "2022-12-27T10:36:14.055Z",
       "like": []
     }
   ],
-  "comments": [
-    {
-      "id": "171f017e-e73d-4463-903b-30e068963b37",
-      "postNumber": "8b229530-07a1-40b7-b126-cc392c832b3d",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "comment": "제로콜라 아니면 사이다가 진리임",
-      "isA": "false",
-      "date": "2022-12-27T05:22:56.458Z"
-    },
-    {
-      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea9860",
-      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613b",
-      "comment": "또 도박할거임",
-      "isA": "true",
-      "date": "2022-12-27T05:51:25.594Z"
-    },
-    {
-      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
-      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
-      "comment": "도박으로 딴 돈 도박으로 잃을거임",
-      "isA": "true",
-      "date": "2022-12-27T05:51:25.594Z"
-    },
-    {
-      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
-      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
-      "comment": "도박하는 사람을 왜 만남?",
-      "isA": "true",
-      "date": "2022-12-27T05:51:25.594Z"
-    },
-    {
-      "id": "6d3bf5b6-dd11-4809-acfa-07b428ea986",
-      "postNumber": "32a32946-0c6c-4bc9-b1dd-d97962f8aaba",
-      "user": "92fbbcc5-b694-41f9-9e56-e294d27e613",
-      "comment": "10억인데?",
-      "isA": "false",
-      "date": "2022-12-27T05:51:25.594Z"
-    }
-  ]
+  "comments": []
 }
