@@ -21,14 +21,14 @@ const CategoryBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding-top: 15px;
   font-size: 20px;
 `;
 
 const CategoryA = styled.span`
-  width: 41%;
+  width: 47%;
   height: 100%;
   background-color: #ec5858;
   color: white;
@@ -40,7 +40,7 @@ const CategoryA = styled.span`
 `;
 
 const CategoryB = styled.span`
-  width: 41%;
+  width: 47%;
   height: 100%;
   background-color: #3e6d9c;
   color: white;
@@ -55,13 +55,13 @@ const InputBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 
   input {
-    width: 76%;
-    height: 50px;
+    width: 90%;
+    height: 33px;
     margin-right: 20px;
     font-size: 15px;
   }

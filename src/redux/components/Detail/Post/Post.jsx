@@ -98,7 +98,7 @@ const Post = () => {
     color = "#3E6D9C";
     fontColor = "white";
   } else {
-    color = "#DFD3C3";
+    color = "#EDE4E0";
     fontColor = "black";
   }
   return (
@@ -134,7 +134,7 @@ const Post = () => {
                 }
                 onClick={() => switchLikesHandler(thePost)}
               >
-                <article>🤍</article>
+                <article style={{ marginRight: "10px" }}>🤍</article>
                 <article style={{ fontSize: "25px" }}>
                   {thePost?.like.length}
                 </article>
@@ -148,7 +148,7 @@ const Post = () => {
                 }
                 onClick={() => switchLikesHandler(thePost)}
               >
-                <article>❤️</article>
+                <article style={{ marginRight: "10px" }}>❤️</article>
                 <article style={{ fontSize: "25px" }}>
                   {thePost?.like.length}
                 </article>

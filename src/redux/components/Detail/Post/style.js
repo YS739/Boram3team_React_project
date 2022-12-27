@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  box-sizing: border-box;
+  width: 100%;
 `;
 const UserName = styled.div`
   width: 91%;
   margin-left: 40px;
+  margin-top: 5px;
   text-align: right;
   font-size: 20px;
   font-weight: 700;
 `;
 const PostBox = styled.div`
-  width: 800px;
+  width: 97%;
   height: 100%;
   border-radius: 10px;
-  margin: 10px auto;
   padding: 10px;
   font-size: 20px;
   background-color: ${(props) => props.color};
@@ -91,6 +91,7 @@ const EditButtons = styled.div`
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 const EditDeleteBtn = styled.div`
@@ -103,12 +104,17 @@ const GageBar = styled.div`
   height: 40px;
   margin: 30px 5px 5px 5px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const BarA = styled.div`
   width: ${(props) => `${props.bg}%`};
   height: 100%;
   background-color: ${(props) => props.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 `;
 

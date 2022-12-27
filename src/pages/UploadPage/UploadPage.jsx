@@ -1,8 +1,8 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { __uploadPost } from '../../redux/modules/postsSlice';
+import React from "react";
+import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { __uploadPost } from "../../redux/modules/postsSlice";
 import {
   PageDiv,
   UpLoadPageTitle,
@@ -21,7 +21,7 @@ import useInput from "../../hooks/useInput";
 const UploadPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const currentUserDi = localStorage.getItem('id');
+  const currentUserDi = localStorage.getItem("id");
 
   const { users } = useSelector((state) => state.users);
   const currentUser = users?.find((name) => name.id === currentUserDi);
@@ -88,7 +88,7 @@ const UploadPage = () => {
             />
             <br></br>
             <CategoryInput>
-              <h2 style={{marginBottom: "10px"}}>선택 분류</h2>
+              <h2>선택 분류</h2>
               <InputA>
                 <InputContent>A :</InputContent>
                 <ContetInput

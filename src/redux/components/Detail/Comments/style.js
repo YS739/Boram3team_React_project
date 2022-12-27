@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const CommentsBox = styled.div`
-  width: 91%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 15px;
 `;
@@ -17,7 +17,9 @@ const CategoryStyle = styled.div`
   width: 98%;
   margin-top: -24px;
   font-size: 25px;
-  padding-left: 17px;
+  padding-left: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 `;
 
 // CommentEditDelete.jsx

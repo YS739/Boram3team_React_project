@@ -4,7 +4,7 @@ const ProfileText = styled.h2`
   margin: 5px 15px;
 
   span {
-    color: #3E6D9C;
+    color: #3e6d9c;
   }
 `;
 
@@ -36,9 +36,11 @@ const Logout = styled.span`
   text-underline-position: under;
   cursor: pointer;
   :hover {
-    color: #3E6D9C;
+    color: #3e6d9c;
   }
 `;
+const ShBtn = styled.button`
+  display: ${(props) => props.dp};
+`;
 
-const Btn = styled.button``;
-export { Section, ProfileText, Article, Btn, P, Logout };
+export { Section, ProfileText, Article, P, Logout, ShBtn };

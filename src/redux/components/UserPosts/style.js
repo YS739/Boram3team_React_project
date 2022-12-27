@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 const Section = styled.section`
-width: 800px;
- 
+  width: 800px;
 `;
 const H1 = styled.h2`
   margin: 5px 15px;
 `;
 const Article = styled.article`
   border: 1px solid gray;
-  border-radius :20px;
-  padding :20px;
+  border-radius: 20px;
+  padding: 20px;
   margin: 10px 10px 50px 10px;
   font-size: 30px;
   cursor: pointer;
@@ -71,7 +70,6 @@ export {
   Article,
   Section,
   H1,
-
   PostBox,
   PostLike,
   PostContainer,
