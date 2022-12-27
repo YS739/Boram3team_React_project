@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useResolvedPath } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 import {
@@ -24,9 +24,13 @@ const CommentUpload = () => {
   const theB = thePost?.categoryB;
   const theId = thePost?.id;
   const currentUserDi = localStorage.getItem("id");
+  const { users } = useSelector((state) => state.users);
 
   //useInput
   const [comment, setComment, onChangeCommentHandler] = useInput();
+
+  // 현재 유저 찾기
+  const currentUser = users?.find((name) => name.id === currentUserDi);
 
   //현재 포스트의 댓글들
   const thePostComment = comments?.filter(
@@ -71,6 +75,7 @@ const CommentUpload = () => {
           postNumber: theId,
           user: currentUserDi,
           comment,
+          userName: currentUser.userName,
           isA: selected.value,
           date: new Date(),
         };

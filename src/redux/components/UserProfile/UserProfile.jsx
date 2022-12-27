@@ -4,6 +4,7 @@ import { Article, Section, ProfileText, Btn, Logout } from "./style";
 import { __editUserName } from "../../modules/usersSlice";
 import useInput from "../../../hooks/useInput";
 import { useNavigate } from "react-router-dom";
+import CustomButtons from "../CustomButtons";
 
 const UserProfile = () => {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const UserProfile = () => {
     localStorage.clear();
     navigate("/");
   };
-  
+
   return (
     <div>
       <Logout onClick={logoutHandler}>로그아웃</Logout>

@@ -18,9 +18,17 @@ const CustomButtons = (props) => {
       );
     }
 
+    // case "name": {
+    //   return (
+    //     <ButtonStyled onClick={props.onClick}>{props.children}</ButtonStyled>
+    //   );
+    // }
+
     default: {
       return (
-        <ButtonStyled onClick={props.onClick}>{props.children}</ButtonStyled>
+        <ButtonStyled dp={props.dp} onClick={props.onClick}>
+          {props.children}
+        </ButtonStyled>
       );
     }
   }

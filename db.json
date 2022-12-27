@@ -1,33 +1,23 @@
 {
   "users": [
     {
-      "id": "9dd5f7fb-65b8-4691-b1d5-dd123f2533b2",
+      "id": "994a5401-4dfc-4446-8196-9fa854d7cc85",
       "userDi": "winter",
       "userPw": "12345678z",
-      "userName": "안녕"
+      "userName": "dd"
     }
   ],
   "posts": [
     {
-      "id": "d373352e-9524-4a53-a8e6-b20bf4684c9f",
-      "user": "9dd5f7fb-65b8-4691-b1d5-dd123f2533b2",
-      "title": "더 맛있는 거 뭘까요?",
-      "categoryA": "마라탕",
-      "categoryB": "다코야끼",
-      "date": "2022-12-27T06:35:01.960Z",
-      "like": [
-        "9dd5f7fb-65b8-4691-b1d5-dd123f2533b2"
-      ]
+      "id": "c91c08f4-ffe3-40e8-b056-9657ec492c11",
+      "user": "994a5401-4dfc-4446-8196-9fa854d7cc85",
+      "title": "dfdfd",
+      "userName": "dd",
+      "categoryA": "dfdf",
+      "categoryB": "df",
+      "date": "2022-12-27T10:36:14.055Z",
+      "like": []
     }
   ],
-  "comments": [
-    {
-      "id": "6e288902-e987-46b8-b46b-bfa8a2593c04",
-      "postNumber": "d373352e-9524-4a53-a8e6-b20bf4684c9f",
-      "user": "9dd5f7fb-65b8-4691-b1d5-dd123f2533b2",
-      "comment": "너무 맛있당",
-      "isA": "false",
-      "date": "2022-12-27T06:35:33.802Z"
-    }
-  ]
+  "comments": []
 }

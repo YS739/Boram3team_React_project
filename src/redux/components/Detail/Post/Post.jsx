@@ -2,8 +2,18 @@ import { useNavigate, useParams } from "react-router-dom";
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { __deletePost, __AddLikes } from "../../../modules/postsSlice";
-import { EditDeleteBtn, PostBox } from "./style";
-import { GageBar, BarA } from "./style";
+import {
+  PostBox,
+  PostLikeBox,
+  PostLike,
+  Categories,
+  EditButtons,
+  EditDeleteBtn,
+  GageBar,
+  BarA,
+  TitleLikeContainer,
+} from "./style";
+import CustomButtons from "../../CustomButtons";
 
 const Post = () => {
   const { posts } = useSelector((state) => state.posts);
@@ -79,40 +89,71 @@ const Post = () => {
   return (
     <PostBox>
       <div key={thePost?.id}>
-        <h1>토론주제 :{thePost?.title}</h1>
-        <h2>선택분류</h2>
-        <p>A : {thePost?.categoryA}</p>
-        <p>B : {thePost?.categoryB}</p>
-        <p>like : {thePost?.like.length}</p>
-        <button onClick={() => switchLikesHandler(thePost)}>
-          좋아요 버튼임
-        </button>
+        <TitleLikeContainer>
+          <h2>
+            토론주제 :{thePost?.title} By {thePost?.userName}
+          </h2>
+          <PostLikeBox>
+            <PostLike
+              dp={
+                thePost?.like.find((like) => like === currentUserDi) !==
+                undefined
+                  ? "none"
+                  : "block"
+              }
+              onClick={() => switchLikesHandler(thePost)}
+            >
+              ♡
+            </PostLike>
+            <PostLike
+              dp={
+                thePost?.like.find((like) => like === currentUserDi) !==
+                undefined
+                  ? "block"
+                  : "none"
+              }
+              onClick={() => switchLikesHandler(thePost)}
+            >
+              ♥
+            </PostLike>
+            <br />
+            <h2>{thePost?.like.length}</h2>
+          </PostLikeBox>
+        </TitleLikeContainer>
+        <Categories>
+          <div>
+            A : <span>{thePost?.categoryA}</span>
+          </div>
+          <h1>VS</h1>
+          <div>
+            B : <span>{thePost?.categoryB}</span>
+          </div>
+        </Categories>
         <GageBar>
-          <BarA bg={ratioA} color={ratioA === 100 ? "red" : barA}>
+          <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>
             <span style={{ display: ratioA === 0 ? "none" : "block" }}>
               {ratioA}%
             </span>
           </BarA>
-          <BarA bg={ratioB} color={ratioB === 100 ? "blue" : barB}>
+          <BarA bg={ratioB} color={ratioB === 100 ? "#3E6D9C" : barB}>
             <span style={{ display: ratioB === 0 ? "none" : "block" }}>
               {ratioB}%
             </span>
           </BarA>
         </GageBar>
-
         <EditDeleteBtn>
           {thePost?.user === currentUserDi ? (
-            <div>
-              <button onClick={() => navigate(`/edit/${thePost?.id}`)}>
+            <EditButtons>
+              <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
                 수정
-              </button>
-              <button
+              </CustomButtons>
+              <CustomButtons
                 type="button"
                 onClick={() => deletePostHandler(thePost?.id)}
               >
                 삭제
-              </button>
-            </div>
+              </CustomButtons>
+            </EditButtons>
           ) : (
             ""
           )}
