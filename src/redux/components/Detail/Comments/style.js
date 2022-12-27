@@ -16,6 +16,7 @@ const CategoryStyle = styled.span`
   padding: 2px 10px;
 `;
 
+// CommentEditDelete.jsx
 const Btn = styled.button`
   display: ${(props) => props.dp};
 `;
@@ -23,4 +24,30 @@ const Btn = styled.button`
 const DelBtn = styled.button`
   display: ${(props) => props.dp};
 `;
-export { Wrap, CategoryStyle, Btn, DelBtn };
+
+const CategoryBox = styled.div`
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: ${(props) => props.dp};
+`;
+const CategoryA = styled.span`
+  background-color: #ec5858;
+  color: white;
+
+  border: 2px solid #ec5858;
+  border-radius: 10px;
+  padding: 10px;
+`;
+
+const CategoryB = styled.span`
+  background-color: #3e6d9c;
+  color: white;
+
+  border: 2px solid #3e6d9c;
+  border-radius: 10px;
+  padding: 10px;
+`;
+export { Wrap, CategoryStyle, Btn, DelBtn, CategoryA, CategoryB, CategoryBox };

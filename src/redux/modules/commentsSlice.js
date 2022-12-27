@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   comments: [],
@@ -8,11 +8,11 @@ const initialState = {
 };
 
 export const __getComments = createAsyncThunk(
-  "comments/getComments",
+  'comments/getComments',
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get(
-        "http://localhost:3001/comments?_sort=date&_order=DESC"
+        'http://localhost:3001/comments?_sort=date&_order=DESC'
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -23,11 +23,13 @@ export const __getComments = createAsyncThunk(
 
 // 댓글 등록하기
 export const __postComment = createAsyncThunk(
-  "comments/postComment",
+  'comments/postComment',
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/comments", payload);
-      const data = await axios.get("http://localhost:3001/comments");
+      await axios.post('http://localhost:3001/comments', payload);
+      const data = await axios.get(
+        'http://localhost:3001/comments?_sort=date&_order=DESC'
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -37,11 +39,13 @@ export const __postComment = createAsyncThunk(
 
 // 댓글 삭제하기
 export const __deleteComment = createAsyncThunk(
-  "comments/deleteComment",
+  'comments/deleteComment',
   async (payload, thunkAPI) => {
     try {
       await axios.delete(`http://localhost:3001/comments/${payload}`);
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        'http://localhost:3001/comments?_sort=date&_order=DESC'
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -51,14 +55,16 @@ export const __deleteComment = createAsyncThunk(
 
 // 댓글 수정하기
 export const __changeComment = createAsyncThunk(
-  "comments/changeComment",
+  'comments/changeComment',
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
         `http://localhost:3001/comments/${payload.id}`,
         payload
       );
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        'http://localhost:3001/comments?_sort=date&_order=DESC'
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -66,8 +72,27 @@ export const __changeComment = createAsyncThunk(
   }
 );
 
+// 카테고리 수정
+// export const __changeCategory = createAsyncThunk(
+//   'comments/changeCategory',
+//   async (payload, thunkAPI) => {
+//     try {
+//       await axios.patch(
+//         `http://localhost:3001/comments/${payload.id}`,
+//         payload
+//       );
+//       const data = await axios.get(
+//         'http://localhost:3001/comments?_sort=date&_order=DESC'
+//       );
+//       return thunkAPI.fulfillWithValue(data.data);
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error);
+//     }
+//   }
+// );
+
 const commentsSlice = createSlice({
-  name: "comments",
+  name: 'comments',
   initialState,
   reducers: {},
   extraReducers: {
@@ -119,6 +144,18 @@ const commentsSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    // 카테고리 수정
+    // [__changeCategory.pending]: (state) => {
+    //   state.isLoading = true;
+    // },
+    // [__changeCategory.fulfilled]: (state, action) => {
+    //   state.isLoading = false;
+    //   state.comments = action.payload;
+    // },
+    // [__changeCategory.rejected]: (state, action) => {
+    //   state.isLoading = false;
+    //   state.error = action.payload;
+    // },
   },
 });
 
