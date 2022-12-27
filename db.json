@@ -1,16 +1,22 @@
 {
   "users": [
     {
-      "id": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
-      "userDi": "1111",
+      "id": "524674ef-fb8b-4e18-b9b5-9777ac698ca9",
+      "userDi": "12345",
       "userPw": "1234qwer",
-      "userName": "dfd"
+      "userName": "ㅇ옹"
     },
     {
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
       "userName": "바보"
+    },
+    {
+      "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "userDi": "willaim",
+      "userPw": "tjdghks12",
+      "userName": "성환임"
     }
   ],
   "posts": [
@@ -30,33 +36,50 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": []
+      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
+    },
+    {
+      "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
+      "user": "9645534e-6895-4fff-b18a-cea16febb5e1",
+      "title": "해보면 되겠구나",
+      "categoryA": "하지마",
+      "categoryB": "하자",
+      "date": "2022-12-26T13:04:07.074Z",
+      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
     }
   ],
   "comments": [
     {
-      "id": "98bb8bb4-cc7d-4688-98b1-a5b7d4bf91fd",
-      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
-      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
-      "comment": " dff",
+      "id": "b2587a23-cc31-44f5-ac67-12f43fc44166",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㄴㅇㄻㄴㅇㄹ",
       "isA": "true",
-      "date": "2022-12-26T09:22:49.324Z"
+      "date": "2022-12-26T12:27:56.159Z"
     },
     {
-      "id": "94c1f7a6-6f03-44af-a1aa-8e3b0d9bc397",
-      "postNumber": "f94f264c-3037-43d9-97d6-12620eb8d888",
-      "user": "4b9009fe-aa61-4be0-8133-4c48712d38bf",
-      "comment": "dfasdf",
+      "id": "6175232a-52f8-4f70-bbd8-c1a2bd7dde58",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅇㅁㄹㄴㅇㄹ",
       "isA": "false",
-      "date": "2022-12-26T09:22:51.059Z"
+      "date": "2022-12-26T12:52:00.305Z"
     },
     {
-      "id": "4419e40b-3ced-4fca-952e-7a6636216207",
-      "postNumber": "d2a9870b-68f2-40b2-834c-929ddd7c83c6",
-      "user": "34127065-a6f8-4938-8cef-93de93a87a51",
-      "comment": "dd",
+      "id": "f5ccbf40-6e75-4b21-aec0-987f0269d62d",
+      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅁㄹㄴㅇㄹ",
+      "isA": "true",
+      "date": "2022-12-26T13:13:58.332Z"
+    },
+    {
+      "id": "d79ed13b-1d23-42dc-9551-5b0380c7c1f3",
+      "postNumber": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
+      "user": "e8762afe-a4a3-4a33-a790-c77e3fa64e41",
+      "comment": "ㅁㄹㄴㅇㄹㄴㅇㄹ",
       "isA": "false",
-      "date": "2022-12-26T11:23:56.234Z"
+      "date": "2022-12-26T13:14:00.616Z"
     },
     {
       "id": "319d2bb9-ed65-4238-b05c-07f701121a43",

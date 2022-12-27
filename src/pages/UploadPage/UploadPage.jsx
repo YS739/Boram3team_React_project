@@ -91,7 +91,7 @@ const UploadPage = () => {
               <input
                 id='categoryB'
                 value={categoryB}
-                onChange={categoryAChangeHandler}
+                onChange={categoryBChangeHandler}
               />
               <CustomButton>등록</CustomButton>
             </InputB>
