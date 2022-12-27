@@ -71,8 +71,8 @@ const PostList = () => {
 
   return (
     <>
-      <H1>토론주제</H1>
       <Section>
+      <H1>토론 주제</H1>
         {posts?.map((post) => {
           let countA = 0;
           let countB = 0;
@@ -113,7 +113,7 @@ const PostList = () => {
             color = "#3E6D9C";
             fontColor = "white";
           } else {
-            color = "#DFD3C3";
+            color = "#EDE4E0";
             fontColor = "black";
           }
 

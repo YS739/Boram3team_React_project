@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Section = styled.section`
+width: 800px;
  
 `;
 const H1 = styled.h2`

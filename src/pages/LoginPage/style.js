@@ -4,7 +4,7 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    width: 100vw;
 `
 
 const SignUpContainer = styled.div`
@@ -15,7 +15,6 @@ const SignUpContainer = styled.div`
     max-width: 480px;
     padding: 30px;
     border-radius: 20px;
-    margin: 20px 0;
 
     h2 {
         margin: 0;

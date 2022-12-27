@@ -16,7 +16,7 @@ const HomePage = () => {
 
   return (
     <Container>
-      <PostList></PostList>
+      <PostList />
     </Container>
   );
 };

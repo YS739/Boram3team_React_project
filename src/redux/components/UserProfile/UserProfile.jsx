@@ -54,7 +54,7 @@ const UserProfile = () => {
   };
 
   return (
-    <div>
+    <div style={{width: "800px"}}>
       <Logout onClick={logoutHandler}>로그아웃</Logout>
       <ProfileText><span>{profile?.userName}</span>님의 프로필</ProfileText>
       <Section>

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Head, Nav, HeaderDiv } from './style';
+import { HeaderDiv, Head, HeaderLogo, HeaderTitle, Nav } from './style';
 import CustomButtons from '../../../redux/components/CustomButtons';
 
 const Header = () => {
@@ -11,16 +11,16 @@ const Header = () => {
   return (
     <HeaderDiv>
       <Head>
-        <CustomButtons btnName='home' onClick={() => navigate('/')}>
+        <HeaderLogo btnName='home' onClick={() => navigate('/')}>
           <img
             src='https://user-images.githubusercontent.com/112805225/209471455-4dc00875-0deb-4679-8374-5a06b7b5b2b5.png'
             alt='Boram3team logo'
-            height='70px'
+            height='50px'
           />
-        </CustomButtons>
-        <CustomButtons btnName='home' onClick={() => navigate('/')}>
+        </HeaderLogo>
+        <HeaderTitle btnName='home' onClick={() => navigate('/')}>
           사망토론
-        </CustomButtons>
+        </HeaderTitle>
         <Nav>
           <CustomButtons
             btnName='navBar'

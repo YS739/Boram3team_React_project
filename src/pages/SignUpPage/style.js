@@ -4,6 +4,7 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 `
 
 const SignUpContainer = styled.div`
@@ -15,7 +16,6 @@ const SignUpContainer = styled.div`
     /* border: 1PX solid #000; */
     padding: 30px;
     border-radius: 20px;
-    margin: 20px 0;
 
     h2 {
         margin: 0;

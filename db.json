@@ -11,12 +11,14 @@
     {
       "id": "c91c08f4-ffe3-40e8-b056-9657ec492c11",
       "user": "994a5401-4dfc-4446-8196-9fa854d7cc85",
-      "title": "dfdfd",
+      "title": "오늘 잘 수 있다?",
       "userName": "dd",
-      "categoryA": "dfdf",
-      "categoryB": "df",
+      "categoryA": "있다",
+      "categoryB": "없다",
       "date": "2022-12-27T10:36:14.055Z",
-      "like": []
+      "like": [
+        "994a5401-4dfc-4446-8196-9fa854d7cc85"
+      ]
     }
   ],
   "comments": []

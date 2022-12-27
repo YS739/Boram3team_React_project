@@ -94,7 +94,7 @@ const EditPage = () => {
       <AddPostContainer>
         <AddPostForm onSubmit={editPostHandler}>
           <section>
-            <h1>토론주제</h1>
+            <h1 style={{marginBottom: "10px"}}>토론 주제</h1>
             <TitleInput
               id='title'
               value={title}
@@ -103,7 +103,7 @@ const EditPage = () => {
             />
             <br></br>
             <CategoryInput>
-              <h2>선택분류</h2>
+              <h2 style={{marginBottom: "10px"}}>선택 분류</h2>
               <InputA>
                 <ChangeInputTitle>A :</ChangeInputTitle>
                 <ChangeInput
@@ -119,8 +119,8 @@ const EditPage = () => {
                   value={categoryB}
                   onChange={categoryBChangeHandler}
                 />
-                <CustomButton>수정 완료</CustomButton>
               </InputB>
+              <CustomButton>수정 완료</CustomButton>
             </CategoryInput>
           </section>
         </AddPostForm>
