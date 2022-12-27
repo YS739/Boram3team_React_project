@@ -7,17 +7,14 @@
       "userName": "dfd"
     },
     {
-
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
       "userName": "바보"
-
     }
   ],
   "posts": [
     {
-
       "id": "8d063c9e-e7cc-495c-ba96-52dd7fbdec8f",
       "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "title": "111",
@@ -84,6 +81,69 @@
       "comment": "멍청이",
       "isA": "true",
       "date": "2022-12-26T11:39:38.322Z"
+    },
+    {
+      "id": "71790b85-346a-42fb-94e7-46984f4d0968",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qwe12e",
+      "isA": "false",
+      "date": "2022-12-26T13:12:17.317Z"
+    },
+    {
+      "id": "c8029972-01de-48e4-ab61-6b82d26cecf9",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qwe12e",
+      "isA": "false",
+      "date": "2022-12-26T13:12:20.414Z"
+    },
+    {
+      "id": "aa3c657b-8ee4-449d-abc7-2ff87d3f8096",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글 수정",
+      "isA": "true",
+      "date": "2022-12-26T13:54:29.091Z"
+    },
+    {
+      "id": "fc6e6ff3-f724-4981-847b-11bb392318a5",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글수정1",
+      "isA": "true",
+      "date": "2022-12-26T14:09:35.644Z"
+    },
+    {
+      "id": "fb04576d-0158-4dc6-9263-78c6322d91b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "wqe12e",
+      "isA": "true",
+      "date": "2022-12-27T00:41:05.484Z"
+    },
+    {
+      "id": "ff781e46-2367-4eba-a790-387d10b3d028",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "댓글수정2",
+      "isA": "true",
+      "date": "2022-12-27T01:22:19.539Z"
+    },
+    {
+      "id": "261d9f4f-d8c2-4e77-9390-b42d6159b8db",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "테스트 수정10",
+      "isA": "true",
+      "date": "2022-12-27T01:32:18.180Z"
+    },
+    {
+      "id": "d06af330-029b-47ba-bae9-1bd789ab3992",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "테스트 댓글1",
+      "isA": "false",
+      "date": "2022-12-27T01:39:12.469Z"
     }
   ]
 }
