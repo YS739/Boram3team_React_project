@@ -2,9 +2,65 @@ import styled from "styled-components";
 
 const PostBox = styled.div`
   width: 800px;
-  height: 350px;
+  height: 100%;
   border: 2px solid navy;
+  border-radius: 10px;
   margin: 20px auto;
+  padding: 10px;
+`;
+
+const TitleLikeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const PostLikeBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 15px;
+  h2 {
+    margin: 0;
+  }
+`;
+
+const PostLike = styled.div`
+  font-size: 50px;
+  color: red;
+  display: ${(props) => props.dp};
+`;
+
+const Categories = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+
+  div {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0 10px;
+
+    box-shadow: 0 0 3px 1px gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  span {
+    color: gray;
+  }
+`;
+
+const EditButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-top: 20px;
 `;
 
 const EditDeleteBtn = styled.div`
@@ -12,9 +68,9 @@ const EditDeleteBtn = styled.div`
 `;
 
 const GageBar = styled.div`
-  border: 1px solid gray;
+  border: none;
   height: 40px;
-  margin: 5px;
+  margin: 30px 5px 5px 5px;
   display: flex;
 `;
 
@@ -25,4 +81,14 @@ const BarA = styled.div`
   text-align: center;
 `;
 
-export { PostBox, EditDeleteBtn, GageBar, BarA };
+export {
+  PostBox,
+  TitleLikeContainer,
+  PostLikeBox,
+  PostLike,
+  Categories,
+  EditButtons,
+  EditDeleteBtn,
+  GageBar,
+  BarA,
+};
