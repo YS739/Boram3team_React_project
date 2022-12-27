@@ -135,7 +135,7 @@ const PostList = () => {
               >
                 ♥
               </PostLike>
-              <br />({post.like.length})
+              <br /> {post.like.length}
             </PostContainer>
             <GageBar>
               <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>

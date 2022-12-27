@@ -16,6 +16,8 @@ const ButtonStyled = styled.button`
   border-radius: 30px;
   font-weight: bold;
 
+  display: ${(props) => props.dp};
+
   :hover {
     background-color: black;
     color: white;
