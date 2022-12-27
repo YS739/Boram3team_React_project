@@ -24,7 +24,6 @@ const AddPostContainer = styled.div`
   opacity: 0.8;
 
   border-radius: 20px;
-  /* box-shadow: 0 0 1px 2px #ede4e0; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 
   display: flex;
@@ -91,9 +90,14 @@ const ContetInput = styled.input`
   margin-bottom: 15px;
 `;
 
-const AddBtn = styled.div``;
+const AddBtn = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+`;
 
 export {
+  AddBtn,
   PageDiv,
   UpLoadPageTitle,
   AddPostContainer,

@@ -10,6 +10,7 @@ import {
   AddPostForm,
   CategoryInput,
   InputA,
+  AddBtn,
   InputB,
   TitleInput,
   InputContent,
@@ -105,7 +106,9 @@ const UploadPage = () => {
                   onChange={categoryBChangeHandler}
                 />
               </InputB>
-              <CustomButton>등록</CustomButton>
+              <AddBtn>
+                <CustomButton>등록</CustomButton>
+              </AddBtn>
             </CategoryInput>
           </section>
         </AddPostForm>

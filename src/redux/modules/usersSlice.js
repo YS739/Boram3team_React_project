@@ -15,7 +15,7 @@ export const __getUsers = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/users"
+        "https://charming-humorous-panda.glitch.me/users"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -32,11 +32,11 @@ export const __signUp = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post(
-        "https://sun-supreme-thunbergia.glitch.me/users",
+        "https://charming-humorous-panda.glitch.me/users",
         payload
       );
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/users"
+        "https://charming-humorous-panda.glitch.me/users"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -51,11 +51,11 @@ export const __editUserName = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `https://sun-supreme-thunbergia.glitch.me/users/${payload.id}`,
+        `https://charming-humorous-panda.glitch.me/users/${payload.id}`,
         payload
       );
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/users"
+        "https://charming-humorous-panda.glitch.me/users"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {

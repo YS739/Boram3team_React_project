@@ -14,12 +14,12 @@ export const __uploadPost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post(
-        "https://sun-supreme-thunbergia.glitch.me/posts",
+        "https://charming-humorous-panda.glitch.me/posts",
         payload
       );
       // 최신 데이터를 불러오기 위해 get 추가
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -34,7 +34,7 @@ export const __getPosts = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -49,11 +49,11 @@ export const __AddLikes = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `https://sun-supreme-thunbergia.glitch.me/posts/${payload.id}`,
+        `https://charming-humorous-panda.glitch.me/posts/${payload.id}`,
         payload
       );
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -68,10 +68,10 @@ export const __deletePost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.delete(
-        `https://sun-supreme-thunbergia.glitch.me/posts/${payload}`
+        `https://charming-humorous-panda.glitch.me/posts/${payload}`
       );
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -86,11 +86,11 @@ export const __editPost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `https://sun-supreme-thunbergia.glitch.me/posts/${payload.id}`,
+        `https://charming-humorous-panda.glitch.me/posts/${payload.id}`,
         payload
       );
       const data = await axios.get(
-        "https://sun-supreme-thunbergia.glitch.me/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {

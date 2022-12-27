@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
-import { __editPost, __getPosts } from '../../redux/modules/postsSlice';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router";
+import { __editPost, __getPosts } from "../../redux/modules/postsSlice";
 import {
   EditPageDiv,
   AddPostContainer,
@@ -9,12 +9,13 @@ import {
   CategoryInput,
   InputA,
   InputB,
+  AddBtn,
   TitleInput,
   ChangeInput,
   ChangeInputTitle,
-} from './style';
-import CustomButton from '../../redux/components/CustomButtons';
-import useInput from '../../hooks/useInput';
+} from "./style";
+import CustomButton from "../../redux/components/CustomButtons";
+import useInput from "../../hooks/useInput";
 
 const EditPage = () => {
   const dispatch = useDispatch();
@@ -28,8 +29,8 @@ const EditPage = () => {
   // 로그인하지 않았을 경우 메인으로 이동
   useEffect(() => {
     const currentUserDi = localStorage.getItem("id");
-    if ( currentUserDi === null ) {
-      navigate("/")
+    if (currentUserDi === null) {
+      navigate("/");
     }
   });
 
@@ -60,7 +61,7 @@ const EditPage = () => {
   const editPostHandler = (e) => {
     e.preventDefault();
     if (title && categoryA && categoryB) {
-      if (window.confirm('수정하시겠습니까?')) {
+      if (window.confirm("수정하시겠습니까?")) {
         navigate(`/${thePost?.id}`);
         const editPost = {
           ...thePost,
@@ -73,18 +74,18 @@ const EditPage = () => {
     }
 
     if (!title) {
-      document.getElementById('title').focus();
-      alert('주제를 입력해주세요');
+      document.getElementById("title").focus();
+      alert("주제를 입력해주세요");
       return;
     }
     if (!categoryA) {
-      document.getElementById('categoryA').focus();
-      alert('A의 내용을 입력해 주세요');
+      document.getElementById("categoryA").focus();
+      alert("A의 내용을 입력해 주세요");
       return;
     }
     if (!categoryB) {
-      document.getElementById('categoryB').focus();
-      alert('B의 내용을 입력해 주세요');
+      document.getElementById("categoryB").focus();
+      alert("B의 내용을 입력해 주세요");
       return;
     }
   };
@@ -94,20 +95,20 @@ const EditPage = () => {
       <AddPostContainer>
         <AddPostForm onSubmit={editPostHandler}>
           <section>
-            <h1 style={{marginBottom: "10px"}}>토론 주제</h1>
+            <h1 style={{ marginBottom: "10px" }}>토론 주제</h1>
             <TitleInput
-              id='title'
+              id="title"
               value={title}
               onChange={titleChangeHandler}
               autoFocus
             />
             <br></br>
             <CategoryInput>
-              <h2 style={{marginBottom: "10px"}}>선택 분류</h2>
+              <h2 style={{ marginBottom: "10px" }}>선택 분류</h2>
               <InputA>
                 <ChangeInputTitle>A :</ChangeInputTitle>
                 <ChangeInput
-                  id='categoryA'
+                  id="categoryA"
                   value={categoryA}
                   onChange={categoryAChangeHandler}
                 />
@@ -115,12 +116,14 @@ const EditPage = () => {
               <InputB>
                 <ChangeInputTitle>B :</ChangeInputTitle>
                 <ChangeInput
-                  id='categoryB'
+                  id="categoryB"
                   value={categoryB}
                   onChange={categoryBChangeHandler}
                 />
               </InputB>
-              <CustomButton>수정 완료</CustomButton>
+              <AddBtn>
+                <CustomButton>수정 완료</CustomButton>{" "}
+              </AddBtn>
             </CategoryInput>
           </section>
         </AddPostForm>
