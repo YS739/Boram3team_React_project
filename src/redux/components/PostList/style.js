@@ -9,7 +9,8 @@ const H1 = styled.h1`
 
 const Article = styled.article`
   border: 5px solid black;
-  margin: 40px;
+  margin: 10px;
+
   font-size: 30px;
 `;
 

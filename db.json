@@ -1,52 +1,5 @@
 {
-  "users": [
-    {
-      "id": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "userDi": "111111",
-      "userPw": "1234qwer",
-      "userName": "ㄹ32ㄹ"
-    }
-  ],
-  "posts": [
-    {
-      "id": "20107257-c2d1-4fb1-b0da-5429d8c92205",
-      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "title": "엄청나게 긴 주제라면? 어떻게 보일지?엄청나게 긴 주제라면? 어떻게 보일지?엄청나게 긴 주제라면? 어떻게 보일지?",
-      "userName": "래미",
-      "categoryA": "1111ㄹㄴㅇㄻㄷㄹㅈㅈㅈㅈㅈㅈㅈㅈㅈ",
-      "categoryB": "ㅁㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㅈ",
-      "date": "2022-12-27T04:31:31.789Z",
-      "like": []
-    },
-    {
-      "id": "b171c490-03c0-4ddf-b364-3357fd7d04df",
-      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "title": "ㅇㄻㄴㅇㄹ",
-      "userName": "래미",
-      "categoryA": "ㅁㅇㄹㅇㄴㄹ",
-      "categoryB": "ㄴㅇㄹㄹ",
-      "date": "2022-12-27T06:52:42.682Z",
-      "like": []
-    }
-  ],
-  "comments": [
-    {
-      "id": "8fd49d27-15c8-494b-bb6b-1a9264664dbd",
-      "postNumber": "20107257-c2d1-4fb1-b0da-5429d8c92205",
-      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "comment": "ㅁㄹㄴㅇㄹ4ㄱㅀ퓨ㅗㅓㅑㅕㅛㅅㄱ",
-      "userName": "래미",
-      "isA": "true",
-      "date": "2022-12-27T07:38:36.051Z"
-    },
-    {
-      "id": "7bfc8e8f-00a1-4a0a-a891-4736ce6820e7",
-      "postNumber": "b171c490-03c0-4ddf-b364-3357fd7d04df",
-      "user": "b1c12f0e-35d0-4464-bb61-0865c6292ac9",
-      "comment": "ㄻㄹㄴㅇㄹㄻㄴㄹㄴㅇㄹ",
-      "userName": "래미",
-      "isA": "false",
-      "date": "2022-12-27T07:53:54.615Z"
-    }
-  ]
+  "users": [],
+  "posts": [],
+  "comments": []
 }
