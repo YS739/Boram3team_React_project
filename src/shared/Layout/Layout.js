@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import Header from './Header';
-import logo from './footerlogo.png';
+import styled from "styled-components";
+import Header from "./Header";
+import logo from "./footerlogo.png";
 // TODO: 컴포넌트 빼서 if문으로 로그인/글작성/마이페이지 보이게
 
 const Footer = () => {
   return (
     <Foot>
-      <h5 style={{ color: '#969a8d' }}>
+      <h5 style={{ color: "#969a8d" }}>
         보람삼조 대표이사: 박성환 성경환 이희령 정윤숙 차상현
       </h5>
-      <h5 style={{ color: '#969a8d' }}>
+      <h5 style={{ color: "#969a8d" }}>
         Copyright ©2022 BORAM3TEAM. All rights reserved.
       </h5>
     </Foot>

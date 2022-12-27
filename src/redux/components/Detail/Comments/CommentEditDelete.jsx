@@ -22,6 +22,7 @@ const CommentEditDelete = ({ comments }) => {
   const [editDisplay, setEditDisplay] = useState("none");
   const [deleteDisplay, setDeleteDisplay] = useState("none");
   const [categoryDisplay, setCategoryDisplay] = useState("none");
+  const [dpName, setDpName] = useState("block");
 
   const changeInput = useRef();
   const userComment = useRef();
@@ -55,6 +56,7 @@ const CommentEditDelete = ({ comments }) => {
     changeInput.current.focus();
     setCompleteDisplay("block");
     setEditDisplay("none");
+    setDpName("none");
   };
 
   // 완료 버튼
@@ -63,6 +65,7 @@ const CommentEditDelete = ({ comments }) => {
     userComment.current.style = "display:block";
     setCompleteDisplay("none");
     setEditDisplay("block");
+    setDpName("block");
 
     const categories = document.getElementsByName("category");
     const selected = Array.from(categories).find((choice) => choice.checked);
@@ -105,9 +108,6 @@ const CommentEditDelete = ({ comments }) => {
           <label htmlFor="b">B: {theB}</label>
         </CategoryB>
       </Categories>
-
-      <span ref={userComment}>{comments?.comment}</span>
-
       <UserComment>
         <input
           style={{ display: "none" }}
@@ -115,28 +115,28 @@ const CommentEditDelete = ({ comments }) => {
           value={commentChange}
           onChange={changeShow}
         />
-        <h3>{comments.userName}</h3>
+        <div style={{ display: dpName }}>{comments.userName}:</div>
+        <article ref={userComment}>{comments?.comment}</article>
+        <CommentBtnS id="comment">
+          <CustomButtons
+            dp={editDisplay}
+            type="button"
+            onClick={editButtonHandler}
+          >
+            수정
+          </CustomButtons>
+          <CustomButtons dp={completeDisplay} onClick={completeButtonHandler}>
+            완료
+          </CustomButtons>
+          <CustomButtons
+            type="button"
+            dp={deleteDisplay}
+            onClick={() => deleteButtonHandler(comments.id)}
+          >
+            삭제
+          </CustomButtons>
+        </CommentBtnS>
       </UserComment>
-
-      <CommentBtnS id="comment">
-        <CustomButtons
-          dp={editDisplay}
-          type="button"
-          onClick={editButtonHandler}
-        >
-          수정
-        </CustomButtons>
-        <CustomButtons dp={completeDisplay} onClick={completeButtonHandler}>
-          완료
-        </CustomButtons>
-        <CustomButtons
-          type="button"
-          dp={deleteDisplay}
-          onClick={() => deleteButtonHandler(comments.id)}
-        >
-          삭제
-        </CustomButtons>
-      </CommentBtnS>
     </EditCommentsBox>
   );
 };

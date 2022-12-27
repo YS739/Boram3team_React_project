@@ -12,6 +12,9 @@ import {
   GageBar,
   BarA,
   TitleLikeContainer,
+  CategoryBox,
+  Container,
+  UserName,
 } from "./style";
 import CustomButtons from "../../CustomButtons";
 
@@ -23,6 +26,8 @@ const Post = () => {
   const param = useParams();
   const currentUserDi = localStorage.getItem("id");
   const thePost = posts.find((post) => post.id === param.id);
+  let color = "";
+  let fontColor = "";
   // 삭제버튼
   const deletePostHandler = (postNumber) => {
     if (window.confirm("삭제하시겠습니까")) {
@@ -62,11 +67,11 @@ const Post = () => {
   comments?.map((comment) => {
     if (comment?.isA === "true" && comment?.postNumber === thePost?.id) {
       countA = countA + 1;
-      barA = "coral";
+      barA = "#EC5858";
     }
     if (comment?.isA === "false" && comment?.postNumber === thePost?.id) {
       countB = countB + 1;
-      barB = "skyblue";
+      barB = "#3E6D9C";
     }
   });
   let ratioA = Math.round(100 - (countB / (countA + countB)) * 100);
@@ -86,80 +91,97 @@ const Post = () => {
     ratioB = 100;
     ratioA = 0;
   }
+  if (ratioA > ratioB) {
+    color = "#EC5858";
+    fontColor = "white";
+  } else if (ratioA < ratioB) {
+    color = "#3E6D9C";
+    fontColor = "white";
+  } else {
+    color = "#DFD3C3";
+    fontColor = "black";
+  }
   return (
-    <PostBox>
-      <div key={thePost?.id}>
-        <TitleLikeContainer>
-          <h2>
-            토론주제 :{thePost?.title} By {thePost?.userName}
-          </h2>
-          <PostLikeBox>
-            <PostLike
-              dp={
-                thePost?.like.find((like) => like === currentUserDi) !==
-                undefined
-                  ? "none"
-                  : "block"
-              }
-              onClick={() => switchLikesHandler(thePost)}
+    <Container>
+      <EditDeleteBtn>
+        {thePost?.user === currentUserDi ? (
+          <EditButtons>
+            <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
+              수정
+            </CustomButtons>
+            <CustomButtons
+              type="button"
+              onClick={() => deletePostHandler(thePost?.id)}
             >
-              ♡
-            </PostLike>
-            <PostLike
-              dp={
-                thePost?.like.find((like) => like === currentUserDi) !==
-                undefined
-                  ? "block"
-                  : "none"
-              }
-              onClick={() => switchLikesHandler(thePost)}
-            >
-              ♥
-            </PostLike>
-            <br />
-            <h2>{thePost?.like.length}</h2>
-          </PostLikeBox>
-        </TitleLikeContainer>
-        <Categories>
-          <div>
-            A : <span>{thePost?.categoryA}</span>
-          </div>
-          <h1>VS</h1>
-          <div>
-            B : <span>{thePost?.categoryB}</span>
-          </div>
-        </Categories>
-        <GageBar>
-          <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>
-            <span style={{ display: ratioA === 0 ? "none" : "block" }}>
-              {ratioA}%
-            </span>
-          </BarA>
-          <BarA bg={ratioB} color={ratioB === 100 ? "#3E6D9C" : barB}>
-            <span style={{ display: ratioB === 0 ? "none" : "block" }}>
-              {ratioB}%
-            </span>
-          </BarA>
-        </GageBar>
-        <EditDeleteBtn>
-          {thePost?.user === currentUserDi ? (
-            <EditButtons>
-              <CustomButtons onClick={() => navigate(`/edit/${thePost?.id}`)}>
-                수정
-              </CustomButtons>
-              <CustomButtons
-                type="button"
-                onClick={() => deletePostHandler(thePost?.id)}
+              삭제
+            </CustomButtons>
+          </EditButtons>
+        ) : (
+          ""
+        )}
+      </EditDeleteBtn>
+      <PostBox color={color}>
+        <div key={thePost?.id}>
+          <TitleLikeContainer font={fontColor}>
+            <h2>{thePost?.title}</h2>
+            <PostLikeBox>
+              <PostLike
+                dp={
+                  thePost?.like.find((like) => like === currentUserDi) !==
+                  undefined
+                    ? "none"
+                    : "block"
+                }
+                onClick={() => switchLikesHandler(thePost)}
               >
-                삭제
-              </CustomButtons>
-            </EditButtons>
-          ) : (
-            ""
-          )}
-        </EditDeleteBtn>
-      </div>
-    </PostBox>
+                <article>🤍</article>
+                <article style={{ fontSize: "25px" }}>
+                  {thePost?.like.length}
+                </article>
+              </PostLike>
+              <PostLike
+                dp={
+                  thePost?.like.find((like) => like === currentUserDi) !==
+                  undefined
+                    ? "block"
+                    : "none"
+                }
+                onClick={() => switchLikesHandler(thePost)}
+              >
+                <article>❤️</article>
+                <article style={{ fontSize: "25px" }}>
+                  {thePost?.like.length}
+                </article>
+              </PostLike>
+            </PostLikeBox>
+          </TitleLikeContainer>
+          <CategoryBox>
+            <Categories>
+              <div>
+                <span>{thePost?.categoryA}</span>
+              </div>
+              <h1>VS</h1>
+              <div>
+                <span>{thePost?.categoryB}</span>
+              </div>
+            </Categories>
+            <GageBar style={{ color: "white" }}>
+              <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>
+                <span style={{ display: ratioA === 0 ? "none" : "block" }}>
+                  {ratioA}%
+                </span>
+              </BarA>
+              <BarA bg={ratioB} color={ratioB === 100 ? "#3E6D9C" : barB}>
+                <span style={{ display: ratioB === 0 ? "none" : "block" }}>
+                  {ratioB}%
+                </span>
+              </BarA>
+            </GageBar>
+          </CategoryBox>
+        </div>
+      </PostBox>
+      <UserName>작성자: {thePost?.userName}</UserName>
+    </Container>
   );
 };
 
