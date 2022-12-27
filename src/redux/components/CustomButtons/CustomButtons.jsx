@@ -1,0 +1,29 @@
+import React from "react";
+import { ButtonStyled, HomeButtonStyled, NavStyled } from "./style";
+
+const CustomButtons = (props) => {
+  switch (props.btnName) {
+    case "home": {
+      return (
+        <HomeButtonStyled onClick={props.onClick}>
+          {props.children}
+        </HomeButtonStyled>
+      );
+    }
+    case "navBar": {
+      return (
+        <NavStyled dp={props.dp} onClick={props.onClick}>
+          {props.children}
+        </NavStyled>
+      );
+    }
+
+    default: {
+      return (
+        <ButtonStyled onClick={props.onClick}>{props.children}</ButtonStyled>
+      );
+    }
+  }
+};
+
+export default CustomButtons;
