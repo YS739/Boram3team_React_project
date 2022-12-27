@@ -36,7 +36,9 @@
       "categoryA": "222",
       "categoryB": "222",
       "date": "2022-12-26T11:45:07.960Z",
-      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
     },
     {
       "id": "4a3d064f-d73f-45ca-a040-65ef68c75906",
@@ -45,7 +47,18 @@
       "categoryA": "하지마",
       "categoryB": "하자",
       "date": "2022-12-26T13:04:07.074Z",
-      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
+      "like": [
+        "9645534e-6895-4fff-b18a-cea16febb5e1"
+      ]
+    },
+    {
+      "id": "30d78b04-de8c-484c-99e2-8027a11f1eff",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "title": "테스트",
+      "categoryA": "111",
+      "categoryB": "qqq",
+      "date": "2022-12-27T02:36:16.219Z",
+      "like": []
     }
   ],
   "comments": [
@@ -167,6 +180,14 @@
       "comment": "테스트 댓글1",
       "isA": "false",
       "date": "2022-12-27T01:39:12.469Z"
+    },
+    {
+      "id": "65f7b779-0819-4038-aeb9-48e13fab40de",
+      "postNumber": "30d78b04-de8c-484c-99e2-8027a11f1eff",
+      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
+      "comment": "qwdqwd",
+      "isA": "true",
+      "date": "2022-12-27T07:07:06.016Z"
     }
   ]
 }

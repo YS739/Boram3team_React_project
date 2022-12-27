@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+`;
 
 const Head = styled.div`
   max-width: 1200px;
@@ -13,4 +20,4 @@ const Nav = styled.ul`
   font-size: 20px;
 `;
 
-export { Head, Nav };
+export { Head, Nav, HeaderDiv };
