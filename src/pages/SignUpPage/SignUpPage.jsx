@@ -22,6 +22,14 @@ const SignUpPage = () => {
     dispatch(__getUsers());
   }, [dispatch]);
 
+  // 로그인했을 경우 메인으로 이동
+  useEffect(() => {
+    const currentUserDi = localStorage.getItem("id");
+    if ( currentUserDi !== null ) {
+      navigate("/")
+    }
+  });
+
   const { error, users } = useSelector((state) => state.users);
 
   const [userDi, setUserDi] = useState("");
@@ -158,11 +166,6 @@ const SignUpPage = () => {
       // 회원가입 성공하면 따로 로그인할 필요 없이 바로 로그인됨
       localStorage.clear();
       localStorage.setItem("id", newUser.id);
-
-      // 가입 가능한 조건이 되면 가입하기 버튼이 활성화됨
-      // FIXME: 클릭해야 작동하는 함수 안에 disabled 코드를 작성하니까 이상해짐
-      // singUpBtn.current.disabled = false;
-      // singUpBtn.current.style = "background-color: skyblue"
     } else {
       e.preventDefault();
     }

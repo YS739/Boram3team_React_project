@@ -76,20 +76,20 @@ const UserLikes = () => {
                 </div>
               </PostBox>
               <PostLike dp={post.like[0] === currentUserDi ? "none" : "block"}>
-                ♡
+                🤍
               </PostLike>
               <PostLike dp={post.like[0] === currentUserDi ? "block" : "none"}>
-                ♥
+                ❤
               </PostLike>
-              <br />({post.like.length})
+              <p>{post.like.length}</p>
             </PostContainer>
             <GageBar>
-              <BarA bg={ratioA} color={ratioA === 100 ? "red" : barA}>
+              <BarA bg={ratioA} color={ratioA === 100 ? "#EC5858" : barA}>
                 <span style={{ display: ratioA === 0 ? "none" : "block" }}>
                   {ratioA}%
                 </span>
               </BarA>
-              <BarA bg={ratioB} color={ratioB === 100 ? "blue" : barB}>
+              <BarA bg={ratioB} color={ratioB === 100 ? "#3E6D9C" : barB}>
                 <span style={{ display: ratioB === 0 ? "none" : "block" }}>
                   {ratioB}%
                 </span>

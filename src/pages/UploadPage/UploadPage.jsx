@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { __uploadPost } from '../../redux/modules/postsSlice';
@@ -20,6 +21,14 @@ const UploadPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentUserDi = localStorage.getItem('id');
+
+   // 로그인하지 않았을 경우 메인으로 이동
+   useEffect(() => {
+    const currentUserDi = localStorage.getItem("id");
+    if ( currentUserDi === null ) {
+      navigate("/")
+    }
+  });
 
   //use Input
   const [title, setTitle, titleChangeHandler] = useInput();

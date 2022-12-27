@@ -15,17 +15,25 @@ import useInput from "../../hooks/useInput";
 
 const EditPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // 새로고침 오류 방지
   useEffect(() => {
     dispatch(__getPosts());
   }, [dispatch]);
 
+  // 로그인하지 않았을 경우 메인으로 이동
+  useEffect(() => {
+    const currentUserDi = localStorage.getItem("id");
+    if ( currentUserDi === null ) {
+      navigate("/")
+    }
+  });
+
   const { posts, error } = useSelector((state) => state.posts);
   const param = useParams();
 
   const thePost = posts?.find((post) => post.id === param.id);
-  const navigate = useNavigate();
 
   //use Input
   const [title, setTitle, titleChangeHandler] = useInput();
@@ -52,7 +60,7 @@ const EditPage = () => {
       if (window.confirm("수정하시겠습니까?")) {
         navigate(`/${thePost?.id}`);
         const editPost = {
-          id: thePost?.id,
+          ...thePost,
           title,
           categoryA,
           categoryB,
