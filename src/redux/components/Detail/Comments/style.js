@@ -83,6 +83,7 @@ const UserComment = styled.div`
   input {
     width: 500px;
     height: 40px;
+    font-size: 17px;
   }
   div {
     font-weight: 800;

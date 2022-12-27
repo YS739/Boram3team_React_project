@@ -69,19 +69,10 @@
       "id": "b5b2b398-5de3-472f-9a4b-eb7e8df591e4",
       "postNumber": "dd9d04d0-5f97-4e0f-adf6-b75f5950ce06",
       "user": "60feb66d-78b0-4fde-ba1b-c430d83ae0fd",
-      "comment": "오류를 찾았다.",
+      "comment": "부먹으로 간다.",
       "userName": "성환",
-      "isA": "false",
-      "date": "2022-12-27T13:23:42.763Z"
-    },
-    {
-      "id": "072f90d7-60ff-4e62-8154-8e33b9c4035c",
-      "postNumber": "dd9d04d0-5f97-4e0f-adf6-b75f5950ce06",
-      "user": "9278ff3f-6567-4bd9-bf61-61aa7a081e0e",
-      "comment": "맛알못특: 찍먹이라고 함 ",
-      "userName": "윌럄",
       "isA": "true",
-      "date": "2022-12-27T14:32:27.361Z"
+      "date": "2022-12-27T13:23:42.763Z"
     },
     {
       "id": "0dc22307-00c7-4bb5-a501-1082f78cd754",
@@ -91,6 +82,15 @@
       "userName": "윌럄",
       "isA": "false",
       "date": "2022-12-27T14:47:41.276Z"
+    },
+    {
+      "id": "49f900ce-2e6a-4566-9007-5107a078f2a4",
+      "postNumber": "c91c08f4-ffe3-40e8-b056-9657ec492c11",
+      "user": "9278ff3f-6567-4bd9-bf61-61aa7a081e0e",
+      "comment": "똑빠로 올리라이 ~",
+      "userName": "윌럄",
+      "isA": "false",
+      "date": "2022-12-27T15:35:50.648Z"
     }
   ]
 }
