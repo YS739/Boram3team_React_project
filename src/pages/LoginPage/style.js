@@ -4,6 +4,7 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
 `
 
 const SignUpContainer = styled.div`
@@ -11,8 +12,7 @@ const SignUpContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 480px;
-    /* border: 1PX solid #000; */
+    max-width: 480px;
     padding: 30px;
     border-radius: 20px;
     margin: 20px 0;
