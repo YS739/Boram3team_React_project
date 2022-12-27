@@ -33,11 +33,11 @@ const UserPosts = () => {
         comments.map((comment) => {
           if (comment.isA === "true" && comment.postNumber === post.id) {
             countA = countA + 1;
-            barA = "coral";
+            barA = "#EC5858";
           }
           if (comment.isA === "false" && comment.postNumber === post.id) {
             countB = countB + 1;
-            barB = "skyblue";
+            barB = "#3E6D9C";
           }
         });
         let ratioA = Math.round(100 - (countB / (countA + countB)) * 100);
@@ -67,19 +67,19 @@ const UserPosts = () => {
           >
             <PostContainer>
               <PostBox>
-                <div>논제: {post.title}</div>
+                <div>{post.title}</div>
                 <div>
                   <div>
-                    A: {post.categoryA} vs B: {post.categoryB}
+                    {post.categoryA} vs {post.categoryB}
                   </div>
                   <div></div>
                 </div>
               </PostBox>
               <PostLike dp={post.like[0] === currentUserDi ? "none" : "block"}>
-                🤍
+                ❤️
               </PostLike>
               <PostLike dp={post.like[0] === currentUserDi ? "block" : "none"}>
-                ❤
+                ❤️
               </PostLike>
               <p>{post.like.length}</p>
             </PostContainer>

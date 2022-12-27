@@ -98,11 +98,11 @@ const CommentUpload = () => {
         <CategoryBox>
           <CategoryA>
             <input type="radio" name="category" id="A" value="true" />
-            <label htmlFor="A">A: {theA}</label>
+            <label htmlFor="A">{theA}</label>
           </CategoryA>
           <CategoryB>
             <input type="radio" name="category" id="B" value="false" />
-            <label htmlFor="B">B: {theB}</label>
+            <label htmlFor="B">{theB}</label>
           </CategoryB>
         </CategoryBox>
 

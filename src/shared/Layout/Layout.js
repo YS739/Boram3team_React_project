@@ -1,21 +1,20 @@
-import styled from 'styled-components';
-import Header from './Header';
-import logo from './footerlogo.png';
+import styled from "styled-components";
+import Header from "./Header";
 // TODO: 컴포넌트 빼서 if문으로 로그인/글작성/마이페이지 보이게
 
 const Footer = () => {
   return (
     <Foot>
       <FooterLogo>
-          <img
-            src='https://user-images.githubusercontent.com/117061017/209667589-b48afaf2-d71d-4dd2-bdb9-209eb19d98e0.png'
-            alt='Boram3team logo'
-          />  
+        <img
+          src="https://user-images.githubusercontent.com/117061017/209667589-b48afaf2-d71d-4dd2-bdb9-209eb19d98e0.png"
+          alt="Boram3team logo"
+        />
       </FooterLogo>
-      <h5 style={{ color: '#8c8c8c' }}>
+      <h5 style={{ color: "#8c8c8c" }}>
         보람삼조(주) | 대표이사 박성환 성경환 이희령 정윤숙 차상현
       </h5>
-      <h5 style={{ color: '#8c8c8c' }}>
+      <h5 style={{ color: "#8c8c8c" }}>
         Copyright ©2022 BORAM3TEAM. All rights reserved.
       </h5>
     </Foot>
@@ -24,11 +23,11 @@ const Footer = () => {
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <LayOut>
       <Header />
       <div>{children}</div>
       <Footer />
-    </div>
+    </LayOut>
   );
 };
 
@@ -36,13 +35,19 @@ export default Layout;
 
 // styled-components
 
+const LayOut = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Foot = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: #06283D;
+  background-color: #06283d;
   gap: 50px;
 
   box-sizing: border-box;
@@ -65,5 +70,4 @@ const FooterLogo = styled.div`
   img {
     height: 35px;
   }
-
 `;

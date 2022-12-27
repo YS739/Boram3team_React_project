@@ -14,7 +14,9 @@ export const __getUsers = createAsyncThunk(
   "users/getUsers",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/users");
+      const data = await axios.get(
+        "https://charming-humorous-panda.glitch.me/users"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -29,8 +31,13 @@ export const __signUp = createAsyncThunk(
   // 두 번째 인자: 콜백함수
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/users", payload);
-      const data = await axios.get("http://localhost:3001/users");
+      await axios.post(
+        "https://charming-humorous-panda.glitch.me/users",
+        payload
+      );
+      const data = await axios.get(
+        "https://charming-humorous-panda.glitch.me/users"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -43,8 +50,13 @@ export const __editUserName = createAsyncThunk(
   "users/switchLoggedIn",
   async (payload, thunkAPI) => {
     try {
-      await axios.patch(`http://localhost:3001/users/${payload.id}`, payload);
-      const data = await axios.get("http://localhost:3001/users");
+      await axios.patch(
+        `https://charming-humorous-panda.glitch.me/users/${payload.id}`,
+        payload
+      );
+      const data = await axios.get(
+        "https://charming-humorous-panda.glitch.me/users"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

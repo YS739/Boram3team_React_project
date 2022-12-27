@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const HeaderDiv = styled.div`
-  background-color: #f6f5ef;
+  border-bottom: 1px solid lightgray;
+  background-color: #efefef;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15,7 +16,6 @@ const Head = styled.div`
   box-sizing: border-box;
   padding: 0 140px;
   width: 1200px;
-  /* min-width: 800px; */
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   align-items: center;
@@ -23,11 +23,11 @@ const Head = styled.div`
 
 const HeaderLogo = styled.div`
   cursor: pointer;
-  
+
   img {
     height: 45px;
   }
-`
+`;
 
 const HeaderTitle = styled.h1`
   margin-left: 80px;
@@ -35,7 +35,7 @@ const HeaderTitle = styled.h1`
   display: flex;
   justify-content: center;
   cursor: pointer;
-`
+`;
 
 const Nav = styled.ul`
   list-style-type: none;

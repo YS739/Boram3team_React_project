@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const EditPageDiv = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -8,16 +10,27 @@ const EditPageDiv = styled.div`
 `;
 
 const AddPostContainer = styled.div`
-  max-width: 1200px;
-  min-width: 800px;
-  background-color: lightgray;
+  width: 650px;
+  height: 400px;
+
+  padding: 20px 0;
+  background-color: #ede4e0;
+  opacity: 0.8;
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: lightgray;
   border-radius: 20px;
   height: 70vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
 `;
 
 const AddPostForm = styled.form`
@@ -27,12 +40,11 @@ const AddPostForm = styled.form`
   align-items: center;
   margin: 0 auto;
   padding-bottom: 20px;
-  
 `;
 
 const TitleInput = styled.input`
   width: 500px;
-  height: 40px;
+  height: 60px;
   border-radius: 10px;
   border: none;
   padding-left: 10px;
@@ -79,6 +91,12 @@ const ChangeInputTitle = styled.span`
   width: 30px;
 `;
 
+const AddBtn = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+`;
+
 export {
   EditPageDiv,
   AddPostContainer,
@@ -88,5 +106,6 @@ export {
   InputA,
   InputB,
   ChangeInput,
+  AddBtn,
   ChangeInputTitle,
 };

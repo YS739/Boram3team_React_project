@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { CommentsBox, CategoryStyle } from "./style";
+import { CommentsBox, CategoryStyle, CommentBox } from "./style";
 import CommentEditDelete from "./CommentEditDelete";
 import { useParams } from "react-router-dom";
 
@@ -32,15 +32,17 @@ const Comments = () => {
         }
 
         return (
-          <div key={comment.id}>
-            <br />
-            <CategoryStyle color={color}>
-              {comment.isA === "true" ? theA : theB}
-            </CategoryStyle>
-            <div id="comment">
-              <CommentEditDelete key={comment.id} comments={comment} />
+          <CommentBox>
+            <div key={comment.id}>
+              <br />
+              <CategoryStyle color={color}>
+                {comment.isA === "true" ? theA : theB}
+              </CategoryStyle>
+              <div id="comment">
+                <CommentEditDelete key={comment.id} comments={comment} />
+              </div>
             </div>
-          </div>
+          </CommentBox>
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}

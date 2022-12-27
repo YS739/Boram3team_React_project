@@ -19,7 +19,7 @@ const H1 = styled.h1`
 `;
 
 const Article = styled.article`
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 40px;
   font-size: 30px;
   width: 800px;

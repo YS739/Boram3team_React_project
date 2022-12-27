@@ -13,10 +13,13 @@ export const __uploadPost = createAsyncThunk(
   "posts/uploadPost",
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/posts", payload);
+      await axios.post(
+        "https://charming-humorous-panda.glitch.me/posts",
+        payload
+      );
       // 최신 데이터를 불러오기 위해 get 추가
       const data = await axios.get(
-        "http://localhost:3001/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -31,7 +34,7 @@ export const __getPosts = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get(
-        "http://localhost:3001/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -45,9 +48,12 @@ export const __AddLikes = createAsyncThunk(
   "likes/Addlikes",
   async (payload, thunkAPI) => {
     try {
-      await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
+      await axios.patch(
+        `https://charming-humorous-panda.glitch.me/posts/${payload.id}`,
+        payload
+      );
       const data = await axios.get(
-        "http://localhost:3001/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -61,9 +67,11 @@ export const __deletePost = createAsyncThunk(
   "posts/deletePost",
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3001/posts/${payload}`);
+      await axios.delete(
+        `https://charming-humorous-panda.glitch.me/posts/${payload}`
+      );
       const data = await axios.get(
-        "http://localhost:3001/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -72,14 +80,17 @@ export const __deletePost = createAsyncThunk(
   }
 );
 
-//본문수정하기
+//본문 수정하기
 export const __editPost = createAsyncThunk(
   "posts/editPost",
   async (payload, thunkAPI) => {
     try {
-      await axios.patch(`http://localhost:3001/posts/${payload.id}`, payload);
+      await axios.patch(
+        `https://charming-humorous-panda.glitch.me/posts/${payload.id}`,
+        payload
+      );
       const data = await axios.get(
-        "http://localhost:3001/posts?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/posts?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
