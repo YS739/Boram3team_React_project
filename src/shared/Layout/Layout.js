@@ -47,6 +47,7 @@ const FooterSpan = styled.span`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `;
 
 const FooterLogo = styled.img`

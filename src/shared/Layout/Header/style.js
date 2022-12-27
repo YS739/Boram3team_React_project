@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 const HeaderDiv = styled.div`
+  background-color: #f6f5ef;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
 `;
 
 const Head = styled.div`
