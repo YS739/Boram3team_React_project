@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const HeaderDiv = styled.div`
+  background-color: #f6f5ef;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+`;
 
 const Head = styled.div`
   max-width: 1200px;
@@ -11,6 +21,8 @@ const Head = styled.div`
 const Nav = styled.ul`
   list-style-type: none;
   font-size: 20px;
+  position: relative;
+  top: -8px;
 `;
 
-export { Head, Nav };
+export { Head, Nav, HeaderDiv };
