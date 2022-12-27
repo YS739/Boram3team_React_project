@@ -27,6 +27,7 @@ const AddPostForm = styled.form`
   align-items: center;
   margin: 0 auto;
   padding-bottom: 20px;
+  
 `;
 
 const TitleInput = styled.input`
@@ -36,13 +37,15 @@ const TitleInput = styled.input`
   border: none;
   padding-left: 10px;
   margin-bottom: 10px;
+  font-size: 20px;
 `;
 
 const CategoryInput = styled.div`
   input {
-    width: 200px;
+    width: 300px;
     height: 40px;
     border-radius: 10px;
+    font-size: 20px;
   }
 `;
 
@@ -51,6 +54,8 @@ const InputA = styled.div`
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  margin-bottom: 5px;
+  font-size: 20px;
 `;
 
 const InputB = styled.div`
@@ -63,12 +68,15 @@ const InputB = styled.div`
 const ChangeInput = styled.input`
   border: none;
   padding-left: 10px;
-  margin-right: 180px;
+  font-size: 20px;
+  margin-bottom: 15px;
 `;
 
-const ChangeInputTitle = styled.h2`
-  margin-right: 15px;
-  margin-bottom: 20px;
+const ChangeInputTitle = styled.span`
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+  width: 30px;
 `;
 
 export {

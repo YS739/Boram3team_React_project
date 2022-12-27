@@ -6,15 +6,35 @@ const HeaderDiv = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin-bottom: 50px;
+  height: 100px;
+  width: 100vw;
 `;
 
 const Head = styled.div`
-  max-width: 1200px;
-  min-width: 800px;
+  box-sizing: border-box;
+  padding: 0 140px;
+  width: 1200px;
+  /* min-width: 800px; */
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   align-items: center;
+`;
+
+const HeaderLogo = styled.div`
+  cursor: pointer;
+
+  img {
+    height: 45px;
+  }
+`;
+
+const HeaderTitle = styled.h1`
+  margin-left: 80px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 `;
 
 const Nav = styled.ul`
@@ -24,4 +44,4 @@ const Nav = styled.ul`
   top: -8px;
 `;
 
-export { Head, Nav, HeaderDiv };
+export { HeaderDiv, Head, HeaderLogo, HeaderTitle, Nav };

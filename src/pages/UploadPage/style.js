@@ -9,7 +9,9 @@ const PageDiv = styled.div`
   align-items: center;
 `;
 
-const UpLoadPageTitle = styled.h1``;
+const UpLoadPageTitle = styled.h1`
+  margin-bottom: 10px;
+`;
 
 const AddPostContainer = styled.div`
   max-width: 1200px;
@@ -37,11 +39,12 @@ const TitleInput = styled.input`
   border-radius: 10px;
   border: none;
   padding-left: 10px;
+  font-size: 20px;
 `;
 
 const CategoryInput = styled.div`
   input {
-    width: 200px;
+    width: 300px;
     height: 40px;
     border-radius: 10px;
     border: none;
@@ -62,15 +65,18 @@ const InputB = styled.div`
   align-items: center;
 `;
 
-const InputContent = styled.h2`
-  font-weight: 700;
+const InputContent = styled.span`
+  font-weight: bold;
+  font-size: 20px;
   margin-right: 10px;
+  width: 30px;
 `;
 
 const ContetInput = styled.input`
-  /* width: 0px; */
-  margin-right: 180px;
+  border: none;
   padding-left: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
 `;
 
 export {

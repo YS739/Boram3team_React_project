@@ -14,21 +14,20 @@ const H1 = styled.h1`
   margin-left: 10px;
   font-size: 30px;
   padding-left: 10px;
-  margin-left: 180px;
-  border-bottom: 1px solid gray;
-  width: 60%;
+  border-bottom: 2px solid black;
+  width: 800px;
 `;
 
 const Article = styled.article`
   border-radius: 10px;
-  margin: 30px;
+  margin: 40px;
   font-size: 30px;
-  width: 70%;
+  width: 800px;
   background-color: ${(props) => props.color};
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  padding: 10px;
+  padding: 0 30px 30px 30px;
   :hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     border-radius: 10px;
   }
 `;
@@ -40,7 +39,6 @@ const PostContainer = styled.div`
 
 const PostBox = styled.div`
   width: 100%;
-  padding: 10px;
   cursor: pointer;
 `;
 
@@ -49,8 +47,10 @@ const PostTitle = styled.div`
   /* text-align: center; */
   justify-content: center;
   align-items: center;
-  height: 150px;
-  padding: 0 30px 30px 50px;
+  height: 120px;
+  padding: 0 30px 30px 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
 
   color: ${(props) => props.font};
 `;
@@ -69,6 +69,7 @@ const CategoryContent = styled.div`
   text-align: center;
   border-right: ${(props) => props.br};
   font-weight: bold;
+  margin-bottom: 5px;
 `;
 const LikeDiv = styled.button`
   border: none;
@@ -78,15 +79,21 @@ const LikeDiv = styled.button`
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 `;
 const PostLike = styled.div`
+  margin-top: 15px;
+  margin-left: 30px;
   font-size: 40px;
   display: ${(props) => props.dp};
+  cursor: pointer;
 `;
 
 const GageBar = styled.div`
-  border: 1px solid gray;
   height: 40px;
   margin: 5px;
   display: flex;
+
+  span {
+    margin-bottom: 5px;
+  }
 `;
 
 const BarA = styled.div`
@@ -96,6 +103,11 @@ const BarA = styled.div`
   text-align: center;
   color: white;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
 `;
 
 export {

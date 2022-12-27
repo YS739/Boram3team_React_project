@@ -23,12 +23,13 @@
     {
       "id": "c91c08f4-ffe3-40e8-b056-9657ec492c11",
       "user": "994a5401-4dfc-4446-8196-9fa854d7cc85",
-      "title": "dfdfd",
+      "title": "오늘 잘 수 있다?",
       "userName": "dd",
-      "categoryA": "dfdf",
-      "categoryB": "df",
+      "categoryA": "있다",
+      "categoryB": "없다",
       "date": "2022-12-27T10:36:14.055Z",
       "like": [
+<<<<<<< HEAD
         "60feb66d-78b0-4fde-ba1b-c430d83ae0fd"
       ]
     },
@@ -52,6 +53,9 @@
       "date": "2022-12-27T14:47:11.958Z",
       "like": [
         "9278ff3f-6567-4bd9-bf61-61aa7a081e0e"
+=======
+        "994a5401-4dfc-4446-8196-9fa854d7cc85"
+>>>>>>> e4877bd82653d5314ac4d59310c1165f2c45daa5
       ]
     }
   ],

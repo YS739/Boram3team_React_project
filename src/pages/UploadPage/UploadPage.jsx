@@ -80,7 +80,7 @@ const UploadPage = () => {
       <AddPostContainer>
         <AddPostForm onSubmit={addPostHandler}>
           <section>
-            <UpLoadPageTitle>토론주제</UpLoadPageTitle>
+            <UpLoadPageTitle>토론 주제</UpLoadPageTitle>
             <TitleInput
               id="title"
               value={title}
@@ -88,7 +88,7 @@ const UploadPage = () => {
             />
             <br></br>
             <CategoryInput>
-              <h2>선택분류</h2>
+              <h2 style={{marginBottom: "10px"}}>선택 분류</h2>
               <InputA>
                 <InputContent>A :</InputContent>
                 <ContetInput
@@ -104,8 +104,8 @@ const UploadPage = () => {
                   value={categoryB}
                   onChange={categoryBChangeHandler}
                 />
-                <CustomButton>등록</CustomButton>
               </InputB>
+              <CustomButton>등록</CustomButton>
             </CategoryInput>
           </section>
         </AddPostForm>
