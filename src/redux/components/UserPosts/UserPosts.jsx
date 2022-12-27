@@ -51,6 +51,7 @@ const UserPosts = () => {
         }
 
         return (
+          
           <Article
             key={post.id}
             onClick={() => {
@@ -67,7 +68,7 @@ const UserPosts = () => {
                   <div></div>
                 </div>
               </PostBox>
-              <PostLike>👍: {post.like.length}</PostLike>
+              👍 {post.like.length}
             </PostContainer>
             <GageBar>
               <BarA bg={ratioA} color={barA}>

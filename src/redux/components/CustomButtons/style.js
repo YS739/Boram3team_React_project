@@ -27,7 +27,7 @@ const HomeButtonStyled = styled.button`
   cursor: pointer;
 
   background-color: transparent;
-  color: darkgreen;
+  /* color: darkgreen; */
 
   border: none;
   font-size: 40px;
@@ -38,7 +38,7 @@ const NavStyled = styled.button`
   cursor: pointer;
 
   background-color: transparent;
-  color: darkgreen;
+  /* color: darkgreen; */
 
   border: none;
   font-size: 20px;

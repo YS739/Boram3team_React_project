@@ -10,7 +10,8 @@
       "id": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
       "userDi": "c9926",
       "userPw": "a123456789",
-      "userName": "바보"
+      "userName": "zzzzz",
+      "comment": "1111"
     },
     {
       "id": "9645534e-6895-4fff-b18a-cea16febb5e1",
@@ -27,7 +28,9 @@
       "categoryA": "111",
       "categoryB": "111",
       "date": "2022-12-26T11:45:01.744Z",
-      "like": []
+      "like": [
+        "750f551a-8397-495e-b5ff-b1c4bcf01c3e"
+      ]
     },
     {
       "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
@@ -156,6 +159,14 @@
       "comment": "이게 더 올라가야 되는데 반대로 됬다?",
       "isA": "true",
       "date": "2022-12-26T12:56:42.170Z"
+    },
+    {
+      "id": "89b39b2c-76db-4711-92ce-247f3653cedc",
+      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
+      "user": "750f551a-8397-495e-b5ff-b1c4bcf01c3e",
+      "comment": "1112111",
+      "isA": "true",
+      "date": "2022-12-26T15:18:57.918Z"
     }
   ]
 }
