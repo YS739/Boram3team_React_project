@@ -74,12 +74,6 @@ const LoginPage = () => {
     }
   };
 
-  const logoutHandler = (e) => {
-    e.preventDefault();
-    alert("로그아웃 완료");
-    localStorage.clear();
-  };
-
   if (error) {
     return <div>{error.massage}</div>;
   }
@@ -101,7 +95,7 @@ const LoginPage = () => {
               onChange={onChangeUserDiHandler}
             />
           </InputBox>
-          <InputBox>
+          <InputBox >
             <h4>비밀번호*</h4>
             <input
               type="password"
@@ -115,7 +109,7 @@ const LoginPage = () => {
             <CheckMsg ref={loginMsg} />
           </InputBox>
           <ButtonBox>
-            <Button onClick={logInHandler}>로그인하기</Button>
+            <Button onClick={logInHandler}>로그인</Button>
           </ButtonBox>
           <SwitchText>
             처음 방문하셨나요?

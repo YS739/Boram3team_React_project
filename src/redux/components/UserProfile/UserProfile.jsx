@@ -51,6 +51,12 @@ const UserProfile = () => {
     navigate("/");
   };
 
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    navigate("/");
+  };
+
   return (
     <div>
       <Logout onClick={logoutHandler}>로그아웃</Logout>

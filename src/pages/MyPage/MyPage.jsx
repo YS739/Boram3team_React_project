@@ -22,9 +22,9 @@ const MyPage = () => {
   
   return (
     <Container>
-      <UserProfile></UserProfile>
-      <UserPosts></UserPosts>
-      <UserLikes></UserLikes>
+      <UserProfile />
+      <UserPosts />
+      <UserLikes />
     </Container>
   );
 };
