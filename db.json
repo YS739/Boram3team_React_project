@@ -17,6 +17,12 @@
       "userDi": "willaim",
       "userPw": "tjdghks12",
       "userName": "성환임"
+    },
+    {
+      "id": "9c02bc16-7407-499d-be32-335578640faa",
+      "userDi": "psh5575",
+      "userPw": "tjdghks12",
+      "userName": "성환쓰"
     }
   ],
   "posts": [
@@ -27,7 +33,10 @@
       "categoryA": "111",
       "categoryB": "111",
       "date": "2022-12-26T11:45:01.744Z",
-      "like": []
+      "like": [
+        "9c02bc16-7407-499d-be32-335578640faa"
+      ],
+      "likeCount": 0
     },
     {
       "id": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
@@ -45,7 +54,6 @@
       "categoryA": "하지마",
       "categoryB": "하자",
       "date": "2022-12-26T13:04:07.074Z",
-      "like": ["9645534e-6895-4fff-b18a-cea16febb5e1"]
     }
   ],
   "comments": [
@@ -158,15 +166,6 @@
       "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
       "comment": "테스트 수정10",
       "isA": "true",
-      "date": "2022-12-27T01:32:18.180Z"
-    },
-    {
-      "id": "d06af330-029b-47ba-bae9-1bd789ab3992",
-      "postNumber": "7ea5220e-4dc9-488f-bae7-d94c64a992b2",
-      "user": "613f6bb7-a56b-4c69-a59a-ec8f674d1fe4",
-      "comment": "테스트 댓글1",
-      "isA": "false",
-      "date": "2022-12-27T01:39:12.469Z"
     }
   ]
 }

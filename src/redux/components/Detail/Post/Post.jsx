@@ -50,17 +50,17 @@ const Post = () => {
   let barA = "lightgray";
   let barB = "gray";
   comments?.map((comment) => {
-    if (comment?.isA === "false" && comment?.postNumber === thePost?.id) {
+    if (comment?.isA === "true" && comment?.postNumber === thePost?.id) {
       countA = countA + 1;
       barA = "coral";
     }
-    if (comment?.isA === "true" && comment?.postNumber === thePost?.id) {
+    if (comment?.isA === "false" && comment?.postNumber === thePost?.id) {
       countB = countB + 1;
       barB = "skyblue";
     }
   });
-  let ratioA = Math.round(100 - (countA / (countA + countB)) * 100);
-  let ratioB = Math.round(100 - (countB / (countA + countB)) * 100);
+  let ratioA = Math.round(100 - (countB / (countA + countB)) * 100);
+  let ratioB = Math.round(100 - (countA / (countA + countB)) * 100);
 
   if (countA === 0) {
     ratioA = 50;
@@ -68,7 +68,14 @@ const Post = () => {
   if (countB === 0) {
     ratioB = 50;
   }
-
+  if (countA > 0 && countB === 0) {
+    ratioA = 100;
+    ratioB = 0;
+  }
+  if (countB > 0 && countA === 0) {
+    ratioB = 100;
+    ratioA = 0;
+  }
   return (
     <PostBox>
       <div key={thePost?.id}>
@@ -81,11 +88,15 @@ const Post = () => {
           좋아요 버튼임
         </button>
         <GageBar>
-          <BarA bg={ratioA} color={barA}>
-            {ratioA}%
+          <BarA bg={ratioA} color={ratioA === 100 ? "red" : barA}>
+            <span style={{ display: ratioA === 0 ? "none" : "block" }}>
+              {ratioA}%
+            </span>
           </BarA>
-          <BarA bg={ratioB} color={barB}>
-            {ratioB}%
+          <BarA bg={ratioB} color={ratioB === 100 ? "blue" : barB}>
+            <span style={{ display: ratioB === 0 ? "none" : "block" }}>
+              {ratioB}%
+            </span>
           </BarA>
         </GageBar>
 
