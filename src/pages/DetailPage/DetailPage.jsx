@@ -5,6 +5,8 @@ import CommentUpload from "../../redux/components/Detail/CommentUpload";
 import Post from "../../redux/components/Detail/Post";
 import { __getComments } from "../../redux/modules/commentsSlice";
 import { __getPosts } from "../../redux/modules/postsSlice";
+import { __getUsers } from "../../redux/modules/usersSlice";
+import { DetailBody } from "./style";
 
 const DetailPage = () => {
   const { error } = useSelector((state) => state.posts);
@@ -13,6 +15,7 @@ const DetailPage = () => {
   useEffect(() => {
     dispatch(__getComments());
     dispatch(__getPosts());
+    dispatch(__getUsers());
   }, [dispatch]);
 
   if (error) {
@@ -20,11 +23,11 @@ const DetailPage = () => {
   }
 
   return (
-    <div>
+    <DetailBody>
       <Post />
       <CommentUpload />
       <Comments />
-    </div>
+    </DetailBody>
   );
 };
 export default DetailPage;

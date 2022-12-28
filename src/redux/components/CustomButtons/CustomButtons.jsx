@@ -1,5 +1,11 @@
 import React from "react";
-import { ButtonStyled, HomeButtonStyled, NavStyled } from "./style";
+import {
+  ButtonStyled,
+  NameDomeStyled,
+  HomeButtonStyled,
+  NavStyled,
+  NameStyled,
+} from "./style";
 
 const CustomButtons = (props) => {
   switch (props.btnName) {
@@ -18,9 +24,32 @@ const CustomButtons = (props) => {
       );
     }
 
+    case "name": {
+      return (
+        <NameStyled
+          ref={props.ref}
+          type={props.type}
+          value={props.value}
+          onClick={props.onClick}
+        >
+          {props.children}
+        </NameStyled>
+      );
+    }
+
+    case "nameDone": {
+      return (
+        <NameDomeStyled ref={props.ref} onClick={props.onClick}>
+          {props.children}
+        </NameDomeStyled>
+      );
+    }
+
     default: {
       return (
-        <ButtonStyled onClick={props.onClick}>{props.children}</ButtonStyled>
+        <ButtonStyled dp={props.dp} onClick={props.onClick}>
+          {props.children}
+        </ButtonStyled>
       );
     }
   }

@@ -1,15 +1,20 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { __uploadPost } from "../../redux/modules/postsSlice";
 import {
+  PageDiv,
+  UpLoadPageTitle,
   AddPostContainer,
   AddPostForm,
   CategoryInput,
   InputA,
+  AddBtn,
   InputB,
   TitleInput,
+  InputContent,
+  ContetInput,
 } from "./style";
 import CustomButton from "../../redux/components/CustomButtons";
 import useInput from "../../hooks/useInput";
@@ -18,6 +23,9 @@ const UploadPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const currentUserDi = localStorage.getItem("id");
+
+  const { users } = useSelector((state) => state.users);
+  const currentUser = users?.find((name) => name.id === currentUserDi);
 
   //use Input
   const [title, setTitle, titleChangeHandler] = useInput();
@@ -34,6 +42,7 @@ const UploadPage = () => {
         id: uuidv4(),
         user: currentUserDi,
         title,
+        userName: currentUser.userName,
         categoryA,
         categoryB,
         date: new Date(),
@@ -68,35 +77,43 @@ const UploadPage = () => {
   };
 
   return (
-    <AddPostContainer>
-      <AddPostForm onSubmit={addPostHandler}>
-        <section>
-          <h1>토론주제</h1>
-          <TitleInput id="title" value={title} onChange={titleChangeHandler} />
-          <br></br>
-          <CategoryInput>
-            <h2>선택분류</h2>
-            <InputA>
-              <h2>A</h2> :
-              <input
-                id="categoryA"
-                value={categoryA}
-                onChange={categoryAChangeHandler}
-              />
-            </InputA>
-            <InputB>
-              <h2>B</h2> :
-              <input
-                id="categoryB"
-                value={categoryB}
-                onChange={categoryBChangeHandler}
-              />
-              <CustomButton>등록</CustomButton>
-            </InputB>
-          </CategoryInput>
-        </section>
-      </AddPostForm>
-    </AddPostContainer>
+    <PageDiv>
+      <AddPostContainer>
+        <AddPostForm onSubmit={addPostHandler}>
+          <section>
+            <UpLoadPageTitle>토론 주제</UpLoadPageTitle>
+            <TitleInput
+              id="title"
+              value={title}
+              onChange={titleChangeHandler}
+            />
+            <br></br>
+            <CategoryInput>
+              <h2>선택 분류</h2>
+              <InputA>
+                <InputContent>A :</InputContent>
+                <ContetInput
+                  id="categoryA"
+                  value={categoryA}
+                  onChange={categoryAChangeHandler}
+                />
+              </InputA>
+              <InputB>
+                <InputContent>B :</InputContent>
+                <ContetInput
+                  id="categoryB"
+                  value={categoryB}
+                  onChange={categoryBChangeHandler}
+                />
+              </InputB>
+              <AddBtn>
+                <CustomButton>등록</CustomButton>
+              </AddBtn>
+            </CategoryInput>
+          </section>
+        </AddPostForm>
+      </AddPostContainer>
+    </PageDiv>
   );
 };
 

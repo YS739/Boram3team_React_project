@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Wrap, CategoryStyle } from "./style";
+import { CommentsBox, CategoryStyle, CommentBox } from "./style";
 import CommentEditDelete from "./CommentEditDelete";
 import { useParams } from "react-router-dom";
 
@@ -20,7 +20,7 @@ const Comments = () => {
   }
 
   return (
-    <Wrap>
+    <CommentsBox>
       {/* optional chaining('?') 사용 - 새로고침했을 때 오류 해결*/}
       {detailComment?.map((comment) => {
         let color = "";
@@ -32,21 +32,21 @@ const Comments = () => {
         }
 
         return (
-          <div key={comment.id}>
-            <br />
-            <CategoryStyle color={color}>
-              {comment.isA === "true" ? theA : theB}
-            </CategoryStyle>
-            <div>
-              <span id="comment">
+          <CommentBox>
+            <div key={comment.id}>
+              <br />
+              <CategoryStyle color={color}>
+                {comment.isA === "true" ? theA : theB}
+              </CategoryStyle>
+              <div id="comment">
                 <CommentEditDelete key={comment.id} comments={comment} />
-              </span>
+              </div>
             </div>
-          </div>
+          </CommentBox>
         );
         // TODO: 작성자, 선택한 카테고리 내용 추가
       })}
-    </Wrap>
+    </CommentsBox>
   );
 };
 

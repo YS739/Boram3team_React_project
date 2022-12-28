@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const CommentContainer = styled.div`
-  width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +10,7 @@ const CommentContainer = styled.div`
 `;
 
 const CommentForm = styled.form`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,27 +18,35 @@ const CommentForm = styled.form`
 `;
 
 const CategoryBox = styled.div`
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 15px;
+  font-size: 20px;
 `;
 
 const CategoryA = styled.span`
+  width: 47%;
+  height: 100%;
   background-color: #ec5858;
   color: white;
 
-  border: 2px solid #ec5858;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border: 1px solid #ec5858;
   border-radius: 10px;
   padding: 10px;
 `;
 
 const CategoryB = styled.span`
+  width: 47%;
+  height: 100%;
   background-color: #3e6d9c;
   color: white;
 
-  border: 2px solid #3e6d9c;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border: 1px solid #3e6d9c;
   border-radius: 10px;
   padding: 10px;
 `;
@@ -46,12 +55,15 @@ const InputBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 
   input {
-    width: 400px;
-    height: 50px;
+    width: 90%;
+    height: 33px;
     margin-right: 20px;
+    font-size: 15px;
   }
 `;
 

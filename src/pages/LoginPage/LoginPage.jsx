@@ -22,6 +22,14 @@ const LoginPage = () => {
     dispatch(__getUsers());
   }, [dispatch]);
 
+  // 로그인했을 경우 메인으로 이동
+  useEffect(() => {
+    const currentUserDi = localStorage.getItem("id");
+    if ( currentUserDi !== null ) {
+      navigate("/")
+    }
+  });
+
   const { error, users } = useSelector((state) => state.users);
 
   const [userDi, setUserDi, onChangeUserDiHandler] = useInput();
@@ -67,17 +75,11 @@ const LoginPage = () => {
     } else {
       navigate("/");
 
-      // 로그인한 특정 유저의 id를 localStorage에 저장함
-      // 저장하는 이유는 어느 페이지에 가든 현재 로그인한 유저의 id를 불러오기 위해서
-      localStorage.clear();
-      localStorage.setItem("id", user.id);
-    }
-  };
-
-  const logoutHandler = (e) => {
-    e.preventDefault();
-    alert("로그아웃 완료");
+    // 로그인한 특정 유저의 id를 localStorage에 저장함
+    // 저장하는 이유는 어느 페이지에 가든 현재 로그인한 유저의 id를 불러오기 위해서
     localStorage.clear();
+    localStorage.setItem("id", user.id);
+    }
   };
 
   if (error) {
@@ -101,7 +103,7 @@ const LoginPage = () => {
               onChange={onChangeUserDiHandler}
             />
           </InputBox>
-          <InputBox>
+          <InputBox >
             <h4>비밀번호*</h4>
             <input
               type="password"
@@ -115,7 +117,7 @@ const LoginPage = () => {
             <CheckMsg ref={loginMsg} />
           </InputBox>
           <ButtonBox>
-            <Button onClick={logInHandler}>로그인하기</Button>
+            <Button onClick={logInHandler}>로그인</Button>
           </ButtonBox>
           <SwitchText>
             처음 방문하셨나요?

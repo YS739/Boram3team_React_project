@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __getUsers, __signUp } from "../../redux/modules/usersSlice";
-import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { v4 as uuidv4 } from "uuid";
 import {
   Wrap,
   SignUpContainer,
@@ -21,6 +21,14 @@ const SignUpPage = () => {
   useEffect(() => {
     dispatch(__getUsers());
   }, [dispatch]);
+
+  // 로그인했을 경우 메인으로 이동
+  useEffect(() => {
+    const currentUserDi = localStorage.getItem("id");
+    if (currentUserDi !== null) {
+      navigate("/");
+    }
+  });
 
   const { error, users } = useSelector((state) => state.users);
 
@@ -122,12 +130,6 @@ const SignUpPage = () => {
 
   const onChangeUserNameHandler = () => {
     setUserName(userName_input.current.value);
-    // const isAllValid = !(onChangeuserDiHandler() === true && onChangeUserPwHandler() === true && userDi && userPw && userName)
-    // console.log(isAllValid)
-    // if (isAllValid) {
-    //   singUpBtn.current.disabled = false;
-    //   singUpBtn.current.style = "background-color: skyblue"
-    // }
   };
 
   // [회원가입] 버튼 클릭 시 작동
@@ -158,11 +160,6 @@ const SignUpPage = () => {
       // 회원가입 성공하면 따로 로그인할 필요 없이 바로 로그인됨
       localStorage.clear();
       localStorage.setItem("id", newUser.id);
-
-      // 가입 가능한 조건이 되면 가입하기 버튼이 활성화됨
-      // FIXME: 클릭해야 작동하는 함수 안에 disabled 코드를 작성하니까 이상해짐
-      // singUpBtn.current.disabled = false;
-      // singUpBtn.current.style = "background-color: skyblue"
     } else {
       e.preventDefault();
     }

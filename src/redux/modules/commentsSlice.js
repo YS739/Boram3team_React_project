@@ -12,7 +12,7 @@ export const __getComments = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get(
-        "http://localhost:3001/comments?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/comments?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -26,9 +26,12 @@ export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3001/comments", payload);
+      await axios.post(
+        "https://charming-humorous-panda.glitch.me/comments",
+        payload
+      );
       const data = await axios.get(
-        "http://localhost:3001/comments?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/comments?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -42,9 +45,11 @@ export const __deleteComment = createAsyncThunk(
   "comments/deleteComment",
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3001/comments/${payload}`);
+      await axios.delete(
+        `https://charming-humorous-panda.glitch.me/comments/${payload}`
+      );
       const data = await axios.get(
-        "http://localhost:3001/comments?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/comments?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -59,11 +64,11 @@ export const __changeComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `http://localhost:3001/comments/${payload.id}`,
+        `https://charming-humorous-panda.glitch.me/comments/${payload.id}`,
         payload
       );
       const data = await axios.get(
-        "http://localhost:3001/comments?_sort=date&_order=DESC"
+        "https://charming-humorous-panda.glitch.me/comments?_sort=date&_order=DESC"
       );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
