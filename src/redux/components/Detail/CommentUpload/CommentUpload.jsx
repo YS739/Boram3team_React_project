@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useResolvedPath } from "react-router-dom";
+import { useParams, useResolvedPath, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { __postComment } from "../../../modules/commentsSlice";
 import {
@@ -16,6 +16,7 @@ import useInput from "../../../../hooks/useInput";
 
 const CommentUpload = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const param = useParams();
   const { comments } = useSelector((state) => state.comments);
   const { posts } = useSelector((state) => state.posts);
@@ -49,8 +50,14 @@ const CommentUpload = () => {
     const categories = document.getElementsByName("category");
     const selected = Array.from(categories).find((choice) => choice.checked);
 
+    // 현재 user가 없을 때
+    if (!currentUser) {
+      alert("로그인을 해주세요.");
+      navigate("/login");
+    }
+
     // 현재 user 댓글이 있을 때
-    if (userComment) {
+    else if (userComment) {
       alert("댓글은 한 번만 등록할 수 있습니다.");
     }
 

@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Container = styled.div`
+  width: 100vw;
+`;
+
 const DetailBody = styled.body`
   margin: 0 auto;
   display: flex;
@@ -7,4 +11,4 @@ const DetailBody = styled.body`
   width: 900px;
 `;
 
-export { DetailBody };
+export { DetailBody, Container };

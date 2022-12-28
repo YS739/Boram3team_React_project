@@ -59,19 +59,19 @@ const UploadPage = () => {
     if (!title) {
       e.preventDefault();
       document.getElementById("title").focus();
-      alert("주제를 입력해주세요");
+      alert("주제를 입력해주세요.");
       return;
     }
     if (!categoryA) {
       e.preventDefault();
       document.getElementById("categoryA").focus();
-      alert("A의 내용을 입력해 주세요");
+      alert("A의 내용을 입력해 주세요.");
       return;
     }
     if (!categoryB) {
       e.preventDefault();
       document.getElementById("categoryB").focus();
-      alert("B의 내용을 입력해 주세요");
+      alert("B의 내용을 입력해 주세요.");
       return;
     }
   };
@@ -91,7 +91,7 @@ const UploadPage = () => {
             <CategoryInput>
               <h2>선택 분류</h2>
               <InputA>
-                <InputContent>A :</InputContent>
+                <InputContent color={"#EC5858"}>A</InputContent>
                 <ContetInput
                   id="categoryA"
                   value={categoryA}
@@ -99,7 +99,7 @@ const UploadPage = () => {
                 />
               </InputA>
               <InputB>
-                <InputContent>B :</InputContent>
+                <InputContent color={"#3E6D9C"}>B</InputContent>
                 <ContetInput
                   id="categoryB"
                   value={categoryB}

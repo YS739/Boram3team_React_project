@@ -39,7 +39,7 @@ const CustomButtons = (props) => {
 
     case "nameDone": {
       return (
-        <NameDomeStyled ref={props.ref} onClick={props.onClick}>
+        <NameDomeStyled ref={props.ref} dp={props.dp} onClick={props.onClick}>
           {props.children}
         </NameDomeStyled>
       );
