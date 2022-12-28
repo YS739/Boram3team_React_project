@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const EditPageDiv = styled.div`
-  max-width: 1200px;
+  width: 100vw;
   min-width: 800px;
   display: flex;
   flex-direction: column;
@@ -23,14 +23,6 @@ const AddPostContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: lightgray;
-  border-radius: 20px;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center; */
 `;
 
 const AddPostForm = styled.form`
@@ -54,10 +46,14 @@ const TitleInput = styled.input`
 
 const CategoryInput = styled.div`
   input {
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 45px;
     border-radius: 10px;
-    font-size: 20px;
+    border: none;
+  }
+
+  h2 {
+    margin-bottom: 10px;
   }
 `;
 
@@ -66,8 +62,6 @@ const InputA = styled.div`
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  margin-bottom: 5px;
-  font-size: 20px;
 `;
 
 const InputB = styled.div`
@@ -85,10 +79,22 @@ const ChangeInput = styled.input`
 `;
 
 const ChangeInputTitle = styled.span`
+  color: white;
+  min-width: 80px;
+  max-height: 40px;
+  background-color: ${(props) => props.color};
+  border-radius: 3px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
+  margin-top: -15px;
+  padding-bottom: 7px;
+
   width: 30px;
+  text-align: center;
 `;
 
 const AddBtn = styled.div`

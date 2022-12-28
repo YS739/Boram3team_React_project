@@ -34,7 +34,6 @@ const Layout = ({ children }) => {
 export default Layout;
 
 // styled-components
-
 const LayOut = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@ const LayOut = styled.div`
 `;
 
 const Foot = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +52,10 @@ const Foot = styled.div`
   box-sizing: border-box;
   padding: 0 140px;
   margin-top: 50px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    height: 180px;
+  }
 `;
 
 const FooterSpan = styled.div`

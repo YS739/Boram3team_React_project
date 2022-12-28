@@ -17,13 +17,12 @@ const CategoryStyle = styled.div`
   width: 98%;
   margin-top: -24px;
   font-size: 25px;
-  padding-left: 16px;
+  padding-left: 19px;
   padding-top: 5px;
   padding-bottom: 5px;
 `;
 
 // CommentEditDelete.jsx
-
 const EditCommentsBox = styled.div`
   display: flex;
   flex-direction: column;

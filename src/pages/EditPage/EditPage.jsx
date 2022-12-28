@@ -75,17 +75,17 @@ const EditPage = () => {
 
     if (!title) {
       document.getElementById("title").focus();
-      alert("주제를 입력해주세요");
+      alert("주제를 입력해주세요.");
       return;
     }
     if (!categoryA) {
       document.getElementById("categoryA").focus();
-      alert("A의 내용을 입력해 주세요");
+      alert("A의 내용을 입력해 주세요.");
       return;
     }
     if (!categoryB) {
       document.getElementById("categoryB").focus();
-      alert("B의 내용을 입력해 주세요");
+      alert("B의 내용을 입력해 주세요.");
       return;
     }
   };
@@ -106,7 +106,7 @@ const EditPage = () => {
             <CategoryInput>
               <h2 style={{ marginBottom: "10px" }}>선택 분류</h2>
               <InputA>
-                <ChangeInputTitle>A :</ChangeInputTitle>
+                <ChangeInputTitle color={"#EC5858"}>A</ChangeInputTitle>
                 <ChangeInput
                   id="categoryA"
                   value={categoryA}
@@ -114,7 +114,7 @@ const EditPage = () => {
                 />
               </InputA>
               <InputB>
-                <ChangeInputTitle>B :</ChangeInputTitle>
+                <ChangeInputTitle color={"#3E6D9C"}>B</ChangeInputTitle>
                 <ChangeInput
                   id="categoryB"
                   value={categoryB}

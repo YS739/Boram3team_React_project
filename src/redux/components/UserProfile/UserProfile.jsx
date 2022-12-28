@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useRef, useState } from "react";
-import { Article, Section, ProfileText, Logout, ShBtn } from "./style";
+import { Article, Section, EditBtn, ProfileText, Logout, ShBtn } from "./style";
 import { __editUserName } from "../../modules/usersSlice";
 import useInput from "../../../hooks/useInput";
 import { useNavigate } from "react-router-dom";
@@ -10,38 +10,34 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { users } = useSelector((state) => state.users);
-
   const currentUserDi = localStorage.getItem("id");
   const profile = users.find((user) => user.id === currentUserDi);
-
   const changeInput = useRef();
   const userComment = useRef();
   const changeBtn = useRef();
   const changeBtn2 = useRef();
-  const [dp, setDp] = useState("none");
-
+  const [completeDisplay, setCompleteDisplay] = useState("none");
   const [name, setName, inputNameHandler] = useInput();
 
   // 닉네임 변경 버튼 핸들러
-  const changeNameHandler = () => {
+  const changeNameHandler = (profile) => {
     changeInput.current.style = "display:block";
     userComment.current.style = "display:none";
-    changeBtn.current.style = "display:none";
-    changeBtn2.current.style = "display:block";
+    changeBtn.current.style = "display:block";
+    changeBtn2.current.style = "display:none";
+    setCompleteDisplay("block");
     changeInput.current.focus();
   };
 
-  //완료 버튼 핸들러
+  //완료버튼 핸들러
   const completeButtonHandler = (id) => {
+    const newProfile = { ...profile, userName: name };
     changeInput.current.style = "display:none";
     userComment.current.style = "display:block";
     changeBtn.current.style = "display:none";
     changeBtn2.current.style = "display:block";
-
-    const newProfile = { ...profile, userName: name };
-
     if (changeInput.current.value === "") {
-      alert("닉네임을 입력하세요.");
+      alert("입력하삼");
     } else {
       dispatch(__editUserName(newProfile));
     }
@@ -62,7 +58,7 @@ const UserProfile = () => {
       </ProfileText>
       <Section>
         <Article>
-          ID: {profile?.userDi}
+          ID : {profile?.userDi}
           <br></br>
           <div style={{ display: "flex" }}>
             <span style={{ display: "flex", alignItems: "center" }}>
@@ -76,24 +72,24 @@ const UserProfile = () => {
               <span style={{ marginLeft: "5px" }} ref={userComment}>
                 {profile?.userName}
               </span>
-              <CustomButtons
-                btnName="name"
+              <EditBtn
                 ref={changeBtn2}
                 type="button"
                 value={name}
                 onClick={changeNameHandler}
               >
                 닉네임 변경
-              </CustomButtons>
-              <CustomButtons
-                btnName="nameDone"
+              </EditBtn>
+              <EditBtn
+                style={{ display: "none" }}
                 ref={changeBtn}
+                dp={completeDisplay}
                 onClick={() =>
                   completeButtonHandler(changeNameHandler(profile))
                 }
               >
                 완료
-              </CustomButtons>
+              </EditBtn>
             </span>
           </div>
         </Article>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const PageDiv = styled.div`
-  max-width: 1200px;
+  width: 100vw;
   min-width: 800px;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@ const TitleInput = styled.input`
 const CategoryInput = styled.div`
   input {
     width: 400px;
-    height: 50px;
+    height: 45px;
     border-radius: 10px;
     border: none;
   }
@@ -76,11 +76,23 @@ const InputB = styled.div`
   align-items: center;
 `;
 
-const InputContent = styled.span`
+const InputContent = styled.div`
+  color: white;
+  min-width: 80px;
+  max-height: 40px;
+  background-color: ${(props) => props.color};
+  border-radius: 3px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
+  margin-top: -15px;
+  padding-bottom: 7px;
+
   width: 30px;
+  text-align: center;
 `;
 
 const ContetInput = styled.input`

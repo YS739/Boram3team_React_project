@@ -61,18 +61,21 @@ const PostList = () => {
       like: isNotLike,
     };
     //  거짓이면 추가 참이면 삭제
-    if (isLike !== currentUserDi) {
+    if (isLike !== currentUserDi && isLike !== undefined) {
       dispatch(__AddLikes(addLike));
     }
     if (isLike === currentUserDi) {
       dispatch(__AddLikes(deleteLike));
+    }
+    if (currentUserDi === null) {
+      alert("로그인해주세요.");
     }
   };
 
   return (
     <>
       <Section>
-      <H1>토론 주제</H1>
+        <H1>토론 주제</H1>
         {posts?.map((post) => {
           let countA = 0;
           let countB = 0;
@@ -144,6 +147,17 @@ const PostList = () => {
                     >
                       ❤️
                     </PostLike>
+                    <article
+                      style={{
+                        position: "absolute",
+                        marginLeft: "50px",
+                        marginTop: "5px",
+                        fontSize: "25px",
+                        color: "white",
+                      }}
+                    >
+                      {post?.like.length}
+                    </article>
                   </LikeDiv>
                   <PostTitle
                     onClick={() => {

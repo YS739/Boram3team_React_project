@@ -6,7 +6,7 @@ import Post from "../../redux/components/Detail/Post";
 import { __getComments } from "../../redux/modules/commentsSlice";
 import { __getPosts } from "../../redux/modules/postsSlice";
 import { __getUsers } from "../../redux/modules/usersSlice";
-import { DetailBody } from "./style";
+import { DetailBody, Container } from "./style";
 
 const DetailPage = () => {
   const { error } = useSelector((state) => state.posts);
@@ -23,11 +23,13 @@ const DetailPage = () => {
   }
 
   return (
-    <DetailBody>
-      <Post />
-      <CommentUpload />
-      <Comments />
-    </DetailBody>
+    <Container>
+      <DetailBody>
+        <Post />
+        <CommentUpload />
+        <Comments />
+      </DetailBody>
+    </Container>
   );
 };
 export default DetailPage;

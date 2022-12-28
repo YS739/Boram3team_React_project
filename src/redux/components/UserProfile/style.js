@@ -39,8 +39,28 @@ const Logout = styled.span`
     color: #3e6d9c;
   }
 `;
-const ShBtn = styled.button`
-  display: ${(props) => props.dp};
+
+const EditBtn = styled.button`
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+
+  background-color: #65647c;
+  color: white;
+
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+
+  margin-left: 10px;
+  margin-top: 10px;
+
+  :hover {
+    opacity: 0.7;
+    color: white;
+    transition: 0.5s;
+  }
 `;
 
-export { Section, ProfileText, Article, P, Logout, ShBtn };
+export { Section, ProfileText, EditBtn, Article, P, Logout };
