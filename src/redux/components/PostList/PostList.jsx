@@ -136,6 +136,7 @@ const PostList = () => {
                     >
                       🤍
                     </PostLike>
+
                     <PostLike
                       dp={
                         post.like.find((like) => like === currentUserDi) !==

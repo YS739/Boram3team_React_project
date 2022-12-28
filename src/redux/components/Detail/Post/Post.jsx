@@ -134,8 +134,15 @@ const Post = () => {
                 }
                 onClick={() => switchLikesHandler(thePost)}
               >
-                <article style={{ marginRight: "10px" }}>🤍</article>
-                <article style={{ fontSize: "25px" }}>
+                <article style={{ cursor: "pointer", marginRight: "10px" }}>
+                  🤍
+                </article>
+                <article
+                  style={{
+                    marginRight: "10px",
+                    fontSize: "25px",
+                  }}
+                >
                   {thePost?.like.length}
                 </article>
               </PostLike>
@@ -148,8 +155,20 @@ const Post = () => {
                 }
                 onClick={() => switchLikesHandler(thePost)}
               >
-                <article style={{ marginRight: "10px" }}>❤️</article>
-                <article style={{ fontSize: "25px" }}>
+                <article
+                  style={{
+                    cursor: "pointer",
+                    marginRight: "10px",
+                  }}
+                >
+                  ❤️
+                </article>
+                <article
+                  style={{
+                    marginRight: "10px",
+                    fontSize: "25px",
+                  }}
+                >
                   {thePost?.like.length}
                 </article>
               </PostLike>
